@@ -2,70 +2,70 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:57051/ja/categories/</loc>
+    <loc>http://localhost:57527/ja/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="http://localhost:57051/categories/"
+                href="http://localhost:57527/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-CN"
-                href="http://localhost:57051/zh-cn/categories/"
+                href="http://localhost:57527/zh-cn/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr-FR"
-                href="http://localhost:57051/fr/categories/"
+                href="http://localhost:57527/fr/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja-JP"
-                href="http://localhost:57051/ja/categories/"
+                href="http://localhost:57527/ja/categories/"
                 />
   </url><url>
-    <loc>http://localhost:57051/ja/</loc>
+    <loc>http://localhost:57527/ja/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="http://localhost:57051/"
+                href="http://localhost:57527/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-CN"
-                href="http://localhost:57051/zh-cn/"
+                href="http://localhost:57527/zh-cn/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr-FR"
-                href="http://localhost:57051/fr/"
+                href="http://localhost:57527/fr/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja-JP"
-                href="http://localhost:57051/ja/"
+                href="http://localhost:57527/ja/"
                 />
   </url><url>
-    <loc>http://localhost:57051/ja/tags/</loc>
+    <loc>http://localhost:57527/ja/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="http://localhost:57051/tags/"
+                href="http://localhost:57527/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-CN"
-                href="http://localhost:57051/zh-cn/tags/"
+                href="http://localhost:57527/zh-cn/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr-FR"
-                href="http://localhost:57051/fr/tags/"
+                href="http://localhost:57527/fr/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja-JP"
-                href="http://localhost:57051/ja/tags/"
+                href="http://localhost:57527/ja/tags/"
                 />
   </url>
 </urlset>

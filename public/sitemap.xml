@@ -2,22 +2,22 @@
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <sitemap>
-    <loc>http://localhost:57051/en/sitemap.xml</loc>
+    <loc>http://localhost:57527/en/sitemap.xml</loc>
     
   </sitemap>
   
   <sitemap>
-    <loc>http://localhost:57051/zh-cn/sitemap.xml</loc>
+    <loc>http://localhost:57527/zh-cn/sitemap.xml</loc>
     
   </sitemap>
   
   <sitemap>
-    <loc>http://localhost:57051/ja/sitemap.xml</loc>
+    <loc>http://localhost:57527/ja/sitemap.xml</loc>
     
   </sitemap>
   
   <sitemap>
-    <loc>http://localhost:57051/fr/sitemap.xml</loc>
+    <loc>http://localhost:57527/fr/sitemap.xml</loc>
     
   </sitemap>
   
