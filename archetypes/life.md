@@ -8,7 +8,7 @@ summary = ""
 tags = [ "生活", "感悟" ]
 categories = [ "life" ]
 cover = ""
-author = "{{ .Site.Params.defaultAuthor | default "Hugo Narrow" }}"
+author = "{{ .Site.Params.defaultAuthor | default "MapleScraps" }}"
 +++
 
 # {{ replace .File.ContentBaseName "-" " " | title }}

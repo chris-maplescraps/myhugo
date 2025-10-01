@@ -15,13 +15,13 @@ author = "MapleScraps"
 
 这是一篇关于Hugo博客的技术文章，主要介绍Hugo的使用方法和配置
 
-> [!NOTE]
-> 知识点:
+> [!NOTE]+ 知识点:
+>
 > - 博客根目录 指的是在博客文件夹内, 包含所有博客文章、配置文件、主题文件等
 > - .yaml 和 .toml 都是配置文件格式, 用于配置博客的参数和外观, 推荐使用 .toml 格式, 因为它更简洁和易读
 
 ## 第一步
-> [!IMPORTANT]
+> [!IMPORTANT]+ 前提条件
 > 在还没开始配置Hugo之前，确保已经**安装**以下的软件:
 > - [Go](https://go.dev/)
 > - [Git](https://git-scm.com/downloads)
