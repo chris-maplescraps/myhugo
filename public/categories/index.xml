@@ -6,19 +6,33 @@
     <description>Recent content in Categories on MapleScraps</description>
     <generator>Hugo</generator>
     <language>en-US</language>
-    <lastBuildDate>Wed, 01 Oct 2025 13:25:58 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 01 Oct 2025 14:24:33 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tech</title>
+      <link>http://localhost:1313/categories/tech/</link>
+      <pubDate>Wed, 01 Oct 2025 14:24:33 +0800</pubDate>
+      <guid>http://localhost:1313/categories/tech/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Life</title>
+      <link>http://localhost:1313/categories/life/</link>
+      <pubDate>Wed, 01 Oct 2025 13:53:14 +0800</pubDate>
+      <guid>http://localhost:1313/categories/life/</guid>
+      <description></description>
+    </item>
     <item>
       <title>博客</title>
       <link>http://localhost:1313/categories/%E5%8D%9A%E5%AE%A2/</link>
-      <pubDate>Wed, 01 Oct 2025 13:25:58 +0800</pubDate>
+      <pubDate>Wed, 01 Oct 2025 13:28:35 +0800</pubDate>
       <guid>http://localhost:1313/categories/%E5%8D%9A%E5%AE%A2/</guid>
       <description></description>
     </item>
     <item>
       <title>Draft</title>
       <link>http://localhost:1313/categories/draft/</link>
-      <pubDate>Wed, 01 Oct 2025 13:21:12 +0800</pubDate>
+      <pubDate>Wed, 01 Oct 2025 13:12:14 +0800</pubDate>
       <guid>http://localhost:1313/categories/draft/</guid>
       <description></description>
     </item>

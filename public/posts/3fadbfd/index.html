@@ -54,7 +54,7 @@ Note知识点:">
 Note知识点:">
   <meta itemprop="datePublished" content="2025-10-01T14:24:33+08:00">
   <meta itemprop="dateModified" content="2025-10-01T14:24:33+08:00">
-  <meta itemprop="wordCount" content="493">
+  <meta itemprop="wordCount" content="568">
   <meta itemprop="image" content="http://localhost:1313/images/og-default.avif">
   <meta itemprop="keywords" content="博客">
 
@@ -1030,7 +1030,7 @@ Note知识点:">
     viewBox="0 0 24 24" aria-label="Reading time"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
 </svg>
           <span
-            >1 minute</span
+            >2 minute</span
           >
         </div>
       
@@ -1045,7 +1045,7 @@ Note知识点:">
     stroke="currentColor"
     viewBox="0 0 24 24" aria-label="Word count"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
 </svg>
-          <span>493 words</span>
+          <span>568 words</span>
         </div>
       
 
@@ -1684,6 +1684,7 @@ mkdir C:\hugo</code></pre>
   }
 })();
 </script>
+<h2 id="第四步">第四步</h2>
 
   <blockquote
     class="border-primary bg-muted/30 hover:bg-muted/40 my-6 rounded-r-lg border-l-4 py-4 pr-4 pl-6 italic transition-all duration-200 ease-out hover:translate-x-1">
@@ -2020,6 +2021,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 })();
 </script>
+<h2 id="第五步">第五步</h2>
 
   <blockquote
     class="border-primary bg-muted/30 hover:bg-muted/40 my-6 rounded-r-lg border-l-4 py-4 pr-4 pl-6 italic transition-all duration-200 ease-out hover:translate-x-1">
@@ -2356,6 +2358,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 })();
 </script>
+<h2 id="第六步">第六步</h2>
 
   <blockquote
     class="border-primary bg-muted/30 hover:bg-muted/40 my-6 rounded-r-lg border-l-4 py-4 pr-4 pl-6 italic transition-all duration-200 ease-out hover:translate-x-1">
@@ -2690,6 +2693,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 })();
 </script>
+<h2 id="第七步">第七步</h2>
 
   <blockquote
     class="border-primary bg-muted/30 hover:bg-muted/40 my-6 rounded-r-lg border-l-4 py-4 pr-4 pl-6 italic transition-all duration-200 ease-out hover:translate-x-1">
@@ -2791,8 +2795,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
   
   <div class="code-block-content relative" id="code-4">
-    <pre tabindex="0"><code class="language-git" data-lang="git"># 跳转到下载的hugo-narrow主题的exampleSite文件夹, 复制hugo.yaml文件到hugo_blog文件夹
-C:\hugo\hugo_blog\themes\hugo-narrow\exampleSite</code></pre>
+    <pre tabindex="0"><code class="language-git" data-lang="git"># 跳转到下载好的hugo-narrow主题的exampleSite文件夹, 复制hugo.yaml文件到hugo_blog文件夹
+cp C:\hugo\hugo_blog\themes\hugo-narrow\exampleSite\hugo.yaml .\hugo.yaml</code></pre>
     
     <div
       class="collapse-overlay to-card/90 pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent opacity-0 transition-opacity duration-300">
@@ -3025,14 +3029,103 @@ C:\hugo\hugo_blog\themes\hugo-narrow\exampleSite</code></pre>
   }
 })();
 </script>
+<h2 id="第八步">第八步</h2>
 
   <blockquote
     class="border-primary bg-muted/30 hover:bg-muted/40 my-6 rounded-r-lg border-l-4 py-4 pr-4 pl-6 italic transition-all duration-200 ease-out hover:translate-x-1">
     <div class="prose prose-sm max-w-none">
-      <ul>
-<li>编辑 <code>config.toml</code> 文件，配置Hugo博客的参数</li>
-<li>运行 <code>hugo server</code> 命令，启动Hugo博客的本地服务器</li>
-<li>打开浏览器，访问 <code>http://localhost:1313/</code> ，查看Hugo博客的效果</li>
+      <p>转换 .yaml 语法为 .toml:
+<a href="https://transform.tools/yaml-to-toml"target="_blank"
+  class="inline-flex items-center gap-1"
+>yaml to toml
+  <svg id="external-link" class="h-3 w-3 flex-shrink-0"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 3h6v6m-11 5L21 3m-3 10v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+</a></p>
+    </div>
+  </blockquote><script>
+function toggleAlert(alertId) {
+  const content = document.getElementById(alertId + '-content');
+  const chevron = document.getElementById(alertId + '-chevron');
+  const header = content.previousElementSibling;
+  
+  if (content.classList.contains('hidden')) {
+    content.classList.remove('hidden');
+    chevron.style.transform = 'rotate(0deg)';
+    header.setAttribute('aria-expanded', 'true');
+  } else {
+    content.classList.add('hidden');
+    chevron.style.transform = 'rotate(-90deg)';
+    header.setAttribute('aria-expanded', 'false');
+  }
+}
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const collapsedAlerts = document.querySelectorAll('.alert-content.hidden');
+  collapsedAlerts.forEach(function(content) {
+    const alertId = content.id.replace('-content', '');
+    const chevron = document.getElementById(alertId + '-chevron');
+    if (chevron) {
+      chevron.style.transform = 'rotate(-90deg)';
+    }
+  });
+});
+</script>
+
+
+  <blockquote
+    class="border-primary bg-muted/30 hover:bg-muted/40 my-6 rounded-r-lg border-l-4 py-4 pr-4 pl-6 italic transition-all duration-200 ease-out hover:translate-x-1">
+    <div class="prose prose-sm max-w-none">
+      <ol>
+<li><strong>编辑 hugo.yaml 文件</strong>, 拷贝粘贴转换好的.toml语法, 替换原有的.yaml语法</li>
+<li>删除根目录下<strong>原本</strong>的 hugo.toml / hugo.yaml 文件</li>
+<li>重命名 <strong>hugo.yaml</strong> 为 <strong>hugo.toml</strong></li>
+</ol>
+    </div>
+  </blockquote><script>
+function toggleAlert(alertId) {
+  const content = document.getElementById(alertId + '-content');
+  const chevron = document.getElementById(alertId + '-chevron');
+  const header = content.previousElementSibling;
+  
+  if (content.classList.contains('hidden')) {
+    content.classList.remove('hidden');
+    chevron.style.transform = 'rotate(0deg)';
+    header.setAttribute('aria-expanded', 'true');
+  } else {
+    content.classList.add('hidden');
+    chevron.style.transform = 'rotate(-90deg)';
+    header.setAttribute('aria-expanded', 'false');
+  }
+}
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const collapsedAlerts = document.querySelectorAll('.alert-content.hidden');
+  collapsedAlerts.forEach(function(content) {
+    const alertId = content.id.replace('-content', '');
+    const chevron = document.getElementById(alertId + '-chevron');
+    if (chevron) {
+      chevron.style.transform = 'rotate(-90deg)';
+    }
+  });
+});
+</script>
+
+<h2 id="第九步">第九步</h2>
+
+  <blockquote
+    class="border-primary bg-muted/30 hover:bg-muted/40 my-6 rounded-r-lg border-l-4 py-4 pr-4 pl-6 italic transition-all duration-200 ease-out hover:translate-x-1">
+    <div class="prose prose-sm max-w-none">
+      <p>启动 hugo 服务</p>
+<ul>
+<li>hugo server ( 默认端口为 1313 )</li>
+<li>打开浏览器, 访问 <code>http://localhost:1313/</code> 查看Hugo博客的效果</li>
+<li>如果需要指定端口号, 可以在启动命令中添加 <code>-p &lt;port&gt;</code> 参数</li>
+<li>例如: <code>hugo server -p 8080</code></li>
+<li>然后在浏览器中访问 <code>http://localhost:8080/</code></li>
 </ul>
     </div>
   </blockquote><script>
@@ -3065,8 +3158,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
-<h2 id="技术背景">技术背景</h2>
-<p>简要介绍相关技术背景和问题场景&hellip;</p>
 
   </article>
 
@@ -3087,69 +3178,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-
-  <div class="post-license bg-muted/30 border-border mb-8 rounded-xl border p-6">
-    <div class="flex items-start gap-4">
-      
-      <div
-        class="bg-primary/10 flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg">
-        
-  <svg class="h-6 w-6"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24" aria-label="许可证"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-</svg>
-      </div>
-
-      
-      <div class="flex-1 min-w-0">
-        <h3 class="text-foreground mb-2 text-lg font-semibold">
-          Copyright Notice
-        </h3>
-
-        <div class="text-muted-foreground space-y-2 text-sm">
-          
-          
-          <p>
-            <strong>Author:</strong>
-            Hugo Narrow
-          </p>
-          
-
-          
-          <p>
-            <strong>Link:</strong>
-            <a
-              href="http://localhost:1313/posts/3fadbfd/"
-              class="text-primary hover:text-primary/80 transition-colors break-all hyphens-auto duration-200">
-              http://localhost:1313/posts/3fadbfd/
-            </a>
-          </p>
-
-          
-          <p>
-            <strong>License:</strong>
-            
-              <a
-                href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="text-primary hover:text-primary/80 transition-colors duration-200">
-                CC BY-NC-SA 4.0
-              </a>
-            
-          </p>
-
-          
-          
-          <p class="text-xs">
-            This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. Please attribute the source, use non-commercially, and maintain the same license.
-          </p>
-          
-        </div>
-      </div>
-    </div>
-  </div>
 
 
 
@@ -3668,7 +3696,12 @@ document.addEventListener('DOMContentLoaded', function() {
     <li><a href="#第一步">第一步</a></li>
     <li><a href="#第二步">第二步</a></li>
     <li><a href="#第三步">第三步</a></li>
-    <li><a href="#技术背景">技术背景</a></li>
+    <li><a href="#第四步">第四步</a></li>
+    <li><a href="#第五步">第五步</a></li>
+    <li><a href="#第六步">第六步</a></li>
+    <li><a href="#第七步">第七步</a></li>
+    <li><a href="#第八步">第八步</a></li>
+    <li><a href="#第九步">第九步</a></li>
   </ul>
 </nav>
           </div>

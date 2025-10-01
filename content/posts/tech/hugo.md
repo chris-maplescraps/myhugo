@@ -40,31 +40,40 @@ example:
 mkdir C:\hugo
 ```
 
+## 第四步
 > - 进入已经创建的文件夹
 ```git
 cd C:\hugo
 ```
-
+## 第五步
 > - 初始化Hugo博客
 ```git
 hugo new site .
 ```
-
+## 第六步
 > 下载 hugo-narrow 主题
 ```git
 git submodule add https://github.com/hugo-narrow/hugo-narrow.git themes/hugo-narrow
 ```
-
+## 第七步
 > 配置 hugo-narrow 主题
 ```git
-# 跳转到下载的hugo-narrow主题的exampleSite文件夹, 复制hugo.yaml文件到hugo_blog文件夹
-C:\hugo\hugo_blog\themes\hugo-narrow\exampleSite
+# 跳转到下载好的hugo-narrow主题的exampleSite文件夹, 复制hugo.yaml文件到hugo_blog文件夹
+cp C:\hugo\hugo_blog\themes\hugo-narrow\exampleSite\hugo.yaml .\hugo.yaml
 ```
+## 第八步
+> 转换 .yaml 语法为 .toml:
+[yaml to toml](https://transform.tools/yaml-to-toml)
 
-> - 编辑 `config.toml` 文件，配置Hugo博客的参数
-> - 运行 `hugo server` 命令，启动Hugo博客的本地服务器
-> - 打开浏览器，访问 `http://localhost:1313/` ，查看Hugo博客的效果
+> 1. **编辑 hugo.yaml 文件**, 拷贝粘贴转换好的.toml语法, 替换原有的.yaml语法
+> 2. 删除根目录下**原本**的 hugo.toml / hugo.yaml 文件
+> 2. 重命名 **hugo.yaml** 为 **hugo.toml**
 
-## 技术背景
+## 第九步
+> 启动 hugo 服务
+> - hugo server ( 默认端口为 1313 )
+> - 打开浏览器, 访问 `http://localhost:1313/` 查看Hugo博客的效果
+> - 如果需要指定端口号, 可以在启动命令中添加 `-p <port>` 参数
+> - 例如: `hugo server -p 8080`
+> - 然后在浏览器中访问 `http://localhost:8080/`
 
-简要介绍相关技术背景和问题场景...
