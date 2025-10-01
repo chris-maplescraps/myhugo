@@ -152,7 +152,7 @@ colorScheme = "default"
   [params.author]
   name = "Chris Goh"
   title = "A Clean and Minimal Hugo Theme"
-  description = "Focused on content and user experience."
+  description = "Focused on personal growth"
   avatar = "/images/avatar.svg"
 
     [[params.author.social]]

@@ -1,0 +1,16 @@
+# 使用 [subtracker] 来定义一个 ID 为 "subtracker" 的链接对象
+[subtracker]
+  # 关键修正：显式添加 Shortcode 模板中需要的 "id" 字段
+  id = "subtracker"
+  
+  # 其他必需字段：
+  title = "Subtracker 项目"
+  url = "https://github.com/mapleblog/subtracker"
+  
+  # 主题可能还需要 "description" 字段，请根据主题文档添加
+  description = "这是一个开源项目，用于跟踪订阅。"
+  
+# 如果您有其他链接，可以继续定义新的表
+# [another_link]
+#   title = "..."
+#   url = "..."

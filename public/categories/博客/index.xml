@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>博客 on MapleScraps</title>
+    <link>http://localhost:1313/categories/%E5%8D%9A%E5%AE%A2/</link>
+    <description>Recent content in 博客 on MapleScraps</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <lastBuildDate>Wed, 01 Oct 2025 13:25:58 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/%E5%8D%9A%E5%AE%A2/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Gemini</title>
+      <link>http://localhost:1313/posts/4583764/</link>
+      <pubDate>Wed, 01 Oct 2025 13:25:58 +0800</pubDate>
+      <guid>http://localhost:1313/posts/4583764/</guid>
+      <description>&lt;h1 id=&#34;gemini&#34;&gt;Gemini&lt;/h1&gt;&#xA;&lt;p&gt;在这里开始写您的文章内容&amp;hellip;&lt;/p&gt;&#xA;&lt;h2 id=&#34;主要内容&#34;&gt;主要内容&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;第一点&lt;/li&gt;&#xA;&lt;li&gt;第二点&lt;/li&gt;&#xA;&lt;li&gt;第三点&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;总结&#34;&gt;总结&lt;/h2&gt;&#xA;&lt;p&gt;文章总结&amp;hellip;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

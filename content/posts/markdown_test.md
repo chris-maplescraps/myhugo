@@ -12,8 +12,23 @@ categories:
 cover:
 ---
 
-## Markdown Practice
-| No | Features | Explanation |
-|:-|:-:|--|
-| 1  | Undo     | Go back previous step |
-| 2 | Redo | Go to latest step |
+{{< figure
+  src="/images/examples/universal.jpg"
+  alt="A photograph of Zion National Park"
+  link="https://www.nps.gov/zion/index.htm"
+  caption="Zion National Park"
+  class="ma0 w-75"
+>}}
+
+
+{{< youtube 1hXQkTgQZ0k >}}
+
+
+
+
+{{< link 
+  title="Hugo 官方文档" 
+  description="查询所有内置功能、短代码和配置选项的权威手册。" 
+  url="https://gohugo.io/documentation/" 
+>}}
+

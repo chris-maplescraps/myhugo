@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>博客 on MapleScraps</title>
+    <link>http://localhost:1313/tags/%E5%8D%9A%E5%AE%A2/</link>
+    <description>Recent content in 博客 on MapleScraps</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <lastBuildDate>Wed, 01 Oct 2025 14:24:33 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E5%8D%9A%E5%AE%A2/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo</title>
+      <link>http://localhost:1313/posts/3fadbfd/</link>
+      <pubDate>Wed, 01 Oct 2025 14:24:33 +0800</pubDate>
+      <guid>http://localhost:1313/posts/3fadbfd/</guid>
+      <description>&lt;h1 id=&#34;hugo&#34;&gt;Hugo&lt;/h1&gt;&#xA;&lt;h2 id=&#34;技术背景&#34;&gt;技术背景&lt;/h2&gt;&#xA;&lt;p&gt;简要介绍相关技术背景和问题场景&amp;hellip;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

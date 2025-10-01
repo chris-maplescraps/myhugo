@@ -3,25 +3,36 @@ title = "Useful Tips"
 date = "2025-10-01T08:57:46+08:00"
 draft = false
 slug = "88635d6"
-tags = [ "draft", "education", "tutorial" ]
-categories = [ "draft", "article" ]
+tags = [ "learn" ]
+categories = [ "markdown" ]
 +++
 
+# GitHub Style Alert Testing
+
+This article is used to test the new GitHub-style Alert feature and folding functionality.
+
+## Alert Syntax
+
+### Note Alert
 
 > [!NOTE]
->
+> This is a note alert box. Used to display useful information that users should be aware of, even when quickly browsing the content.
 
+### Tip Alert
 > [!TIP]
->
+> This is a tip alert box. Provides suggestions that help complete tasks better or more easily.
 
+### Warning Alert
 > [!WARNING]
->
+> This is a warning box. Urgent information that requires immediate user attention to avoid problems.
 
+### Caution Alert
 > [!CAUTION]
->
+> This is a caution alert box. Advises users to be aware of the risks or negative consequences of certain behaviors.
 
+### Important Alert
 > [!IMPORTANT]
->
+> This is an important alert box. Displays critical information users need to know to achieve their goals.
 
 
 ## Code Highlighting
