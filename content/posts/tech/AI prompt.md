@@ -1,7 +1,7 @@
 +++
 title = 'AI Prompt'
 date = 2025-10-01T13:28:35+08:00
-draft = false
+draft = true
 slug = "c490622"
 description = ""
 summary = ""
