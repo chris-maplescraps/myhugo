@@ -22,5 +22,40 @@
       <guid>http://localhost:1313/tags/%E5%8D%9A%E5%AE%A2/</guid>
       <description></description>
     </item>
+    <item>
+      <title>感悟</title>
+      <link>http://localhost:1313/tags/%E6%84%9F%E6%82%9F/</link>
+      <pubDate>Wed, 01 Oct 2025 13:53:14 +0800</pubDate>
+      <guid>http://localhost:1313/tags/%E6%84%9F%E6%82%9F/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>生活</title>
+      <link>http://localhost:1313/tags/%E7%94%9F%E6%B4%BB/</link>
+      <pubDate>Wed, 01 Oct 2025 13:53:14 +0800</pubDate>
+      <guid>http://localhost:1313/tags/%E7%94%9F%E6%B4%BB/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>技术</title>
+      <link>http://localhost:1313/tags/%E6%8A%80%E6%9C%AF/</link>
+      <pubDate>Wed, 01 Oct 2025 13:28:35 +0800</pubDate>
+      <guid>http://localhost:1313/tags/%E6%8A%80%E6%9C%AF/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Draft</title>
+      <link>http://localhost:1313/tags/draft/</link>
+      <pubDate>Wed, 01 Oct 2025 13:12:14 +0800</pubDate>
+      <guid>http://localhost:1313/tags/draft/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Learn</title>
+      <link>http://localhost:1313/tags/learn/</link>
+      <pubDate>Wed, 01 Oct 2025 08:57:46 +0800</pubDate>
+      <guid>http://localhost:1313/tags/learn/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

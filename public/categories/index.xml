@@ -15,5 +15,33 @@
       <guid>http://localhost:1313/categories/tech/</guid>
       <description></description>
     </item>
+    <item>
+      <title>Life</title>
+      <link>http://localhost:1313/categories/life/</link>
+      <pubDate>Wed, 01 Oct 2025 13:53:14 +0800</pubDate>
+      <guid>http://localhost:1313/categories/life/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>博客</title>
+      <link>http://localhost:1313/categories/%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Wed, 01 Oct 2025 13:28:35 +0800</pubDate>
+      <guid>http://localhost:1313/categories/%E5%8D%9A%E5%AE%A2/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Draft</title>
+      <link>http://localhost:1313/categories/draft/</link>
+      <pubDate>Wed, 01 Oct 2025 13:12:14 +0800</pubDate>
+      <guid>http://localhost:1313/categories/draft/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Markdown</title>
+      <link>http://localhost:1313/categories/markdown/</link>
+      <pubDate>Wed, 01 Oct 2025 08:57:46 +0800</pubDate>
+      <guid>http://localhost:1313/categories/markdown/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>
