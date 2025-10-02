@@ -22,7 +22,7 @@ author = "MapleScraps"
 > - **{{</* figure ... */>}}**: 插入图片或视频，支持 caption、link 等参数。
 >> 示例 : 
 >>
->>{{</* figure **src="/images/xxx.jpg"** **alt="xxx"** **caption="xxx"** **link="https://xxx"** **class="w-75 ma0"** */>}}
+>> {{</* figure **src="/images/xxx.jpg"** **alt="xxx"** **caption="xxx"** **link="https://xxx"** **class="w-75 ma0"** */>}}
 
 > - **{{</* link ... */>}}**: 插入可点击的链接，支持 target="_blank" 等参数。
 > - **{{</* param ... */>}}**: 插入参数值，用于动态内容。
@@ -34,6 +34,14 @@ author = "MapleScraps"
 >
 > Include this in your Markdown:
 >> ` {{</* instagram CxOWiQNP2MO */>}}`
+
+> [!NOTE]+ YouTube shortcode
+> #### Example
+> To display an Instagram post with this URL:
+>> `https://www.youtube.com/watch?v=0RKpf3rK57I`
+>
+> Include this in your Markdown:
+>> ` {{< youtube 0RKpf3rK57I >}}`
 
 > [!NOTE]+ HightLight shortcode
 > #### Example
@@ -53,3 +61,26 @@ func main() {
 >> This is some {{< highlight go "hl_inline=true" >}}fmt.Println("inline"){{< /highlight >}} code.
 >>
 >>  **{{</* highlight go "hl_inline=true" */>}}** Your_text_highlight **{{</* /highlight */>}}**
+
+> [!NOTE]+ QR shortcode
+> #### Example
+> Use the self-closing syntax to pass the text as an argument:
+>> {{< qr text="https://gohugo.io" />}}
+>
+> Or insert the text between the opening and closing tags:
+>> {{< qr >}}
+https://gohugo.io
+>> {{< /qr >}}
+
+> To create a QR code containing contact information in the vCard format:
+>> {{< qr level="low" scale=2 alt="QR code of vCard for John Smith" >}}
+BEGIN:VCARD
+VERSION:2.1
+N;CHARSET=UTF-8:Goh;Chris
+FN;CHARSET=UTF-8:Chris Goh
+ORG;CHARSET=UTF-8:United Caps Kulim Sdn Bhd
+TITLE;CHARSET=UTF-8:IT Support Engineer
+TEL;TYPE=WORK:+60109399688
+EMAIL;TYPE=WORK:tkgoh228@gmail.com
+END:VCARD
+>> {{< /qr >}}
