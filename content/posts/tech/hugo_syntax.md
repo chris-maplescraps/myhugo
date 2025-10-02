@@ -19,6 +19,7 @@ author = "MapleScraps"
 > - **{{%/* ... */%}} (百分号)**: 用于 Shortcode 结果需要被 Markdown 处理器再次处理的情况。由于 > {{%/* param "" */%}} 的结果通常是文本（如 "red"），Markdown 处理器需要能够将这段文本作为普通内容的一部分来渲染，因此必> 须使用百分号版本。
 
 > [!NOTE]+ Picture Shortcode
+> 在markdown文章中嵌入此 shortcode, 就可以实现了
 > #### Example
 > - **{{</* figure ... */>}}**: 插入图片或视频，支持 caption、link 等参数。
 > - {{</* figure **src="/images/xxx.jpg"** **alt="xxx"** **caption="xxx"** **link="https://xxx"** **class="w-75 ma0"** */>}}
@@ -32,6 +33,7 @@ author = "MapleScraps"
 >}}
 
 > [!NOTE]+ Instagram shortcode
+> 在markdown文章中嵌入此 shortcode, 就可以实现了
 > #### Example
 > To display an Instagram post with this URL:
 >> `https://www.instagram.com/p/CxOWiQNP2MO/`
@@ -40,6 +42,7 @@ author = "MapleScraps"
 >> ` {{</* instagram CxOWiQNP2MO */>}}`
 
 > [!NOTE]+ YouTube shortcode
+> 在markdown文章中嵌入此 shortcode, 就可以实现了
 > #### Example
 > To display an Instagram post with this URL:
 >> `https://www.youtube.com/watch?v=0RKpf3rK57I`
@@ -48,6 +51,7 @@ author = "MapleScraps"
 >> ` {{< youtube 0RKpf3rK57I >}}`
 
 > [!NOTE]+ HightLight shortcode
+> 在markdown文章中嵌入此 shortcode, 就可以实现了
 > #### Example
 >> {{< highlight go "linenos=inline, hl_lines=1-10, style=emacs" >}}
 package main
@@ -67,6 +71,7 @@ func main() {
 >>  **{{</* highlight go "hl_inline=true" */>}}** Your_text_highlight **{{</* /highlight */>}}**
 
 > [!NOTE]+ QR shortcode
+> 在markdown文章中嵌入此 shortcode, 就可以实现了
 > #### Example
 > Use the self-closing syntax to pass the text as an argument:
 >> {{< qr text="https://gohugo.io" />}}
@@ -75,7 +80,7 @@ func main() {
 >> {{< qr >}}
 https://gohugo.io
 >> {{< /qr >}}
-
+>
 > To create a QR code containing contact information in the vCard format:
 >> {{< qr level="low" scale=2 alt="QR code of vCard for John Smith" >}}
 BEGIN:VCARD
