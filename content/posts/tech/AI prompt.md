@@ -13,6 +13,23 @@ author = "MapleScraps"
 
 # AI Prompt
 
-## 技术背景
+所有的提示词样式会不断更新, 只作为参考。一切为实际测试结果为准
 
-简要介绍相关技术背景和问题场景...
+> ## ChatGPT 
+> {{< figure 
+  src="/images/universal.jpg" 
+  alt="" 
+  caption=""
+  link="" 
+  class="w-75 ma0" 
+>}}
+
+
+> ## Deepseek
+>
+
+> ## Gemini
+>
+
+> ## Grok
+>
