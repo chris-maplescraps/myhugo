@@ -16,13 +16,6 @@ author = "MapleScraps"
 所有的提示词样式会不断更新, 只作为参考。一切为实际测试结果为准
 
 > ## ChatGPT 
-> {{< figure 
-  src="/images/universal.jpg" 
-  alt="" 
-  caption=""
-  link="" 
-  class="w-75 ma0" 
->}}
 
 
 > ## Deepseek

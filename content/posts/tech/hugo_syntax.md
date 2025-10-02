@@ -18,14 +18,18 @@ author = "MapleScraps"
 > - **{{</* ... */>}} (尖括号)**: 用于 Shortcode 结果不会被 Markdown 处理器再次处理的情况，通常用于插入复杂的 HTML 结构，比> 如> 图片 (figure) 或卡片。 
 > - **{{%/* ... */%}} (百分号)**: 用于 Shortcode 结果需要被 Markdown 处理器再次处理的情况。由于 > {{%/* param "" */%}} 的结果通常是文本（如 "red"），Markdown 处理器需要能够将这段文本作为普通内容的一部分来渲染，因此必> 须使用百分号版本。
 
-> #### 常用 Shortcode 示例
+> [!NOTE]+ Picture Shortcode
+> #### Example
 > - **{{</* figure ... */>}}**: 插入图片或视频，支持 caption、link 等参数。
+> - {{</* figure **src="/images/xxx.jpg"** **alt="xxx"** **caption="xxx"** **link="https://xxx"** **class="w-75 ma0"** */>}}
 >> 示例 : 
->>
->> {{</* figure **src="/images/xxx.jpg"** **alt="xxx"** **caption="xxx"** **link="https://xxx"** **class="w-75 ma0"** */>}}
-
-> - **{{</* link ... */>}}**: 插入可点击的链接，支持 target="_blank" 等参数。
-> - **{{</* param ... */>}}**: 插入参数值，用于动态内容。
+> {{< figure 
+  src="/images/universal.jpg" 
+  alt="Universal Image" 
+  caption="Image description"
+  link="https://www.google.com" 
+  class="w-75 ma0" 
+>}}
 
 > [!NOTE]+ Instagram shortcode
 > #### Example
@@ -76,11 +80,12 @@ https://gohugo.io
 >> {{< qr level="low" scale=2 alt="QR code of vCard for John Smith" >}}
 BEGIN:VCARD
 VERSION:2.1
-N;CHARSET=UTF-8:Goh;Chris
-FN;CHARSET=UTF-8:Chris Goh
-ORG;CHARSET=UTF-8:United Caps Kulim Sdn Bhd
-TITLE;CHARSET=UTF-8:IT Support Engineer
-TEL;TYPE=WORK:+60109399688
-EMAIL;TYPE=WORK:tkgoh228@gmail.com
+N;CHARSET=UTF-8:Smith;John;R.;Dr.;PhD
+FN;CHARSET=UTF-8:Dr. John R. Smith, PhD.
+ORG;CHARSET=UTF-8:ABC Widgets
+TITLE;CHARSET=UTF-8:Vice President Engineering
+TEL;TYPE=WORK:+12065550101
+EMAIL;TYPE=WORK:jsmith@example.org
 END:VCARD
 >> {{< /qr >}}
+
