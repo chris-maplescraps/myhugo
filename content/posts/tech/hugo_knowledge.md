@@ -11,43 +11,26 @@ cover = ""
 author = "MapleScraps"
 +++
 
-# GitHub 风格提示框
-
-### 注意提示框
-
+### GitHub 风格提示框
 > [!NOTE]
 > 这是一个注意提示框。用于显示用户应该注意的有用信息，即使在快速浏览内容时也应该注意。
-
-### 提示提示框
 
 > [!TIP]
 > 这是一个提示提示框。提供有助于更好或更轻松地完成任务的建议。
 
-### 重要提示框
-
 > [!IMPORTANT]
 > 这是一个重要提示框。显示用户成功完成任务所需的关键信息。
-
-### 警告提示框
 
 > [!WARNING]
 > 这是一个警告提示框。由于潜在风险，需要用户立即注意的关键内容。
 
-### 注意提示框
-
 > [!CAUTION]
 > 这是一个注意提示框。建议采取行动以避免负面后果。
 
-## 折叠功能
-
-### 可折叠的注意提示框
-
-> [!NOTE]+ 可折叠的注意事项
+### 可折叠笔记框
+> [!NOTE]+ 可折叠提示框
 > 这是一个可折叠的注意提示框。点击标题可以展开或折叠内容。
-> 
 > 这里可以包含更多详细信息，当用户需要时可以展开查看。
-
-### 可折叠的提示提示框
 
 > [!TIP]+ 高级使用技巧
 > 这个折叠的提示框包含高级使用技巧：
@@ -57,8 +40,6 @@ author = "MapleScraps"
 > 3. 最后完成这个步骤
 > 
 > 记住要按顺序执行这些步骤。
-
-### 可折叠的重要提示框
 
 > [!IMPORTANT]+ 重要配置信息
 > 这些配置设置对系统正常运行至关重要：
@@ -74,8 +55,6 @@ author = "MapleScraps"
 > 
 > 请确保所有设置都正确配置。
 
-### 可折叠的警告提示框
-
 > [!WARNING]+ 安全警告
 > 在继续之前，请注意以下安全考虑：
 > 
@@ -84,12 +63,10 @@ author = "MapleScraps"
 > - 定期更新系统
 > - 不要在公共网络上执行敏感操作
 
-### 可折叠的注意提示框
-
 > [!CAUTION]+ 复杂内容示例
 > 这个可折叠框包含复杂的 Markdown 内容：
 > 
-> #### 子标题
+> ##### 子标题
 > 
 > 这是一个包含[链接](https://example.com)和其他格式的段落。
 > 
@@ -105,7 +82,7 @@ author = "MapleScraps"
 > | 行1 | 数据1 |
 > | 行2 | 数据2 |
 
-## 普通引用块
+##### 普通引用块
 
 这是一个普通的引用块，不是提示框：
 
@@ -113,7 +90,7 @@ author = "MapleScraps"
 > 
 > 支持多行内容和**格式化文本**。
 
-## 多语言支持
+##### 多语言支持
 
 提示框支持多种语言，标题会自动以当前语言显示：
 
@@ -123,7 +100,7 @@ author = "MapleScraps"
 > [!TIP]
 > 在中文环境中，这个标题会显示为"提示"。
 
-## 嵌套内容测试
+##### 嵌套内容测试
 
 > [!WARNING]+ 嵌套内容测试
 > 这个提示框包含嵌套内容：
@@ -138,13 +115,6 @@ author = "MapleScraps"
 >    1. 嵌套有序列表
 >    2. 另一个嵌套项
 
-## 使用场景示例
-
-### 文档说明
-
-> [!NOTE]
-> 本功能从版本 2.0 开始可用。如果您使用的是较早版本，请先升级。
-
 ### 最佳实践
 
 > [!TIP]+ 性能优化建议
@@ -155,17 +125,17 @@ author = "MapleScraps"
 > - 优化图片大小
 > - 使用浏览器缓存
 
-### 重要配置
+##### 重要配置
 
 > [!IMPORTANT]
 > 修改配置文件后，必须重启服务才能生效。
 
-### 安全提醒
+##### 安全提醒
 
 > [!WARNING]
 > 请勿在生产环境中使用默认密码。
 
-### 破坏性操作
+##### 破坏性操作
 
 > [!CAUTION]
 > 此操作将永久删除所有数据，且无法恢复。请确保已备份重要数据。
@@ -174,7 +144,7 @@ author = "MapleScraps"
 
 
 ### Instagram shortcode
-> #### Example
+> ##### Example
 > To display an Instagram post with this URL:
 > ```html
 > https://www.instagram.com/p/CxOWiQNP2MO/`
@@ -188,3 +158,46 @@ author = "MapleScraps"
 > The rendered output will be:
 > {{< instagram CxOWiQNP2MO >}}
 
+### Highlight shortcode
+> ##### To `highlight` shortcode takes three arguments.
+> ```markdown
+> {{</* highlight LANG OPTIONS */>}}
+> CODE
+> {{</* /highlight */>}}
+> ```
+>
+> ##### Example
+> ```markdown
+> {{</* highlight go "linenos=inline, hl_lines=3 6-8, style=emacs" */>}}
+> package main
+> 
+> import "fmt"
+> 
+> func main() {
+>     for i := 0; i < 3; i++ {
+>         fmt.Println("Value of i:", i)
+>     }
+> }
+> {{</* /highlight */>}}
+> ```
+> 
+> ##### Hugo render this to:
+> {{< highlight go "linenos=inline, hl_lines=3 6-8, style=emacs" >}}
+> package main
+> 
+> import "fmt"
+> 
+> func main() {
+>     for i := 0; i < 3; i++ {
+>         fmt.Println("Value of i:", i)
+>     }
+> }
+> {{< /highlight >}}
+>
+> ##### You can also use the highlight shortcode for inline code snippets:
+> ```markdown
+> This is some {{</* highlight go "hl_inline=true" >}}fmt.Println("inline"){{< /highlight */>}} code.
+> ```
+>
+> ##### Hugo render this to:
+> This is some {{< highlight go "hl_inline=true" >}}fmt.Println("inline"){{< /highlight >}} code.
