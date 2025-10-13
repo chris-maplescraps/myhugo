@@ -173,4 +173,18 @@ author = "MapleScraps"
 这些提示框可以帮助用户更好地理解内容的重要性和上下文，提升文档的可读性和用户体验。
 
 
+### Instagram shortcode
+> #### Example
+> To display an Instagram post with this URL:
+> ```html
+> https://www.instagram.com/p/CxOWiQNP2MO/`
+> ```
+>
+> Include this in your Markdown:
+> ```markdown
+> {{</* instagram CxOWiQNP2MO */>}}
+> ```
+>
+> The rendered output will be:
+> {{< instagram CxOWiQNP2MO >}}
 
