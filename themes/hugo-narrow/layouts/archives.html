@@ -2,7 +2,6 @@
   <!-- 面包屑导航 -->
   {{ partial "navigation/breadcrumb.html" . }}
 
-
   <!-- 页面标题和描述 -->
   <header class="mb-8">
     <div class="mb-4 flex items-center gap-3">
@@ -24,7 +23,8 @@
 
 
     <!-- 统计信息 -->
-    {{ $allPosts := where .Site.RegularPages "Section" "posts" }}
+    {{ $allPostsAll := where .Site.RegularPages "Section" "posts" }}
+    {{ $allPosts := where $allPostsAll "Params.search_only" "ne" true }}
     <div class="text-muted-foreground flex items-center gap-4 text-sm">
       <div class="flex items-center gap-1">
         {{ partial "features/icon.html" (dict "name" "file-text" "size" "sm" "ariaLabel" "") }}
@@ -32,7 +32,7 @@
           >{{ i18n "archives.total_posts" (dict "count" (len $allPosts)) | default (printf "共 %d 篇文章" (len $allPosts)) }}</span
         >
       </div>
-      <div class="flex items-center gap-1">
+      <div class="flex items中心 gap-1">
         {{ partial "features/icon.html" (dict "name" "calendar" "size" "sm" "ariaLabel" "") }}
         <span>{{ i18n "archives.timeline" | default "时间轴视图" }}</span>
       </div>

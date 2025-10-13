@@ -3,6 +3,9 @@
     <!-- 面包屑导航 -->
     {{ partial "navigation/breadcrumb.html" . }}
 
+    {{ $paginator := .Paginator }}
+    {{ $filtered := where .Pages "Params.search_only" "ne" true }}
+    {{ $paginator = .Paginate $filtered }}
 
     <!-- 页面标题和描述 -->
     <header class="mb-8">
@@ -37,14 +40,14 @@
           <div class="flex items-center gap-1">
             {{ partial "features/icon.html" (dict "name" "folder" "size" "sm" "ariaLabel" "") }}
             <span
-              >{{ i18n "post.total_posts" (dict "count" .Paginator.TotalNumberOfElements) | default (printf "共 %d 篇文章" .Paginator.TotalNumberOfElements) }}</span
+              >{{ i18n "post.total_posts" (dict "count" $paginator.TotalNumberOfElements) | default (printf "共 %d 篇文章" $paginator.TotalNumberOfElements) }}</span
             >
           </div>
-          {{ if gt .Paginator.TotalPages 1 }}
+          {{ if gt $paginator.TotalPages 1 }}
             <div class="flex items-center gap-1">
               {{ partial "features/icon.html" (dict "name" "layers" "size" "sm" "ariaLabel" "") }}
               <span
-                >{{ i18n "nav.total_pages" (dict "count" .Paginator.TotalPages) | default (printf "共 %d 页" .Paginator.TotalPages) }}</span
+                >{{ i18n "nav.total_pages" (dict "count" $paginator.TotalPages) | default (printf "共 %d 页" $paginator.TotalPages) }}</span
               >
             </div>
           {{ end }}
@@ -53,7 +56,7 @@
     </header>
 
     <!-- 文章列表 -->
-    {{ $posts := .Paginator.Pages }}
+    {{ $posts := $paginator.Pages }}
     {{ if $posts }}
       {{ partial "content/post-list.html" (dict "posts" $posts) }}
     {{ else }}
@@ -77,7 +80,6 @@
         </a>
       </div>
     {{ end }}
-
 
     <!-- 分页导航 -->
     {{ partial "navigation/pagination.html" . }}

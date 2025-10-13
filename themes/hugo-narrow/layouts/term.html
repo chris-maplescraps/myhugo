@@ -2,6 +2,7 @@
   <!-- 面包屑导航 -->
   {{ partial "navigation/breadcrumb.html" . }}
 
+  {{ $posts := where .Pages "Params.search_only" "ne" true }}
 
   <!-- 页面标题和描述 -->
   <header class="mb-8">
@@ -40,7 +41,7 @@
       <div class="flex items-center gap-1">
         {{ partial "features/icon.html" (dict "name" "file-text" "size" "sm" "ariaLabel" "") }}
         <span
-          >{{ i18n "term.total_posts" (dict "count" (len .Pages)) | default (printf "共 %d 篇文章" (len .Pages)) }}</span
+          >{{ i18n "term.total_posts" (dict "count" (len $posts)) | default (printf "共 %d 篇文章" (len $posts)) }}</span
         >
       </div>
       <div class="flex items-center gap-1">
@@ -51,7 +52,6 @@
   </header>
 
   <!-- 文章列表 -->
-  {{ $posts := .Pages }}
   {{ if $posts }}
     {{ partial "content/post-list.html" (dict "posts" $posts) }}
   {{ else }}

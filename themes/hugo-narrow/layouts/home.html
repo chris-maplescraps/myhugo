@@ -1,5 +1,7 @@
 {{ define "main" }}
-  <div class="mx-auto max-w-4xl">
+  <div class="mx-auto max-w-4xl px-4 py-6">
+    <!-- 面包屑导航 -->
+    {{ partial "navigation/breadcrumb.html" . }}
     <!-- 作者信息区域 -->
     {{ if site.Params.author }}
       <section class="author-section mb-12">
@@ -69,7 +71,9 @@
 
     <!-- 最近文章区域 -->
     {{ $recentPostsCount := site.Params.home.recentPostsCount | default 5 }}
-    {{ $posts := where site.RegularPages "Section" "posts" | first $recentPostsCount }}
+    {{ $all := where site.RegularPages "Section" "posts" }}
+    {{ $filtered := where $all "Params.search_only" "ne" true }}
+    {{ $posts := first $recentPostsCount $filtered }}
 
     {{ partial "content/post-list.html" (dict
       "posts" $posts
