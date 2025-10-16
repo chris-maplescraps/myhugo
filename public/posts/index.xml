@@ -6,8 +6,15 @@
     <description>Recent content in Posts on MapleScraps</description>
     <generator>Hugo</generator>
     <language>en-US</language>
-    <lastBuildDate>Thu, 16 Oct 2025 13:26:19 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 16 Oct 2025 14:22:00 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python Manage</title>
+      <link>http://localhost:1313/posts/e985480/</link>
+      <pubDate>Thu, 16 Oct 2025 14:22:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/e985480/</guid>
+      <description>&lt;h1 id=&#34;python-manage&#34;&gt;Python Manage&lt;/h1&gt;&#xA;&lt;p&gt;Extremely fast Python package and project manager, written in Rust.&lt;/p&gt;&#xA;&lt;h2 id=&#34;highlight&#34;&gt;Highlight&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;🚀 A single tool to replace pip, pip-tools, pipx, poetry, pyenv, twine, virtualenv, and more.&lt;/li&gt;&#xA;&lt;li&gt;⚡️ 10-100x faster than pip.&lt;/li&gt;&#xA;&lt;li&gt;🗂️ Provides comprehensive project management, with a universal lockfile.&lt;/li&gt;&#xA;&lt;li&gt;❇️ Runs scripts, with support for inline dependency metadata.&lt;/li&gt;&#xA;&lt;li&gt;🐍 Installs and manages Python versions.&lt;/li&gt;&#xA;&lt;li&gt;🛠️ Runs and installs tools published as Python packages.&lt;/li&gt;&#xA;&lt;li&gt;🔩 Includes a pip-compatible interface for a performance boost with a familiar CLI.&lt;/li&gt;&#xA;&lt;li&gt;🏢 Supports Cargo-style workspaces for scalable projects.&lt;/li&gt;&#xA;&lt;li&gt;💾 Disk-space efficient, with a global cache for dependency deduplication.&lt;/li&gt;&#xA;&lt;li&gt;⏬ Installable without Rust or Python via curl or pip.&lt;/li&gt;&#xA;&lt;li&gt;🖥️ Supports macOS, Linux, and Windows.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;installation--windows-&#34;&gt;Installation ( Windows )&lt;/h2&gt;&#xA;&lt;p&gt;Install uv with our official standalone installer:&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Python Installation</title>
       <link>http://localhost:1313/posts/e5febaf/</link>
