@@ -68,7 +68,8 @@ author = "MapleScraps"
 > - git diff `--`cached 查看已经 git add 但未提交的更改
 > - git diff `<commit>` HEAD 查看指定提交和当前分支最新提交的差异
 > - git diff `<commit>` 显示该提交与当前工作区的差异
-> - git reset HEAD `< files >` 取消文件追踪
+> - git reset  HEAD `< changed_file >` 从暂存区移除，也会丢失硬盘上的文件
+> - git restore `--`staged `< changed_file >` 只从暂存区移除
 
 ## *储存区 ( Local Repository ) 常用命令*
 
@@ -84,7 +85,7 @@ author = "MapleScraps"
 使用 git push `--`force-with-lease origin `<sub-branch>`
 >> Parameters :
 >> - `--`soft	只移动 HEAD 指针，更改保留在暂存区
->> - `--`mixed	移动 HEAD 指针，清空暂存区。更改保留在工作区。这是 git reset 的默认选项
+>> - `--`mixed	移动 HEAD 指针，撤销 commit，也会撤销暂存区的文件。这是 git reset 的默认选项
 >> - `--`hard	移动 HEAD 指针，清空暂存区和工作区。所有更改都被丢弃。这是最危险的选项
 >> 
 

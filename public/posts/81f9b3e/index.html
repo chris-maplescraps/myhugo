@@ -55,7 +55,7 @@
 下载 &#43; 安装 点击此链接Github 流程 :工作区 (Working Directory)">
   <meta itemprop="datePublished" content="2025-10-14T19:43:39+08:00">
   <meta itemprop="dateModified" content="2025-10-14T19:43:39+08:00">
-  <meta itemprop="wordCount" content="2083">
+  <meta itemprop="wordCount" content="2112">
   <meta itemprop="image" content="http://localhost:1313/images/og-default.avif">
   <meta itemprop="keywords" content="技术,开发">
 
@@ -1046,7 +1046,7 @@
     stroke="currentColor"
     viewBox="0 0 24 24" aria-label="Word count"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
 </svg>
-          <span>2083 words</span>
+          <span>2112 words</span>
         </div>
       
 
@@ -1465,7 +1465,8 @@ document.addEventListener('DOMContentLoaded', function() {
 <li>git diff <code>--</code>cached 查看已经 git add 但未提交的更改</li>
 <li>git diff <code>&lt;commit&gt;</code> HEAD 查看指定提交和当前分支最新提交的差异</li>
 <li>git diff <code>&lt;commit&gt;</code> 显示该提交与当前工作区的差异</li>
-<li>git reset HEAD <code>&lt; files &gt;</code> 取消文件追踪</li>
+<li>git reset  HEAD <code>&lt; changed_file &gt;</code> 从暂存区移除，也会丢失硬盘上的文件</li>
+<li>git restore <code>--</code>staged <code>&lt; changed_file &gt;</code> 只从暂存区移除</li>
 </ul>
     </div>
   </blockquote><script>
@@ -1522,7 +1523,7 @@ document.addEventListener('DOMContentLoaded', function() {
       <p>Parameters :</p>
 <ul>
 <li><code>--</code>soft	只移动 HEAD 指针，更改保留在暂存区</li>
-<li><code>--</code>mixed	移动 HEAD 指针，清空暂存区。更改保留在工作区。这是 git reset 的默认选项</li>
+<li><code>--</code>mixed	移动 HEAD 指针，撤销 commit，也会撤销暂存区的文件。这是 git reset 的默认选项</li>
 <li><code>--</code>hard	移动 HEAD 指针，清空暂存区和工作区。所有更改都被丢弃。这是最危险的选项</li>
 </ul>
     </div>
@@ -2748,7 +2749,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
               <h3
                 class="text-foreground group-hover:text-primary mb-3 line-clamp-2 text-right text-lg leading-tight font-semibold transition-colors duration-200">
-                Python_update
+                Python Update
               </h3>
             </div>
 

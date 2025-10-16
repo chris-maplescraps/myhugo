@@ -1,5 +1,5 @@
 +++
-title = 'Python_update'
+title = 'Python Update'
 date = 2025-10-16T10:32:06+08:00
 draft = false
 slug = "460fa21"
