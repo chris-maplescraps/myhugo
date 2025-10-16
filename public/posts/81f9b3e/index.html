@@ -55,7 +55,7 @@
 下载 &#43; 安装 点击此链接Github 流程 :工作区 (Working Directory)">
   <meta itemprop="datePublished" content="2025-10-14T19:43:39+08:00">
   <meta itemprop="dateModified" content="2025-10-14T19:43:39+08:00">
-  <meta itemprop="wordCount" content="2112">
+  <meta itemprop="wordCount" content="2176">
   <meta itemprop="image" content="http://localhost:1313/images/og-default.avif">
   <meta itemprop="keywords" content="技术,开发">
 
@@ -1046,7 +1046,7 @@
     stroke="currentColor"
     viewBox="0 0 24 24" aria-label="Word count"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
 </svg>
-          <span>2112 words</span>
+          <span>2176 words</span>
         </div>
       
 
@@ -1605,12 +1605,10 @@ document.addEventListener('DOMContentLoaded', function() {
     class="border-primary bg-muted/30 hover:bg-muted/40 my-6 rounded-r-lg border-l-4 py-4 pr-4 pl-6 italic transition-all duration-200 ease-out hover:translate-x-1">
     <div class="prose prose-sm max-w-none">
       <ul>
-<li>
-<p>git merge <code>--</code>abort 用于merge conflict，取消合并
-使用 git branch <code>-</code>vv 可以看到以下讯息：指针的分支，是否和远程仓库分支一样</p>
-<p>test   5ab7ba3 [origin/test] Create a new file for result record purpose</p>
-</li>
+<li>git merge <code>--</code>abort 用于merge conflict，取消合并
+使用 git branch <code>-</code>vv 可以看到以下讯息：指针的分支，是否和远程仓库分支一样</li>
 </ul>
+<p>test   5ab7ba3 [origin/test] Create a new file for result record purpose</p>
     </div>
   </blockquote><script>
 function toggleAlert(alertId) {
@@ -1650,9 +1648,9 @@ document.addEventListener('DOMContentLoaded', function() {
 <li>
 <p>git merge 将主分支 &lt;&mdash;- 其他分支进行文件合并</p>
 <p><code>git chekout main/master</code></p>
-<p><code>git merge [ sub-branches ]</code></p>
 </li>
 </ul>
+<p><code>git merge [ sub-branches ]</code></p>
     </div>
   </blockquote><script>
 function toggleAlert(alertId) {
@@ -1807,9 +1805,9 @@ document.addEventListener('DOMContentLoaded', function() {
 <li>git push <code>--</code>delete origin &lt; 远程仓库分支 &gt;  删除远程分支</li>
 <li>git pull <code>--</code>rebase origin main 将其他同事推送更新，同步到本地，然后将自己的新推送放在最后</li>
 <li>git rebase <code>--</code>continue</li>
-<li>git merge origin/master</li>
-<li>git log origin/master
-git rebase <code>--</code>continue</li>
+<li>git merge origin/master 合并后，必须执行推送到远程仓库</li>
+<li>git log origin/master</li>
+<li>git rebase <code>--</code>continue</li>
 </ul>
 
   <blockquote
@@ -1818,7 +1816,42 @@ git rebase <code>--</code>continue</li>
       <ul>
 <li>git rebase &lt; target-branch &gt; 把我在其他分支提交，重新放在 main/master 后面继续排队走</li>
 </ul>
-<div
+    </div>
+  </blockquote><script>
+function toggleAlert(alertId) {
+  const content = document.getElementById(alertId + '-content');
+  const chevron = document.getElementById(alertId + '-chevron');
+  const header = content.previousElementSibling;
+  
+  if (content.classList.contains('hidden')) {
+    content.classList.remove('hidden');
+    chevron.style.transform = 'rotate(0deg)';
+    header.setAttribute('aria-expanded', 'true');
+  } else {
+    content.classList.add('hidden');
+    chevron.style.transform = 'rotate(-90deg)';
+    header.setAttribute('aria-expanded', 'false');
+  }
+}
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const collapsedAlerts = document.querySelectorAll('.alert-content.hidden');
+  collapsedAlerts.forEach(function(content) {
+    const alertId = content.id.replace('-content', '');
+    const chevron = document.getElementById(alertId + '-chevron');
+    if (chevron) {
+      chevron.style.transform = 'rotate(-90deg)';
+    }
+  });
+});
+</script>
+
+
+  <blockquote
+    class="border-primary bg-muted/30 hover:bg-muted/40 my-6 rounded-r-lg border-l-4 py-4 pr-4 pl-6 italic transition-all duration-200 ease-out hover:translate-x-1">
+    <div class="prose prose-sm max-w-none">
+      <div
   class="code-block-container border-border bg-card my-6 overflow-hidden rounded-xl border shadow-sm transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md">
   
   <div
@@ -2119,7 +2152,42 @@ git rebase <code>--</code>continue</li>
   }
 })();
 </script>
-<div
+    </div>
+  </blockquote><script>
+function toggleAlert(alertId) {
+  const content = document.getElementById(alertId + '-content');
+  const chevron = document.getElementById(alertId + '-chevron');
+  const header = content.previousElementSibling;
+  
+  if (content.classList.contains('hidden')) {
+    content.classList.remove('hidden');
+    chevron.style.transform = 'rotate(0deg)';
+    header.setAttribute('aria-expanded', 'true');
+  } else {
+    content.classList.add('hidden');
+    chevron.style.transform = 'rotate(-90deg)';
+    header.setAttribute('aria-expanded', 'false');
+  }
+}
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const collapsedAlerts = document.querySelectorAll('.alert-content.hidden');
+  collapsedAlerts.forEach(function(content) {
+    const alertId = content.id.replace('-content', '');
+    const chevron = document.getElementById(alertId + '-chevron');
+    if (chevron) {
+      chevron.style.transform = 'rotate(-90deg)';
+    }
+  });
+});
+</script>
+
+
+  <blockquote
+    class="border-primary bg-muted/30 hover:bg-muted/40 my-6 rounded-r-lg border-l-4 py-4 pr-4 pl-6 italic transition-all duration-200 ease-out hover:translate-x-1">
+    <div class="prose prose-sm max-w-none">
+      <div
   class="code-block-container border-border bg-card my-6 overflow-hidden rounded-xl border shadow-sm transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md">
   
   <div
@@ -2135,7 +2203,7 @@ git rebase <code>--</code>continue</li>
 </svg>
       </div>
       <span class="text-muted-foreground text-sm font-medium">
-        MARKDOWN
+        PLAINTEXT
       </span>
     </div>
 
@@ -2184,10 +2252,22 @@ git rebase <code>--</code>continue</li>
 
   
   <div class="code-block-content relative" id="code-1">
-    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">[ 使用 git rebase ]
-</span></span><span class="line"><span class="cl">main:          A --- B --- C --- F
-</span></span><span class="line"><span class="cl">                                  \
-</span></span><span class="line"><span class="cl">feature:                           D  --- E &lt;--- 将我分支所有提交排在main最后继续开发</span></span></code></pre></div>
+    <pre tabindex="0"><code>```markdown
+
+# 1. 确保在 dev 上执行 rebase 成功
+git checkout dev
+git rebase main 
+
+# 2. 切换到 main
+git checkout main  &lt;-- (这步会切换指针)
+
+# 3. 执行快速合并
+git merge dev
+
+[ 使用 git rebase ]
+main:          A --- B --- C --- F
+                         \
+feature:                           D  --- E &lt;--- 将我分支所有提交排在main最后继续开发</code></pre>
     
     <div
       class="collapse-overlay to-card/90 pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent opacity-0 transition-opacity duration-300">
@@ -2489,7 +2569,7 @@ document.addEventListener('DOMContentLoaded', function() {
     onmouseover="this.style.backgroundColor = this.style.getPropertyValue('--hover-bg')"
     onmouseout="this.style.backgroundColor = 'color-mix(in srgb, var(--color-note) 10%, transparent)'"
     role="alert"
-    aria-labelledby="alert-18-title">
+    aria-labelledby="alert-20-title">
     
     <div
       class=" flex items-center justify-between px-6 py-6"
@@ -2497,7 +2577,7 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="flex items-center gap-3">
         
         <h4
-          id="alert-18-title"
+          id="alert-20-title"
           class="m-0 font-semibold text-foreground/90">
           其他：
         </h4>
@@ -2509,7 +2589,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     
     <div
-      id="alert-18-content"
+      id="alert-20-content"
       class="alert-content  px-6 pb-6">
       <div class="prose prose-sm text-foreground/90 max-w-none">
         

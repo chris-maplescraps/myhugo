@@ -100,13 +100,13 @@ author = "MapleScraps"
 > > - git merge `--`abort 用于merge conflict，取消合并
 >> 使用 git branch `-`vv 可以看到以下讯息：指针的分支，是否和远程仓库分支一样 
 >> 
->> 		test   5ab7ba3 [origin/test] Create a new file for result record purpose
+>> 	test   5ab7ba3 [origin/test] Create a new file for result record purpose
 >
 >> - git merge 将主分支 <---- 其他分支进行文件合并
 >> 
 >>  	`git chekout main/master`
 >>  
->> 		`git merge [ sub-branches ]`
+>> 	`git merge [ sub-branches ]`
 
 ## *远程仓库 ( Remote Repository ) 常用命令*
 
@@ -134,25 +134,37 @@ git remote update 获取远程分支所有的内容，但不会自动合并到�
 > - git push `--`delete origin < 远程仓库分支 >  删除远程分支
 > - git pull `--`rebase origin main 将其他同事推送更新，同步到本地，然后将自己的新推送放在最后
 > - git rebase `--`continue 
-> - git merge origin/master
+> - git merge origin/master 合并后，必须执行推送到远程仓库
 > - git log origin/master
-> git rebase `--`continue 
-> 
->> - git rebase < target-branch > 把我在其他分支提交，重新放在 main/master 后面继续排队走
->>
->> ```markdown
->> [ 真实环境例子 ]
->> main:          A --- B --- C --- F
->>                             \
->> feature:                     D  --- E <--- 我拉的分支
->>
->>```
->>```markdown
->> [ 使用 git rebase ]
->> main:          A --- B --- C --- F
->>                                   \
->> feature:                           D  --- E <--- 将我分支所有提交排在main最后继续开发
->> ```
+> - git rebase `--`continue 
+>
+> > - git rebase < target-branch > 把我在其他分支提交，重新放在 main/master 后面继续排队走
+>
+> > ```markdown
+> > [ 真实环境例子 ]
+> > main:          A --- B --- C --- F
+> >                             \
+> > feature:                     D  --- E <--- 我拉的分支
+>
+> >```
+> >```markdown
+> >
+> > # 1. 确保在 dev 上执行 rebase 成功
+> > git checkout dev
+> > git rebase main 
+> > 
+> > # 2. 切换到 main
+> > git checkout main  <-- (这步会切换指针)
+> > 
+> > # 3. 执行快速合并
+> > git merge dev
+> > 
+> > [ 使用 git rebase ]
+> > main:          A --- B --- C --- F
+> >                          \
+> > feature:                           D  --- E <--- 将我分支所有提交排在main最后继续开发
+> >```
+> >
 
 > [!NOTE] 其他：
 >> Pull request =  
