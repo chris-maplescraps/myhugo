@@ -43,13 +43,14 @@ author = "MapleScraps"
 > 
 >> - git clone `< http.git > own_directory`
 >> - git clone `-`b `< branch > < repo_url >`
->> - git clone `-`b develope --single-branch <你的仓库URL>
+>> - git clone `-`b develope --single-branch < 你的仓库URL >
 >
 >> - git log `--`stat 显示提交后的信息
 >> - git log `-`p `-`2 显示最新两个log信息
 >> - git log `-`2 显示最新两个log信息
 >> - git log `--`graph `--`oneline 以图线和一行显示
 > 
+>> 🈯 如果在错误分支下修改文件，想要将所有已经修改转移到正确的分支：
 >> - git stash 需要保存修改但不想提交时, 还原修改使用 `git stash [ pop/apply ]`
 >> - git stash save "Solving login page issue" 添加一个描述，方便以后查找
 >> - git stash list 查看修改保存多个记录
@@ -68,14 +69,16 @@ author = "MapleScraps"
 ## *暂存区 ( Staging Area ) 常用命令*
 
 > - git add `-`p 显示确认窗口
-> - git diff `--`staged 显示暂存区最后一次状态
-> - git diff 比较工作文件 和 暂存区文件的差异
-> - git diff `<commit1>` `<commit2>` 比较2个提交的差异
-> - git diff `--`cached 查看已经 git add 但未提交的更改
-> - git diff `<commit>` HEAD 查看指定提交和当前分支最新提交的差异
-> - git diff `<commit>` 显示该提交与当前工作区的差异
 > - git reset  HEAD `< changed_file >` 从暂存区移除，也会丢失硬盘上的文件
 > - git restore `--`staged `< changed_file >` 只从暂存区移除
+> 
+>> - git diff `--`staged 显示暂存区最后一次状态
+>> - git diff 比较工作文件 和 暂存区文件的差异
+>> - git diff `<commit1>` `<commit2>` 比较2个提交的差异
+>> - git diff `--`cached 查看已经 git add 但未提交的更改
+>> - git diff `<commit>` HEAD 查看指定提交和当前分支最新提交的差异
+>> - git diff `<commit>` 显示该提交与当前工作区的差异
+> 
 
 ## *储存区 ( Local Repository ) 常用命令*
 
@@ -98,6 +101,9 @@ author = "MapleScraps"
 ## *分支 ( Branch ) 常用命令*
 
 > - git branch 显示分支列表
+> - git branch `-`a 显示本地 和 远程分支
+> - git branch `-`r  只显示远程分支
+> - git branch `-`M main 将当前分支的名称强制重命名为 main ( 用于远程空仓库，第一次在本地提交到远程仓库， 因为在本地git init 默认是master )
 > - git branch  `< new-branch >` 创建新分支
 > - git branch `-`d `< current-branch >` 删除某个分支，包括master/main分支？
 > - git branch `-`D `< current-branch >` 强制删除某个分支
@@ -118,23 +124,20 @@ author = "MapleScraps"
 
 > - git clone 克隆github远程储存库某个项目到本地
 > - git pull 从远程储存库更新 ( git fetch )+ 合并 ( git merge )到本地目录
-> - git push origin main从本地的快照上传文件到远程储存库 ( 新分支在执行推送到远程仓库，会自动创建 )
-> - git remote `-`v 
-> - git remote show origin 显示当前连接的远程仓库
-> - git remote add origin `< git@github.com:you/project.git >` 添加远程仓库 （ 属于自己的远程仓库 ）
-> - git remote add upstream `< http://github.com/[git-username] >` 添加上游 （ fork别人的github仓库 ）
-> - git remote set-url origin `< git@github.com:you/project.git >` 修改远程地址
-> - git remote remove origin 删除远程仓库连接
-> - git branch `-`a 显示本地 和 远程分支
-> - git branch `-`r  只显示远程分支
-> - git branch `-`M main 将当前分支的名称强制重命名为 main ( 用于远程空仓库，第一次在本地提交到远程仓库， 因为在本地git init 默认是master )
+> - git push origin main从本地的快照上传文件到远程储存库 ( 新分支在执行推送到远程仓库，会自动创建 ) 
+>> - git remote `-`v 
+>> - git remote show origin 显示当前连接的远程仓库
+>> - git remote add origin `< git@github.com:you/project.git >` 添加远程仓库 （ 属于自己的远程仓库 ）
+>> - git remote add upstream `< http://github.com/[git-username] >` 添加上游 （ fork别人的github仓库 ）
+>> - git remote set-url origin `< git@github.com:you/project.git >` 修改远程地址
+>> - git remote remove origin 删除远程仓库连接
 > 
 > - git fetch 将远程仓库别人更新的提交，复制到本地远程分支，就可以看到别人提交什么，但不会合并
           * git log origin/main 查看main分支最新的状态
           * git log origin/main --online --graph 以树状显示分支状态
 > - git fetch origin optimize:optimize 本地没有该远程分支，可以直接把它 origin/optimize 拉到本地 optimize 并切换过去
 git remote update 获取远程分支所有的内容，但不会自动合并到本地分支
-
+>
 > - git push `-`u origin < 分支名 > 将本地< 分支名 >分支推送代码到origin 远程仓库, -u 默认为当前的远程仓库
 > - git push `--`set-upstream origin 等于 git push -u origin < branch >
 > - git push `--`delete origin < 远程仓库分支 >  删除远程分支

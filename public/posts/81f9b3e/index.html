@@ -55,7 +55,7 @@
 下载 &#43; 安装 点击此链接Github 流程 :工作区 (Working Directory)">
   <meta itemprop="datePublished" content="2025-10-14T19:43:39+08:00">
   <meta itemprop="dateModified" content="2025-10-14T19:43:39+08:00">
-  <meta itemprop="wordCount" content="2731">
+  <meta itemprop="wordCount" content="2757">
   <meta itemprop="image" content="http://localhost:1313/images/og-default.avif">
   <meta itemprop="keywords" content="技术,开发">
 
@@ -1046,7 +1046,7 @@
     stroke="currentColor"
     viewBox="0 0 24 24" aria-label="Word count"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
 </svg>
-          <span>2731 words</span>
+          <span>2757 words</span>
         </div>
       
 
@@ -1414,7 +1414,7 @@ document.addEventListener('DOMContentLoaded', function() {
       <ul>
 <li>git clone <code>&lt; http.git &gt; own_directory</code></li>
 <li>git clone <code>-</code>b <code>&lt; branch &gt; &lt; repo_url &gt;</code></li>
-<li>git clone <code>-</code>b develope &ndash;single-branch &lt;你的仓库URL&gt;</li>
+<li>git clone <code>-</code>b develope &ndash;single-branch &lt; 你的仓库URL &gt;</li>
 </ul>
 
     </div>
@@ -1494,7 +1494,8 @@ document.addEventListener('DOMContentLoaded', function() {
   <blockquote
     class="border-primary bg-muted/30 hover:bg-muted/40 my-6 rounded-r-lg border-l-4 py-4 pr-4 pl-6 italic transition-all duration-200 ease-out hover:translate-x-1">
     <div class="prose prose-sm max-w-none">
-      <ul>
+      <p>🈯 如果在错误分支下修改文件，想要将所有已经修改转移到正确的分支：</p>
+<ul>
 <li>git stash 需要保存修改但不想提交时, 还原修改使用 <code>git stash [ pop/apply ]</code></li>
 <li>git stash save &ldquo;Solving login page issue&rdquo; 添加一个描述，方便以后查找</li>
 <li>git stash list 查看修改保存多个记录</li>
@@ -1617,15 +1618,53 @@ document.addEventListener('DOMContentLoaded', function() {
     <div class="prose prose-sm max-w-none">
       <ul>
 <li>git add <code>-</code>p 显示确认窗口</li>
+<li>git reset  HEAD <code>&lt; changed_file &gt;</code> 从暂存区移除，也会丢失硬盘上的文件</li>
+<li>git restore <code>--</code>staged <code>&lt; changed_file &gt;</code> 只从暂存区移除</li>
+</ul>
+
+  <blockquote
+    class="border-primary bg-muted/30 hover:bg-muted/40 my-6 rounded-r-lg border-l-4 py-4 pr-4 pl-6 italic transition-all duration-200 ease-out hover:translate-x-1">
+    <div class="prose prose-sm max-w-none">
+      <ul>
 <li>git diff <code>--</code>staged 显示暂存区最后一次状态</li>
 <li>git diff 比较工作文件 和 暂存区文件的差异</li>
 <li>git diff <code>&lt;commit1&gt;</code> <code>&lt;commit2&gt;</code> 比较2个提交的差异</li>
 <li>git diff <code>--</code>cached 查看已经 git add 但未提交的更改</li>
 <li>git diff <code>&lt;commit&gt;</code> HEAD 查看指定提交和当前分支最新提交的差异</li>
 <li>git diff <code>&lt;commit&gt;</code> 显示该提交与当前工作区的差异</li>
-<li>git reset  HEAD <code>&lt; changed_file &gt;</code> 从暂存区移除，也会丢失硬盘上的文件</li>
-<li>git restore <code>--</code>staged <code>&lt; changed_file &gt;</code> 只从暂存区移除</li>
 </ul>
+
+    </div>
+  </blockquote><script>
+function toggleAlert(alertId) {
+  const content = document.getElementById(alertId + '-content');
+  const chevron = document.getElementById(alertId + '-chevron');
+  const header = content.previousElementSibling;
+  
+  if (content.classList.contains('hidden')) {
+    content.classList.remove('hidden');
+    chevron.style.transform = 'rotate(0deg)';
+    header.setAttribute('aria-expanded', 'true');
+  } else {
+    content.classList.add('hidden');
+    chevron.style.transform = 'rotate(-90deg)';
+    header.setAttribute('aria-expanded', 'false');
+  }
+}
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const collapsedAlerts = document.querySelectorAll('.alert-content.hidden');
+  collapsedAlerts.forEach(function(content) {
+    const alertId = content.id.replace('-content', '');
+    const chevron = document.getElementById(alertId + '-chevron');
+    if (chevron) {
+      chevron.style.transform = 'rotate(-90deg)';
+    }
+  });
+});
+</script>
+
 
     </div>
   </blockquote><script>
@@ -1756,6 +1795,9 @@ document.addEventListener('DOMContentLoaded', function() {
     <div class="prose prose-sm max-w-none">
       <ul>
 <li>git branch 显示分支列表</li>
+<li>git branch <code>-</code>a 显示本地 和 远程分支</li>
+<li>git branch <code>-</code>r  只显示远程分支</li>
+<li>git branch <code>-</code>M main 将当前分支的名称强制重命名为 main ( 用于远程空仓库，第一次在本地提交到远程仓库， 因为在本地git init 默认是master )</li>
 <li>git branch  <code>&lt; new-branch &gt;</code> 创建新分支</li>
 <li>git branch <code>-</code>d <code>&lt; current-branch &gt;</code> 删除某个分支，包括master/main分支？</li>
 <li>git branch <code>-</code>D <code>&lt; current-branch &gt;</code> 强制删除某个分支</li>
@@ -1884,51 +1926,21 @@ document.addEventListener('DOMContentLoaded', function() {
     class="border-primary bg-muted/30 hover:bg-muted/40 my-6 rounded-r-lg border-l-4 py-4 pr-4 pl-6 italic transition-all duration-200 ease-out hover:translate-x-1">
     <div class="prose prose-sm max-w-none">
       <ul>
-<li>
-<p>git clone 克隆github远程储存库某个项目到本地</p>
-</li>
-<li>
-<p>git pull 从远程储存库更新 ( git fetch )+ 合并 ( git merge )到本地目录</p>
-</li>
-<li>
-<p>git push origin main从本地的快照上传文件到远程储存库 ( 新分支在执行推送到远程仓库，会自动创建 )</p>
-</li>
-<li>
-<p>git remote <code>-</code>v</p>
-</li>
-<li>
-<p>git remote show origin 显示当前连接的远程仓库</p>
-</li>
-<li>
-<p>git remote add origin <code>&lt; git@github.com:you/project.git &gt;</code> 添加远程仓库 （ 属于自己的远程仓库 ）</p>
-</li>
-<li>
-<p>git remote add upstream <code>&lt; http://github.com/[git-username] &gt;</code> 添加上游 （ fork别人的github仓库 ）</p>
-</li>
-<li>
-<p>git remote set-url origin <code>&lt; git@github.com:you/project.git &gt;</code> 修改远程地址</p>
-</li>
-<li>
-<p>git remote remove origin 删除远程仓库连接</p>
-</li>
-<li>
-<p>git branch <code>-</code>a 显示本地 和 远程分支</p>
-</li>
-<li>
-<p>git branch <code>-</code>r  只显示远程分支</p>
-</li>
-<li>
-<p>git branch <code>-</code>M main 将当前分支的名称强制重命名为 main ( 用于远程空仓库，第一次在本地提交到远程仓库， 因为在本地git init 默认是master )</p>
-</li>
-<li>
-<p>git fetch 将远程仓库别人更新的提交，复制到本地远程分支，就可以看到别人提交什么，但不会合并
-* git log origin/main 查看main分支最新的状态
-* git log origin/main &ndash;online &ndash;graph 以树状显示分支状态</p>
-</li>
-<li>
-<p>git fetch origin optimize:optimize 本地没有该远程分支，可以直接把它 origin/optimize 拉到本地 optimize 并切换过去
-git remote update 获取远程分支所有的内容，但不会自动合并到本地分支</p>
-</li>
+<li>git clone 克隆github远程储存库某个项目到本地</li>
+<li>git pull 从远程储存库更新 ( git fetch )+ 合并 ( git merge )到本地目录</li>
+<li>git push origin main从本地的快照上传文件到远程储存库 ( 新分支在执行推送到远程仓库，会自动创建 )</li>
+</ul>
+
+  <blockquote
+    class="border-primary bg-muted/30 hover:bg-muted/40 my-6 rounded-r-lg border-l-4 py-4 pr-4 pl-6 italic transition-all duration-200 ease-out hover:translate-x-1">
+    <div class="prose prose-sm max-w-none">
+      <ul>
+<li>git remote <code>-</code>v</li>
+<li>git remote show origin 显示当前连接的远程仓库</li>
+<li>git remote add origin <code>&lt; git@github.com:you/project.git &gt;</code> 添加远程仓库 （ 属于自己的远程仓库 ）</li>
+<li>git remote add upstream <code>&lt; http://github.com/[git-username] &gt;</code> 添加上游 （ fork别人的github仓库 ）</li>
+<li>git remote set-url origin <code>&lt; git@github.com:you/project.git &gt;</code> 修改远程地址</li>
+<li>git remote remove origin 删除远程仓库连接</li>
 </ul>
 
     </div>
@@ -1962,19 +1974,40 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
-
-  <blockquote
-    class="border-primary bg-muted/30 hover:bg-muted/40 my-6 rounded-r-lg border-l-4 py-4 pr-4 pl-6 italic transition-all duration-200 ease-out hover:translate-x-1">
-    <div class="prose prose-sm max-w-none">
-      <ul>
-<li>git push <code>-</code>u origin &lt; 分支名 &gt; 将本地&lt; 分支名 &gt;分支推送代码到origin 远程仓库, -u 默认为当前的远程仓库</li>
-<li>git push <code>--</code>set-upstream origin 等于 git push -u origin &lt; branch &gt;</li>
-<li>git push <code>--</code>delete origin &lt; 远程仓库分支 &gt;  删除远程分支</li>
-<li>git pull <code>--</code>rebase origin main 将其他同事推送更新，同步到本地，然后将自己的新推送放在最后</li>
-<li>git rebase <code>--</code>continue</li>
-<li>git merge origin/master 合并后，必须执行推送到远程仓库</li>
-<li>git log origin/master</li>
-<li>git rebase <code>--</code>continue</li>
+<ul>
+<li>
+<p>git fetch 将远程仓库别人更新的提交，复制到本地远程分支，就可以看到别人提交什么，但不会合并
+* git log origin/main 查看main分支最新的状态
+* git log origin/main &ndash;online &ndash;graph 以树状显示分支状态</p>
+</li>
+<li>
+<p>git fetch origin optimize:optimize 本地没有该远程分支，可以直接把它 origin/optimize 拉到本地 optimize 并切换过去
+git remote update 获取远程分支所有的内容，但不会自动合并到本地分支</p>
+</li>
+<li>
+<p>git push <code>-</code>u origin &lt; 分支名 &gt; 将本地&lt; 分支名 &gt;分支推送代码到origin 远程仓库, -u 默认为当前的远程仓库</p>
+</li>
+<li>
+<p>git push <code>--</code>set-upstream origin 等于 git push -u origin &lt; branch &gt;</p>
+</li>
+<li>
+<p>git push <code>--</code>delete origin &lt; 远程仓库分支 &gt;  删除远程分支</p>
+</li>
+<li>
+<p>git pull <code>--</code>rebase origin main 将其他同事推送更新，同步到本地，然后将自己的新推送放在最后</p>
+</li>
+<li>
+<p>git rebase <code>--</code>continue</p>
+</li>
+<li>
+<p>git merge origin/master 合并后，必须执行推送到远程仓库</p>
+</li>
+<li>
+<p>git log origin/master</p>
+</li>
+<li>
+<p>git rebase <code>--</code>continue</p>
+</li>
 </ul>
 
   <blockquote
@@ -2741,21 +2774,21 @@ document.addEventListener('DOMContentLoaded', function() {
     onmouseover="this.style.backgroundColor = this.style.getPropertyValue('--hover-bg')"
     onmouseout="this.style.backgroundColor = 'color-mix(in srgb, var(--color-note) 10%, transparent)'"
     role="alert"
-    aria-labelledby="alert-24-title">
+    aria-labelledby="alert-25-title">
     
     <div
       class="
         cursor-pointer
        flex items-center justify-between px-6 py-6"
       
-        onclick="toggleAlert('alert-24')" role="button" tabindex="0"
-        aria-expanded="true" aria-controls="alert-24-content"
-        onkeydown="if(event.key==='Enter'||event.key===' '){toggleAlert('alert-24');event.preventDefault();}"
+        onclick="toggleAlert('alert-25')" role="button" tabindex="0"
+        aria-expanded="true" aria-controls="alert-25-content"
+        onkeydown="if(event.key==='Enter'||event.key===' '){toggleAlert('alert-25');event.preventDefault();}"
       >
       <div class="flex items-center gap-3">
         
         <h4
-          id="alert-24-title"
+          id="alert-25-title"
           class="m-0 font-semibold text-foreground/90">
           其他：
         </h4>
@@ -2765,7 +2798,7 @@ document.addEventListener('DOMContentLoaded', function() {
       
         <div
           class="flex-shrink-0 transition-transform duration-200"
-          id="alert-24-chevron">
+          id="alert-25-chevron">
           
   <svg class="h-4 w-4"
     fill="none"
@@ -2778,7 +2811,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     
     <div
-      id="alert-24-content"
+      id="alert-25-content"
       class="alert-content  px-6 pb-6">
       <div class="prose prose-sm text-foreground/90 max-w-none">
         
@@ -2933,21 +2966,21 @@ document.addEventListener('DOMContentLoaded', function() {
     onmouseover="this.style.backgroundColor = this.style.getPropertyValue('--hover-bg')"
     onmouseout="this.style.backgroundColor = 'color-mix(in srgb, var(--color-tip) 10%, transparent)'"
     role="alert"
-    aria-labelledby="alert-26-title">
+    aria-labelledby="alert-27-title">
     
     <div
       class="
         cursor-pointer
        flex items-center justify-between px-6 py-6"
       
-        onclick="toggleAlert('alert-26')" role="button" tabindex="0"
-        aria-expanded="true" aria-controls="alert-26-content"
-        onkeydown="if(event.key==='Enter'||event.key===' '){toggleAlert('alert-26');event.preventDefault();}"
+        onclick="toggleAlert('alert-27')" role="button" tabindex="0"
+        aria-expanded="true" aria-controls="alert-27-content"
+        onkeydown="if(event.key==='Enter'||event.key===' '){toggleAlert('alert-27');event.preventDefault();}"
       >
       <div class="flex items-center gap-3">
         
         <h4
-          id="alert-26-title"
+          id="alert-27-title"
           class="m-0 font-semibold text-foreground/90">
           其难杂症
         </h4>
@@ -2957,7 +2990,7 @@ document.addEventListener('DOMContentLoaded', function() {
       
         <div
           class="flex-shrink-0 transition-transform duration-200"
-          id="alert-26-chevron">
+          id="alert-27-chevron">
           
   <svg class="h-4 w-4"
     fill="none"
@@ -2970,7 +3003,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     
     <div
-      id="alert-26-content"
+      id="alert-27-content"
       class="alert-content  px-6 pb-6">
       <div class="prose prose-sm text-foreground/90 max-w-none">
         <h4 id="-在第二台设备使用git-pull-origin-dev-子分支成功拉取但是文件不是最新版本">💢 在第二台设备使用git pull origin dev 子分支，成功拉取但是文件不是最新版本</h4>
