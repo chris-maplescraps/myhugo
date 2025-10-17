@@ -55,7 +55,7 @@
 下载 &#43; 安装 点击此链接Github 流程 :工作区 (Working Directory)">
   <meta itemprop="datePublished" content="2025-10-14T19:43:39+08:00">
   <meta itemprop="dateModified" content="2025-10-14T19:43:39+08:00">
-  <meta itemprop="wordCount" content="2176">
+  <meta itemprop="wordCount" content="2731">
   <meta itemprop="image" content="http://localhost:1313/images/og-default.avif">
   <meta itemprop="keywords" content="技术,开发">
 
@@ -1031,7 +1031,7 @@
     viewBox="0 0 24 24" aria-label="Reading time"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
 </svg>
           <span
-            >5 minute</span
+            >6 minute</span
           >
         </div>
       
@@ -1046,7 +1046,7 @@
     stroke="currentColor"
     viewBox="0 0 24 24" aria-label="Word count"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
 </svg>
-          <span>2176 words</span>
+          <span>2731 words</span>
         </div>
       
 
@@ -1400,31 +1400,184 @@ document.addEventListener('DOMContentLoaded', function() {
     class="border-primary bg-muted/30 hover:bg-muted/40 my-6 rounded-r-lg border-l-4 py-4 pr-4 pl-6 italic transition-all duration-200 ease-out hover:translate-x-1">
     <div class="prose prose-sm max-w-none">
       <ul>
-<li>git clone <code>&lt; http.git &gt; own_directory</code></li>
-<li>git clone <code>-</code>b <code>&lt; branch &gt; &lt; repo_url &gt;</code></li>
-<li>git clone <code>-</code>b develope &ndash;single-branch &lt;你的仓库URL&gt;</li>
 <li>git add <code>&lt; files &gt;</code> 将文件保存到暂存区</li>
-<li>git log <code>--</code>stat 显示提交后的信息</li>
-<li>git log <code>-</code>p <code>-</code>2 显示最新两个log信息</li>
-<li>git log <code>-</code>2 显示最新两个log信息</li>
-<li>git log <code>--</code>graph <code>--</code>oneline 以图线和一行显示</li>
+<li>git config &ndash;global &ndash;add safe.directory 拷贝到其他设备，需要在新设备添加此配置</li>
 <li>git tag v1.0.0 创建标签</li>
 <li>git commit <code>-</code>m 将暂存区文件提交到储存区</li>
 <li>git checkout <code>&lt; branch &gt;</code> 如果本地没有该分支，会自动创建并跟踪对应的远程分支</li>
 <li>git restore <code>&lt; files &gt;</code> 撤销已经追踪/提交过，但是在工作区的文件</li>
-<li>git stash 需要保存修改但不想提交时</li>
+</ul>
+
+  <blockquote
+    class="border-primary bg-muted/30 hover:bg-muted/40 my-6 rounded-r-lg border-l-4 py-4 pr-4 pl-6 italic transition-all duration-200 ease-out hover:translate-x-1">
+    <div class="prose prose-sm max-w-none">
+      <ul>
+<li>git clone <code>&lt; http.git &gt; own_directory</code></li>
+<li>git clone <code>-</code>b <code>&lt; branch &gt; &lt; repo_url &gt;</code></li>
+<li>git clone <code>-</code>b develope &ndash;single-branch &lt;你的仓库URL&gt;</li>
+</ul>
+
+    </div>
+  </blockquote><script>
+function toggleAlert(alertId) {
+  const content = document.getElementById(alertId + '-content');
+  const chevron = document.getElementById(alertId + '-chevron');
+  const header = content.previousElementSibling;
+  
+  if (content.classList.contains('hidden')) {
+    content.classList.remove('hidden');
+    chevron.style.transform = 'rotate(0deg)';
+    header.setAttribute('aria-expanded', 'true');
+  } else {
+    content.classList.add('hidden');
+    chevron.style.transform = 'rotate(-90deg)';
+    header.setAttribute('aria-expanded', 'false');
+  }
+}
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const collapsedAlerts = document.querySelectorAll('.alert-content.hidden');
+  collapsedAlerts.forEach(function(content) {
+    const alertId = content.id.replace('-content', '');
+    const chevron = document.getElementById(alertId + '-chevron');
+    if (chevron) {
+      chevron.style.transform = 'rotate(-90deg)';
+    }
+  });
+});
+</script>
+
+
+  <blockquote
+    class="border-primary bg-muted/30 hover:bg-muted/40 my-6 rounded-r-lg border-l-4 py-4 pr-4 pl-6 italic transition-all duration-200 ease-out hover:translate-x-1">
+    <div class="prose prose-sm max-w-none">
+      <ul>
+<li>git log <code>--</code>stat 显示提交后的信息</li>
+<li>git log <code>-</code>p <code>-</code>2 显示最新两个log信息</li>
+<li>git log <code>-</code>2 显示最新两个log信息</li>
+<li>git log <code>--</code>graph <code>--</code>oneline 以图线和一行显示</li>
+</ul>
+
+    </div>
+  </blockquote><script>
+function toggleAlert(alertId) {
+  const content = document.getElementById(alertId + '-content');
+  const chevron = document.getElementById(alertId + '-chevron');
+  const header = content.previousElementSibling;
+  
+  if (content.classList.contains('hidden')) {
+    content.classList.remove('hidden');
+    chevron.style.transform = 'rotate(0deg)';
+    header.setAttribute('aria-expanded', 'true');
+  } else {
+    content.classList.add('hidden');
+    chevron.style.transform = 'rotate(-90deg)';
+    header.setAttribute('aria-expanded', 'false');
+  }
+}
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const collapsedAlerts = document.querySelectorAll('.alert-content.hidden');
+  collapsedAlerts.forEach(function(content) {
+    const alertId = content.id.replace('-content', '');
+    const chevron = document.getElementById(alertId + '-chevron');
+    if (chevron) {
+      chevron.style.transform = 'rotate(-90deg)';
+    }
+  });
+});
+</script>
+
+
+  <blockquote
+    class="border-primary bg-muted/30 hover:bg-muted/40 my-6 rounded-r-lg border-l-4 py-4 pr-4 pl-6 italic transition-all duration-200 ease-out hover:translate-x-1">
+    <div class="prose prose-sm max-w-none">
+      <ul>
+<li>git stash 需要保存修改但不想提交时, 还原修改使用 <code>git stash [ pop/apply ]</code></li>
 <li>git stash save &ldquo;Solving login page issue&rdquo; 添加一个描述，方便以后查找</li>
-<li>git stash list 查看储存多个列表</li>
-<li>git stash pop 恢复最近一次的储藏，并从列表中移除它</li>
-<li>git stash apply stash@{1} 恢复指定的储藏，但保留它在列表中以备后用</li>
-<li>git stash drop stash@{0} 使用索引是你出指定的记录</li>
-<li>git stash clear 一次性删除所有的git stash记录</li>
-<li>git config &ndash;global &ndash;add safe.directory 拷贝到其他设备，需要在新设备添加此配置</li>
+<li>git stash list 查看修改保存多个记录</li>
+<li>git stash pop 恢复最近一次修改记录，并从列表中移除它</li>
+<li>git stash pop stash@{2} 恢复指定的修改保存记录后，从列表中删除</li>
+<li>git stash apply stash@{1} 恢复指定的修改保存记录，依然保留在列表中以备后用</li>
+<li>git stash drop stash@{0} 删除指定修改保存记录</li>
+<li>git stash clear 一次性删除所有的 git stash 修改保存记录</li>
+</ul>
+
+    </div>
+  </blockquote><script>
+function toggleAlert(alertId) {
+  const content = document.getElementById(alertId + '-content');
+  const chevron = document.getElementById(alertId + '-chevron');
+  const header = content.previousElementSibling;
+  
+  if (content.classList.contains('hidden')) {
+    content.classList.remove('hidden');
+    chevron.style.transform = 'rotate(0deg)';
+    header.setAttribute('aria-expanded', 'true');
+  } else {
+    content.classList.add('hidden');
+    chevron.style.transform = 'rotate(-90deg)';
+    header.setAttribute('aria-expanded', 'false');
+  }
+}
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const collapsedAlerts = document.querySelectorAll('.alert-content.hidden');
+  collapsedAlerts.forEach(function(content) {
+    const alertId = content.id.replace('-content', '');
+    const chevron = document.getElementById(alertId + '-chevron');
+    if (chevron) {
+      chevron.style.transform = 'rotate(-90deg)';
+    }
+  });
+});
+</script>
+
+
+  <blockquote
+    class="border-primary bg-muted/30 hover:bg-muted/40 my-6 rounded-r-lg border-l-4 py-4 pr-4 pl-6 italic transition-all duration-200 ease-out hover:translate-x-1">
+    <div class="prose prose-sm max-w-none">
+      <ul>
 <li>git clean <code>&lt; file_name &gt;</code> <code>-</code>f 可以删除新创建但不曾提交过的文件</li>
 <li>git clean <code>-</code>n <code>--</code>dry-run 模拟删除不曾提交/追踪过的文件</li>
 <li>git clean <code>&lt; folder_name &gt;</code> <code>-</code>nd 模拟删除不曾提交/追踪过的文件夹</li>
 <li>git clean <code>&lt; folder_name &gt;</code> <code>-</code>fd 确认删除文件夹</li>
 </ul>
+
+    </div>
+  </blockquote><script>
+function toggleAlert(alertId) {
+  const content = document.getElementById(alertId + '-content');
+  const chevron = document.getElementById(alertId + '-chevron');
+  const header = content.previousElementSibling;
+  
+  if (content.classList.contains('hidden')) {
+    content.classList.remove('hidden');
+    chevron.style.transform = 'rotate(0deg)';
+    header.setAttribute('aria-expanded', 'true');
+  } else {
+    content.classList.add('hidden');
+    chevron.style.transform = 'rotate(-90deg)';
+    header.setAttribute('aria-expanded', 'false');
+  }
+}
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const collapsedAlerts = document.querySelectorAll('.alert-content.hidden');
+  collapsedAlerts.forEach(function(content) {
+    const alertId = content.id.replace('-content', '');
+    const chevron = document.getElementById(alertId + '-chevron');
+    if (chevron) {
+      chevron.style.transform = 'rotate(-90deg)';
+    }
+  });
+});
+</script>
+
 
     </div>
   </blockquote><script>
@@ -2588,15 +2741,21 @@ document.addEventListener('DOMContentLoaded', function() {
     onmouseover="this.style.backgroundColor = this.style.getPropertyValue('--hover-bg')"
     onmouseout="this.style.backgroundColor = 'color-mix(in srgb, var(--color-note) 10%, transparent)'"
     role="alert"
-    aria-labelledby="alert-20-title">
+    aria-labelledby="alert-24-title">
     
     <div
-      class=" flex items-center justify-between px-6 py-6"
+      class="
+        cursor-pointer
+       flex items-center justify-between px-6 py-6"
+      
+        onclick="toggleAlert('alert-24')" role="button" tabindex="0"
+        aria-expanded="true" aria-controls="alert-24-content"
+        onkeydown="if(event.key==='Enter'||event.key===' '){toggleAlert('alert-24');event.preventDefault();}"
       >
       <div class="flex items-center gap-3">
         
         <h4
-          id="alert-20-title"
+          id="alert-24-title"
           class="m-0 font-semibold text-foreground/90">
           其他：
         </h4>
@@ -2604,11 +2763,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
       
       
+        <div
+          class="flex-shrink-0 transition-transform duration-200"
+          id="alert-24-chevron">
+          
+  <svg class="h-4 w-4"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+</svg>
+        </div>
+      
     </div>
 
     
     <div
-      id="alert-20-content"
+      id="alert-24-content"
       class="alert-content  px-6 pb-6">
       <div class="prose prose-sm text-foreground/90 max-w-none">
         
@@ -2692,6 +2862,1631 @@ document.addEventListener('DOMContentLoaded', function() {
     class="border-primary bg-muted/30 hover:bg-muted/40 my-6 rounded-r-lg border-l-4 py-4 pr-4 pl-6 italic transition-all duration-200 ease-out hover:translate-x-1">
     <div class="prose prose-sm max-w-none">
       <p>Issue tracker =</p>
+
+    </div>
+  </blockquote><script>
+function toggleAlert(alertId) {
+  const content = document.getElementById(alertId + '-content');
+  const chevron = document.getElementById(alertId + '-chevron');
+  const header = content.previousElementSibling;
+  
+  if (content.classList.contains('hidden')) {
+    content.classList.remove('hidden');
+    chevron.style.transform = 'rotate(0deg)';
+    header.setAttribute('aria-expanded', 'true');
+  } else {
+    content.classList.add('hidden');
+    chevron.style.transform = 'rotate(-90deg)';
+    header.setAttribute('aria-expanded', 'false');
+  }
+}
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const collapsedAlerts = document.querySelectorAll('.alert-content.hidden');
+  collapsedAlerts.forEach(function(content) {
+    const alertId = content.id.replace('-content', '');
+    const chevron = document.getElementById(alertId + '-chevron');
+    if (chevron) {
+      chevron.style.transform = 'rotate(-90deg)';
+    }
+  });
+});
+</script>
+      </div>
+    </div>
+  </div><script>
+function toggleAlert(alertId) {
+  const content = document.getElementById(alertId + '-content');
+  const chevron = document.getElementById(alertId + '-chevron');
+  const header = content.previousElementSibling;
+  
+  if (content.classList.contains('hidden')) {
+    content.classList.remove('hidden');
+    chevron.style.transform = 'rotate(0deg)';
+    header.setAttribute('aria-expanded', 'true');
+  } else {
+    content.classList.add('hidden');
+    chevron.style.transform = 'rotate(-90deg)';
+    header.setAttribute('aria-expanded', 'false');
+  }
+}
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const collapsedAlerts = document.querySelectorAll('.alert-content.hidden');
+  collapsedAlerts.forEach(function(content) {
+    const alertId = content.id.replace('-content', '');
+    const chevron = document.getElementById(alertId + '-chevron');
+    if (chevron) {
+      chevron.style.transform = 'rotate(-90deg)';
+    }
+  });
+});
+</script>
+
+<div
+    class="alert alert-tip my-6 overflow-hidden rounded-lg transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md"
+    style="background-color: color-mix(in srgb, var(--color-tip) 10%, transparent);
+              border-left-color: var(--color-tip);
+              --hover-bg: color-mix(in srgb, var(--color-tip) 15%, transparent);"
+    onmouseover="this.style.backgroundColor = this.style.getPropertyValue('--hover-bg')"
+    onmouseout="this.style.backgroundColor = 'color-mix(in srgb, var(--color-tip) 10%, transparent)'"
+    role="alert"
+    aria-labelledby="alert-26-title">
+    
+    <div
+      class="
+        cursor-pointer
+       flex items-center justify-between px-6 py-6"
+      
+        onclick="toggleAlert('alert-26')" role="button" tabindex="0"
+        aria-expanded="true" aria-controls="alert-26-content"
+        onkeydown="if(event.key==='Enter'||event.key===' '){toggleAlert('alert-26');event.preventDefault();}"
+      >
+      <div class="flex items-center gap-3">
+        
+        <h4
+          id="alert-26-title"
+          class="m-0 font-semibold text-foreground/90">
+          其难杂症
+        </h4>
+      </div>
+
+      
+      
+        <div
+          class="flex-shrink-0 transition-transform duration-200"
+          id="alert-26-chevron">
+          
+  <svg class="h-4 w-4"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+</svg>
+        </div>
+      
+    </div>
+
+    
+    <div
+      id="alert-26-content"
+      class="alert-content  px-6 pb-6">
+      <div class="prose prose-sm text-foreground/90 max-w-none">
+        <h4 id="-在第二台设备使用git-pull-origin-dev-子分支成功拉取但是文件不是最新版本">💢 在第二台设备使用git pull origin dev 子分支，成功拉取但是文件不是最新版本</h4>
+
+  <blockquote
+    class="border-primary bg-muted/30 hover:bg-muted/40 my-6 rounded-r-lg border-l-4 py-4 pr-4 pl-6 italic transition-all duration-200 ease-out hover:translate-x-1">
+    <div class="prose prose-sm max-w-none">
+      <h4 id="-原因一你当前不在-dev-分支上">🔍 原因一：你当前不在 dev 分支上</h4>
+<p>尽管你执行了 git pull origin dev，但 Git 默认是将远程的 origin/dev 拉取到你的 本地 dev 分支。如果你的工作区当前检出的是 main 或其他分支，那么你眼前的代码就不会变动。</p>
+<h4 id="解决办法确认和切换分支">解决办法：确认和切换分支</h4>
+<p>1️⃣ 检查当前分支：</p>
+<div
+  class="code-block-container border-border bg-card my-6 overflow-hidden rounded-xl border shadow-sm transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md">
+  
+  <div
+    class="code-block-header bg-muted/30 border-border flex items-center justify-between border-b px-4 py-3">
+    
+    <div class="flex items-center gap-2">
+      <div class="text-muted-foreground flex-shrink-0">
+        
+  <svg class="h-4 w-4"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+</svg>
+      </div>
+      <span class="text-muted-foreground text-sm font-medium">
+        BASH
+      </span>
+    </div>
+
+    
+    <div class="flex items-center gap-2">
+      <button
+          class="collapse-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
+          data-code-id="code-2"
+          data-default-state="expanded"
+          data-collapsed="false"
+          data-auto-collapse-lines="30"
+          data-auto-collapse-height="400"
+          data-collapsed-height="120"
+          title="Collapse"
+          aria-label="Collapse">
+          <span class="collapse-icon">
+            
+  <svg class="h-3 w-3"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"><path fill="currentColor" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z"/></svg>
+          </span>
+          <span class="collapse-text hidden sm:inline"
+            >Collapse</span
+          >
+        </button>
+      <button
+        class="copy-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
+        data-code-id="code-2"
+        title="Copy"
+        aria-label="Copy">
+        <span class="copy-icon">
+          
+  <svg class="h-3 w-3"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+</svg>
+        </span>
+        <span class="copy-text hidden sm:inline"
+          >Copy</span
+        >
+      </button>
+    </div>
+  </div>
+
+  
+  <div class="code-block-content relative" id="code-2">
+    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git branch	<span class="c1">#（当前分支前会有一个 * 号。）</span></span></span></code></pre></div>
+    
+    <div
+      class="collapse-overlay to-card/90 pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent opacity-0 transition-opacity duration-300">
+      <div
+        class="text-muted-foreground bg-card/80 border-border/50 hover:bg-primary/10 hover:text-primary hover:border-primary/30 absolute bottom-4 left-1/2 -translate-x-1/2 cursor-pointer rounded-full border px-3 py-1.5 text-xs backdrop-blur-sm transition-all duration-200">
+        Click to expand and view more
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+(function() {
+  const codeId = 'code-2';
+  const copyBtn = document.querySelector('.copy-code-btn[data-code-id="' + codeId + '"]');
+  const collapseBtn = document.querySelector('.collapse-code-btn[data-code-id="' + codeId + '"]');
+  const codeContainer = document.getElementById(codeId);
+
+  if (!codeContainer) return;
+
+  
+  if (copyBtn) {
+    const copyIcon = copyBtn.querySelector('.copy-icon');
+    const copyText = copyBtn.querySelector('.copy-text');
+
+    copyBtn.addEventListener('click', async function() {
+      try {
+        
+        let codeText = '';
+
+        
+        const codeTableCell = codeContainer.querySelector('.lntd:last-child code');
+        if (codeTableCell) {
+          codeText = codeTableCell.textContent || codeTableCell.innerText;
+        } else {
+          
+          const codeElement = codeContainer.querySelector('code');
+          if (codeElement) {
+            
+            const hasInlineLineNumbers = codeElement.querySelector('.ln');
+            if (hasInlineLineNumbers) {
+              
+              const codeLines = codeElement.querySelectorAll('.cl');
+              if (codeLines.length > 0) {
+                codeText = Array.from(codeLines)
+                  .map(line => {
+                    const text = line.textContent || line.innerText;
+                    
+                    return text.replace(/\n+$/, '');
+                  })
+                  .join('\n')
+                  .replace(/\n+$/, ''); 
+              } else {
+                
+                const allText = codeElement.textContent || codeElement.innerText;
+                codeText = allText.replace(/^\d+/gm, '').replace(/^\s+/gm, '');
+              }
+            } else {
+              
+              codeText = codeElement.textContent || codeElement.innerText;
+            }
+          } else {
+            
+            codeText = codeContainer.textContent || codeContainer.innerText;
+          }
+        }
+
+        
+        codeText = codeText.trim();
+
+        
+        await navigator.clipboard.writeText(codeText);
+
+        
+        copyIcon.innerHTML = `\r\n  \u003csvg class=\u0022h-3 w-3\u0022\r\n    fill=\u0022none\u0022\r\n    stroke=\u0022currentColor\u0022\r\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M5 13l4 4L19 7\u0022 \/\u003e\r\n\u003c\/svg\u003e`;
+        if (copyText) {
+          copyText.textContent = 'Copied';
+        }
+        copyBtn.classList.add('text-green-600');
+
+        
+        setTimeout(() => {
+          copyIcon.innerHTML = `\r\n  \u003csvg class=\u0022h-3 w-3\u0022\r\n    fill=\u0022none\u0022\r\n    stroke=\u0022currentColor\u0022\r\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z\u0022 \/\u003e\r\n\u003c\/svg\u003e`;
+          if (copyText) {
+            copyText.textContent = 'Copy';
+          }
+          copyBtn.classList.remove('text-green-600');
+        }, 2000);
+
+      } catch (err) {
+        console.error('复制失败:', err);
+
+        
+        const range = document.createRange();
+        const codeElement = codeContainer.querySelector('code') || codeContainer;
+        range.selectNodeContents(codeElement);
+        const selection = window.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(range);
+
+        
+        if (copyText) {
+          copyText.textContent = 'Selected';
+        }
+
+        setTimeout(() => {
+          if (copyText) {
+            copyText.textContent = 'Copy';
+          }
+          selection.removeAllRanges();
+        }, 2000);
+      }
+    });
+  }
+
+  
+  if (collapseBtn) {
+    const collapseIcon = collapseBtn.querySelector('.collapse-icon');
+    const collapseText = collapseBtn.querySelector('.collapse-text');
+    const collapseOverlay = codeContainer.querySelector('.collapse-overlay');
+
+    
+    let codeElement = codeContainer.querySelector('pre.chroma');
+    if (!codeElement) {
+      codeElement = codeContainer.querySelector('pre');
+    }
+
+    const defaultState = collapseBtn.dataset.defaultState || 'expanded';
+    const isCollapsedAttr = collapseBtn.dataset.collapsed === 'true';
+    const autoCollapseLines = parseInt(collapseBtn.dataset.autoCollapseLines) || 30;
+    const autoCollapseHeight = parseInt(collapseBtn.dataset.autoCollapseHeight) || 400;
+    const collapsedHeight = parseInt(collapseBtn.dataset.collapsedHeight) || 120;
+
+    let isCollapsed = false;
+
+    
+    function initCollapse() {
+      
+      const shouldCollapse = isCollapsedAttr ||
+                           defaultState === 'collapsed' ||
+                           shouldAutoCollapse();
+
+      if (shouldCollapse) {
+        setCollapsed(true, false); 
+      }
+    }
+
+    function shouldAutoCollapse() {
+      
+      if (codeElement) {
+        const lines = codeElement.querySelectorAll('.line, .cl');
+        const height = codeElement.offsetHeight;
+        return lines.length > autoCollapseLines || height > autoCollapseHeight;
+      }
+
+      
+      const containerHeight = codeContainer.offsetHeight;
+      if (containerHeight > autoCollapseHeight) {
+        return true;
+      }
+
+      
+      const textContent = codeContainer.textContent || codeContainer.innerText || '';
+      const estimatedLines = textContent.split('\n').length;
+      return estimatedLines > autoCollapseLines;
+    }
+
+    function setCollapsed(collapsed, animate = true) {
+      if (!collapseOverlay) return;
+
+      isCollapsed = collapsed;
+
+      if (collapsed) {
+        
+        codeContainer.style.maxHeight = collapsedHeight + 'px';
+        codeContainer.style.overflow = 'hidden';
+        collapseOverlay.style.opacity = '1';
+        collapseOverlay.style.pointerEvents = 'auto';
+
+        
+        collapseIcon.innerHTML = `\r\n  \u003csvg class=\u0022h-3 w-3\u0022\r\n    fill=\u0022none\u0022\r\n    stroke=\u0022currentColor\u0022\r\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M19 9l-7 7-7-7\u0022 \/\u003e\r\n\u003c\/svg\u003e`;
+        if (collapseText) {
+          collapseText.textContent = 'Expand';
+        }
+        collapseBtn.title = 'Expand';
+
+      } else {
+        
+        codeContainer.style.maxHeight = '';
+        codeContainer.style.overflow = '';
+        collapseOverlay.style.opacity = '0';
+        collapseOverlay.style.pointerEvents = 'none';
+
+        
+        collapseIcon.innerHTML = `\r\n  \u003csvg class=\u0022h-3 w-3\u0022\r\n    fill=\u0022none\u0022\r\n    stroke=\u0022currentColor\u0022\r\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath fill=\u0022currentColor\u0022 d=\u0022M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z\u0022\/\u003e\u003c\/svg\u003e`;
+        if (collapseText) {
+          collapseText.textContent = 'Collapse';
+        }
+        collapseBtn.title = 'Collapse';
+      }
+
+      
+      if (animate) {
+        codeContainer.style.transition = 'max-height 0.3s ease-out';
+        setTimeout(() => {
+          codeContainer.style.transition = '';
+        }, 300);
+      }
+    }
+
+    function toggleCollapse() {
+      setCollapsed(!isCollapsed, true);
+    }
+
+    
+    collapseBtn.addEventListener('click', toggleCollapse);
+
+    
+    if (collapseOverlay) {
+      collapseOverlay.addEventListener('click', () => {
+        if (isCollapsed) {
+          setCollapsed(false, true);
+        }
+      });
+    }
+
+    
+    initCollapse();
+  }
+})();
+</script>
+<p>2️⃣ 切换到 dev 分支：</p>
+<div
+  class="code-block-container border-border bg-card my-6 overflow-hidden rounded-xl border shadow-sm transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md">
+  
+  <div
+    class="code-block-header bg-muted/30 border-border flex items-center justify-between border-b px-4 py-3">
+    
+    <div class="flex items-center gap-2">
+      <div class="text-muted-foreground flex-shrink-0">
+        
+  <svg class="h-4 w-4"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+</svg>
+      </div>
+      <span class="text-muted-foreground text-sm font-medium">
+        BASH
+      </span>
+    </div>
+
+    
+    <div class="flex items-center gap-2">
+      <button
+          class="collapse-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
+          data-code-id="code-3"
+          data-default-state="expanded"
+          data-collapsed="false"
+          data-auto-collapse-lines="30"
+          data-auto-collapse-height="400"
+          data-collapsed-height="120"
+          title="Collapse"
+          aria-label="Collapse">
+          <span class="collapse-icon">
+            
+  <svg class="h-3 w-3"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"><path fill="currentColor" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z"/></svg>
+          </span>
+          <span class="collapse-text hidden sm:inline"
+            >Collapse</span
+          >
+        </button>
+      <button
+        class="copy-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
+        data-code-id="code-3"
+        title="Copy"
+        aria-label="Copy">
+        <span class="copy-icon">
+          
+  <svg class="h-3 w-3"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+</svg>
+        </span>
+        <span class="copy-text hidden sm:inline"
+          >Copy</span
+        >
+      </button>
+    </div>
+  </div>
+
+  
+  <div class="code-block-content relative" id="code-3">
+    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git checkout dev</span></span></code></pre></div>
+    
+    <div
+      class="collapse-overlay to-card/90 pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent opacity-0 transition-opacity duration-300">
+      <div
+        class="text-muted-foreground bg-card/80 border-border/50 hover:bg-primary/10 hover:text-primary hover:border-primary/30 absolute bottom-4 left-1/2 -translate-x-1/2 cursor-pointer rounded-full border px-3 py-1.5 text-xs backdrop-blur-sm transition-all duration-200">
+        Click to expand and view more
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+(function() {
+  const codeId = 'code-3';
+  const copyBtn = document.querySelector('.copy-code-btn[data-code-id="' + codeId + '"]');
+  const collapseBtn = document.querySelector('.collapse-code-btn[data-code-id="' + codeId + '"]');
+  const codeContainer = document.getElementById(codeId);
+
+  if (!codeContainer) return;
+
+  
+  if (copyBtn) {
+    const copyIcon = copyBtn.querySelector('.copy-icon');
+    const copyText = copyBtn.querySelector('.copy-text');
+
+    copyBtn.addEventListener('click', async function() {
+      try {
+        
+        let codeText = '';
+
+        
+        const codeTableCell = codeContainer.querySelector('.lntd:last-child code');
+        if (codeTableCell) {
+          codeText = codeTableCell.textContent || codeTableCell.innerText;
+        } else {
+          
+          const codeElement = codeContainer.querySelector('code');
+          if (codeElement) {
+            
+            const hasInlineLineNumbers = codeElement.querySelector('.ln');
+            if (hasInlineLineNumbers) {
+              
+              const codeLines = codeElement.querySelectorAll('.cl');
+              if (codeLines.length > 0) {
+                codeText = Array.from(codeLines)
+                  .map(line => {
+                    const text = line.textContent || line.innerText;
+                    
+                    return text.replace(/\n+$/, '');
+                  })
+                  .join('\n')
+                  .replace(/\n+$/, ''); 
+              } else {
+                
+                const allText = codeElement.textContent || codeElement.innerText;
+                codeText = allText.replace(/^\d+/gm, '').replace(/^\s+/gm, '');
+              }
+            } else {
+              
+              codeText = codeElement.textContent || codeElement.innerText;
+            }
+          } else {
+            
+            codeText = codeContainer.textContent || codeContainer.innerText;
+          }
+        }
+
+        
+        codeText = codeText.trim();
+
+        
+        await navigator.clipboard.writeText(codeText);
+
+        
+        copyIcon.innerHTML = `\r\n  \u003csvg class=\u0022h-3 w-3\u0022\r\n    fill=\u0022none\u0022\r\n    stroke=\u0022currentColor\u0022\r\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M5 13l4 4L19 7\u0022 \/\u003e\r\n\u003c\/svg\u003e`;
+        if (copyText) {
+          copyText.textContent = 'Copied';
+        }
+        copyBtn.classList.add('text-green-600');
+
+        
+        setTimeout(() => {
+          copyIcon.innerHTML = `\r\n  \u003csvg class=\u0022h-3 w-3\u0022\r\n    fill=\u0022none\u0022\r\n    stroke=\u0022currentColor\u0022\r\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z\u0022 \/\u003e\r\n\u003c\/svg\u003e`;
+          if (copyText) {
+            copyText.textContent = 'Copy';
+          }
+          copyBtn.classList.remove('text-green-600');
+        }, 2000);
+
+      } catch (err) {
+        console.error('复制失败:', err);
+
+        
+        const range = document.createRange();
+        const codeElement = codeContainer.querySelector('code') || codeContainer;
+        range.selectNodeContents(codeElement);
+        const selection = window.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(range);
+
+        
+        if (copyText) {
+          copyText.textContent = 'Selected';
+        }
+
+        setTimeout(() => {
+          if (copyText) {
+            copyText.textContent = 'Copy';
+          }
+          selection.removeAllRanges();
+        }, 2000);
+      }
+    });
+  }
+
+  
+  if (collapseBtn) {
+    const collapseIcon = collapseBtn.querySelector('.collapse-icon');
+    const collapseText = collapseBtn.querySelector('.collapse-text');
+    const collapseOverlay = codeContainer.querySelector('.collapse-overlay');
+
+    
+    let codeElement = codeContainer.querySelector('pre.chroma');
+    if (!codeElement) {
+      codeElement = codeContainer.querySelector('pre');
+    }
+
+    const defaultState = collapseBtn.dataset.defaultState || 'expanded';
+    const isCollapsedAttr = collapseBtn.dataset.collapsed === 'true';
+    const autoCollapseLines = parseInt(collapseBtn.dataset.autoCollapseLines) || 30;
+    const autoCollapseHeight = parseInt(collapseBtn.dataset.autoCollapseHeight) || 400;
+    const collapsedHeight = parseInt(collapseBtn.dataset.collapsedHeight) || 120;
+
+    let isCollapsed = false;
+
+    
+    function initCollapse() {
+      
+      const shouldCollapse = isCollapsedAttr ||
+                           defaultState === 'collapsed' ||
+                           shouldAutoCollapse();
+
+      if (shouldCollapse) {
+        setCollapsed(true, false); 
+      }
+    }
+
+    function shouldAutoCollapse() {
+      
+      if (codeElement) {
+        const lines = codeElement.querySelectorAll('.line, .cl');
+        const height = codeElement.offsetHeight;
+        return lines.length > autoCollapseLines || height > autoCollapseHeight;
+      }
+
+      
+      const containerHeight = codeContainer.offsetHeight;
+      if (containerHeight > autoCollapseHeight) {
+        return true;
+      }
+
+      
+      const textContent = codeContainer.textContent || codeContainer.innerText || '';
+      const estimatedLines = textContent.split('\n').length;
+      return estimatedLines > autoCollapseLines;
+    }
+
+    function setCollapsed(collapsed, animate = true) {
+      if (!collapseOverlay) return;
+
+      isCollapsed = collapsed;
+
+      if (collapsed) {
+        
+        codeContainer.style.maxHeight = collapsedHeight + 'px';
+        codeContainer.style.overflow = 'hidden';
+        collapseOverlay.style.opacity = '1';
+        collapseOverlay.style.pointerEvents = 'auto';
+
+        
+        collapseIcon.innerHTML = `\r\n  \u003csvg class=\u0022h-3 w-3\u0022\r\n    fill=\u0022none\u0022\r\n    stroke=\u0022currentColor\u0022\r\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M19 9l-7 7-7-7\u0022 \/\u003e\r\n\u003c\/svg\u003e`;
+        if (collapseText) {
+          collapseText.textContent = 'Expand';
+        }
+        collapseBtn.title = 'Expand';
+
+      } else {
+        
+        codeContainer.style.maxHeight = '';
+        codeContainer.style.overflow = '';
+        collapseOverlay.style.opacity = '0';
+        collapseOverlay.style.pointerEvents = 'none';
+
+        
+        collapseIcon.innerHTML = `\r\n  \u003csvg class=\u0022h-3 w-3\u0022\r\n    fill=\u0022none\u0022\r\n    stroke=\u0022currentColor\u0022\r\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath fill=\u0022currentColor\u0022 d=\u0022M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z\u0022\/\u003e\u003c\/svg\u003e`;
+        if (collapseText) {
+          collapseText.textContent = 'Collapse';
+        }
+        collapseBtn.title = 'Collapse';
+      }
+
+      
+      if (animate) {
+        codeContainer.style.transition = 'max-height 0.3s ease-out';
+        setTimeout(() => {
+          codeContainer.style.transition = '';
+        }, 300);
+      }
+    }
+
+    function toggleCollapse() {
+      setCollapsed(!isCollapsed, true);
+    }
+
+    
+    collapseBtn.addEventListener('click', toggleCollapse);
+
+    
+    if (collapseOverlay) {
+      collapseOverlay.addEventListener('click', () => {
+        if (isCollapsed) {
+          setCollapsed(false, true);
+        }
+      });
+    }
+
+    
+    initCollapse();
+  }
+})();
+</script>
+<p>3️⃣ 再次拉取（确保万无一失）：</p>
+<div
+  class="code-block-container border-border bg-card my-6 overflow-hidden rounded-xl border shadow-sm transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md">
+  
+  <div
+    class="code-block-header bg-muted/30 border-border flex items-center justify-between border-b px-4 py-3">
+    
+    <div class="flex items-center gap-2">
+      <div class="text-muted-foreground flex-shrink-0">
+        
+  <svg class="h-4 w-4"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+</svg>
+      </div>
+      <span class="text-muted-foreground text-sm font-medium">
+        BASH
+      </span>
+    </div>
+
+    
+    <div class="flex items-center gap-2">
+      <button
+          class="collapse-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
+          data-code-id="code-4"
+          data-default-state="expanded"
+          data-collapsed="false"
+          data-auto-collapse-lines="30"
+          data-auto-collapse-height="400"
+          data-collapsed-height="120"
+          title="Collapse"
+          aria-label="Collapse">
+          <span class="collapse-icon">
+            
+  <svg class="h-3 w-3"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"><path fill="currentColor" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z"/></svg>
+          </span>
+          <span class="collapse-text hidden sm:inline"
+            >Collapse</span
+          >
+        </button>
+      <button
+        class="copy-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
+        data-code-id="code-4"
+        title="Copy"
+        aria-label="Copy">
+        <span class="copy-icon">
+          
+  <svg class="h-3 w-3"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+</svg>
+        </span>
+        <span class="copy-text hidden sm:inline"
+          >Copy</span
+        >
+      </button>
+    </div>
+  </div>
+
+  
+  <div class="code-block-content relative" id="code-4">
+    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git pull origin dev</span></span></code></pre></div>
+    
+    <div
+      class="collapse-overlay to-card/90 pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent opacity-0 transition-opacity duration-300">
+      <div
+        class="text-muted-foreground bg-card/80 border-border/50 hover:bg-primary/10 hover:text-primary hover:border-primary/30 absolute bottom-4 left-1/2 -translate-x-1/2 cursor-pointer rounded-full border px-3 py-1.5 text-xs backdrop-blur-sm transition-all duration-200">
+        Click to expand and view more
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+(function() {
+  const codeId = 'code-4';
+  const copyBtn = document.querySelector('.copy-code-btn[data-code-id="' + codeId + '"]');
+  const collapseBtn = document.querySelector('.collapse-code-btn[data-code-id="' + codeId + '"]');
+  const codeContainer = document.getElementById(codeId);
+
+  if (!codeContainer) return;
+
+  
+  if (copyBtn) {
+    const copyIcon = copyBtn.querySelector('.copy-icon');
+    const copyText = copyBtn.querySelector('.copy-text');
+
+    copyBtn.addEventListener('click', async function() {
+      try {
+        
+        let codeText = '';
+
+        
+        const codeTableCell = codeContainer.querySelector('.lntd:last-child code');
+        if (codeTableCell) {
+          codeText = codeTableCell.textContent || codeTableCell.innerText;
+        } else {
+          
+          const codeElement = codeContainer.querySelector('code');
+          if (codeElement) {
+            
+            const hasInlineLineNumbers = codeElement.querySelector('.ln');
+            if (hasInlineLineNumbers) {
+              
+              const codeLines = codeElement.querySelectorAll('.cl');
+              if (codeLines.length > 0) {
+                codeText = Array.from(codeLines)
+                  .map(line => {
+                    const text = line.textContent || line.innerText;
+                    
+                    return text.replace(/\n+$/, '');
+                  })
+                  .join('\n')
+                  .replace(/\n+$/, ''); 
+              } else {
+                
+                const allText = codeElement.textContent || codeElement.innerText;
+                codeText = allText.replace(/^\d+/gm, '').replace(/^\s+/gm, '');
+              }
+            } else {
+              
+              codeText = codeElement.textContent || codeElement.innerText;
+            }
+          } else {
+            
+            codeText = codeContainer.textContent || codeContainer.innerText;
+          }
+        }
+
+        
+        codeText = codeText.trim();
+
+        
+        await navigator.clipboard.writeText(codeText);
+
+        
+        copyIcon.innerHTML = `\r\n  \u003csvg class=\u0022h-3 w-3\u0022\r\n    fill=\u0022none\u0022\r\n    stroke=\u0022currentColor\u0022\r\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M5 13l4 4L19 7\u0022 \/\u003e\r\n\u003c\/svg\u003e`;
+        if (copyText) {
+          copyText.textContent = 'Copied';
+        }
+        copyBtn.classList.add('text-green-600');
+
+        
+        setTimeout(() => {
+          copyIcon.innerHTML = `\r\n  \u003csvg class=\u0022h-3 w-3\u0022\r\n    fill=\u0022none\u0022\r\n    stroke=\u0022currentColor\u0022\r\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z\u0022 \/\u003e\r\n\u003c\/svg\u003e`;
+          if (copyText) {
+            copyText.textContent = 'Copy';
+          }
+          copyBtn.classList.remove('text-green-600');
+        }, 2000);
+
+      } catch (err) {
+        console.error('复制失败:', err);
+
+        
+        const range = document.createRange();
+        const codeElement = codeContainer.querySelector('code') || codeContainer;
+        range.selectNodeContents(codeElement);
+        const selection = window.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(range);
+
+        
+        if (copyText) {
+          copyText.textContent = 'Selected';
+        }
+
+        setTimeout(() => {
+          if (copyText) {
+            copyText.textContent = 'Copy';
+          }
+          selection.removeAllRanges();
+        }, 2000);
+      }
+    });
+  }
+
+  
+  if (collapseBtn) {
+    const collapseIcon = collapseBtn.querySelector('.collapse-icon');
+    const collapseText = collapseBtn.querySelector('.collapse-text');
+    const collapseOverlay = codeContainer.querySelector('.collapse-overlay');
+
+    
+    let codeElement = codeContainer.querySelector('pre.chroma');
+    if (!codeElement) {
+      codeElement = codeContainer.querySelector('pre');
+    }
+
+    const defaultState = collapseBtn.dataset.defaultState || 'expanded';
+    const isCollapsedAttr = collapseBtn.dataset.collapsed === 'true';
+    const autoCollapseLines = parseInt(collapseBtn.dataset.autoCollapseLines) || 30;
+    const autoCollapseHeight = parseInt(collapseBtn.dataset.autoCollapseHeight) || 400;
+    const collapsedHeight = parseInt(collapseBtn.dataset.collapsedHeight) || 120;
+
+    let isCollapsed = false;
+
+    
+    function initCollapse() {
+      
+      const shouldCollapse = isCollapsedAttr ||
+                           defaultState === 'collapsed' ||
+                           shouldAutoCollapse();
+
+      if (shouldCollapse) {
+        setCollapsed(true, false); 
+      }
+    }
+
+    function shouldAutoCollapse() {
+      
+      if (codeElement) {
+        const lines = codeElement.querySelectorAll('.line, .cl');
+        const height = codeElement.offsetHeight;
+        return lines.length > autoCollapseLines || height > autoCollapseHeight;
+      }
+
+      
+      const containerHeight = codeContainer.offsetHeight;
+      if (containerHeight > autoCollapseHeight) {
+        return true;
+      }
+
+      
+      const textContent = codeContainer.textContent || codeContainer.innerText || '';
+      const estimatedLines = textContent.split('\n').length;
+      return estimatedLines > autoCollapseLines;
+    }
+
+    function setCollapsed(collapsed, animate = true) {
+      if (!collapseOverlay) return;
+
+      isCollapsed = collapsed;
+
+      if (collapsed) {
+        
+        codeContainer.style.maxHeight = collapsedHeight + 'px';
+        codeContainer.style.overflow = 'hidden';
+        collapseOverlay.style.opacity = '1';
+        collapseOverlay.style.pointerEvents = 'auto';
+
+        
+        collapseIcon.innerHTML = `\r\n  \u003csvg class=\u0022h-3 w-3\u0022\r\n    fill=\u0022none\u0022\r\n    stroke=\u0022currentColor\u0022\r\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M19 9l-7 7-7-7\u0022 \/\u003e\r\n\u003c\/svg\u003e`;
+        if (collapseText) {
+          collapseText.textContent = 'Expand';
+        }
+        collapseBtn.title = 'Expand';
+
+      } else {
+        
+        codeContainer.style.maxHeight = '';
+        codeContainer.style.overflow = '';
+        collapseOverlay.style.opacity = '0';
+        collapseOverlay.style.pointerEvents = 'none';
+
+        
+        collapseIcon.innerHTML = `\r\n  \u003csvg class=\u0022h-3 w-3\u0022\r\n    fill=\u0022none\u0022\r\n    stroke=\u0022currentColor\u0022\r\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath fill=\u0022currentColor\u0022 d=\u0022M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z\u0022\/\u003e\u003c\/svg\u003e`;
+        if (collapseText) {
+          collapseText.textContent = 'Collapse';
+        }
+        collapseBtn.title = 'Collapse';
+      }
+
+      
+      if (animate) {
+        codeContainer.style.transition = 'max-height 0.3s ease-out';
+        setTimeout(() => {
+          codeContainer.style.transition = '';
+        }, 300);
+      }
+    }
+
+    function toggleCollapse() {
+      setCollapsed(!isCollapsed, true);
+    }
+
+    
+    collapseBtn.addEventListener('click', toggleCollapse);
+
+    
+    if (collapseOverlay) {
+      collapseOverlay.addEventListener('click', () => {
+        if (isCollapsed) {
+          setCollapsed(false, true);
+        }
+      });
+    }
+
+    
+    initCollapse();
+  }
+})();
+</script>
+<h4 id="-原因二pull-时的本地合并问题--">🔍 原因二：pull 时的本地合并问题  &raquo;</h4>
+<p>git pull 实际上是两个命令的组合：git fetch（拉取远程数据）和 git merge（将拉取到的数据合并到当前分支）。</p>
+<h4 id="解决办法清理并强制更新">解决办法：清理并强制更新</h4>
+<p>1️⃣ 检查工作区状态：</p>
+<div
+  class="code-block-container border-border bg-card my-6 overflow-hidden rounded-xl border shadow-sm transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md">
+  
+  <div
+    class="code-block-header bg-muted/30 border-border flex items-center justify-between border-b px-4 py-3">
+    
+    <div class="flex items-center gap-2">
+      <div class="text-muted-foreground flex-shrink-0">
+        
+  <svg class="h-4 w-4"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+</svg>
+      </div>
+      <span class="text-muted-foreground text-sm font-medium">
+        BASH
+      </span>
+    </div>
+
+    
+    <div class="flex items-center gap-2">
+      <button
+          class="collapse-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
+          data-code-id="code-5"
+          data-default-state="expanded"
+          data-collapsed="false"
+          data-auto-collapse-lines="30"
+          data-auto-collapse-height="400"
+          data-collapsed-height="120"
+          title="Collapse"
+          aria-label="Collapse">
+          <span class="collapse-icon">
+            
+  <svg class="h-3 w-3"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"><path fill="currentColor" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z"/></svg>
+          </span>
+          <span class="collapse-text hidden sm:inline"
+            >Collapse</span
+          >
+        </button>
+      <button
+        class="copy-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
+        data-code-id="code-5"
+        title="Copy"
+        aria-label="Copy">
+        <span class="copy-icon">
+          
+  <svg class="h-3 w-3"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+</svg>
+        </span>
+        <span class="copy-text hidden sm:inline"
+          >Copy</span
+        >
+      </button>
+    </div>
+  </div>
+
+  
+  <div class="code-block-content relative" id="code-5">
+    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git status	<span class="c1"># （查看是否有未提交的更改或冲突。）</span></span></span></code></pre></div>
+    
+    <div
+      class="collapse-overlay to-card/90 pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent opacity-0 transition-opacity duration-300">
+      <div
+        class="text-muted-foreground bg-card/80 border-border/50 hover:bg-primary/10 hover:text-primary hover:border-primary/30 absolute bottom-4 left-1/2 -translate-x-1/2 cursor-pointer rounded-full border px-3 py-1.5 text-xs backdrop-blur-sm transition-all duration-200">
+        Click to expand and view more
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+(function() {
+  const codeId = 'code-5';
+  const copyBtn = document.querySelector('.copy-code-btn[data-code-id="' + codeId + '"]');
+  const collapseBtn = document.querySelector('.collapse-code-btn[data-code-id="' + codeId + '"]');
+  const codeContainer = document.getElementById(codeId);
+
+  if (!codeContainer) return;
+
+  
+  if (copyBtn) {
+    const copyIcon = copyBtn.querySelector('.copy-icon');
+    const copyText = copyBtn.querySelector('.copy-text');
+
+    copyBtn.addEventListener('click', async function() {
+      try {
+        
+        let codeText = '';
+
+        
+        const codeTableCell = codeContainer.querySelector('.lntd:last-child code');
+        if (codeTableCell) {
+          codeText = codeTableCell.textContent || codeTableCell.innerText;
+        } else {
+          
+          const codeElement = codeContainer.querySelector('code');
+          if (codeElement) {
+            
+            const hasInlineLineNumbers = codeElement.querySelector('.ln');
+            if (hasInlineLineNumbers) {
+              
+              const codeLines = codeElement.querySelectorAll('.cl');
+              if (codeLines.length > 0) {
+                codeText = Array.from(codeLines)
+                  .map(line => {
+                    const text = line.textContent || line.innerText;
+                    
+                    return text.replace(/\n+$/, '');
+                  })
+                  .join('\n')
+                  .replace(/\n+$/, ''); 
+              } else {
+                
+                const allText = codeElement.textContent || codeElement.innerText;
+                codeText = allText.replace(/^\d+/gm, '').replace(/^\s+/gm, '');
+              }
+            } else {
+              
+              codeText = codeElement.textContent || codeElement.innerText;
+            }
+          } else {
+            
+            codeText = codeContainer.textContent || codeContainer.innerText;
+          }
+        }
+
+        
+        codeText = codeText.trim();
+
+        
+        await navigator.clipboard.writeText(codeText);
+
+        
+        copyIcon.innerHTML = `\r\n  \u003csvg class=\u0022h-3 w-3\u0022\r\n    fill=\u0022none\u0022\r\n    stroke=\u0022currentColor\u0022\r\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M5 13l4 4L19 7\u0022 \/\u003e\r\n\u003c\/svg\u003e`;
+        if (copyText) {
+          copyText.textContent = 'Copied';
+        }
+        copyBtn.classList.add('text-green-600');
+
+        
+        setTimeout(() => {
+          copyIcon.innerHTML = `\r\n  \u003csvg class=\u0022h-3 w-3\u0022\r\n    fill=\u0022none\u0022\r\n    stroke=\u0022currentColor\u0022\r\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z\u0022 \/\u003e\r\n\u003c\/svg\u003e`;
+          if (copyText) {
+            copyText.textContent = 'Copy';
+          }
+          copyBtn.classList.remove('text-green-600');
+        }, 2000);
+
+      } catch (err) {
+        console.error('复制失败:', err);
+
+        
+        const range = document.createRange();
+        const codeElement = codeContainer.querySelector('code') || codeContainer;
+        range.selectNodeContents(codeElement);
+        const selection = window.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(range);
+
+        
+        if (copyText) {
+          copyText.textContent = 'Selected';
+        }
+
+        setTimeout(() => {
+          if (copyText) {
+            copyText.textContent = 'Copy';
+          }
+          selection.removeAllRanges();
+        }, 2000);
+      }
+    });
+  }
+
+  
+  if (collapseBtn) {
+    const collapseIcon = collapseBtn.querySelector('.collapse-icon');
+    const collapseText = collapseBtn.querySelector('.collapse-text');
+    const collapseOverlay = codeContainer.querySelector('.collapse-overlay');
+
+    
+    let codeElement = codeContainer.querySelector('pre.chroma');
+    if (!codeElement) {
+      codeElement = codeContainer.querySelector('pre');
+    }
+
+    const defaultState = collapseBtn.dataset.defaultState || 'expanded';
+    const isCollapsedAttr = collapseBtn.dataset.collapsed === 'true';
+    const autoCollapseLines = parseInt(collapseBtn.dataset.autoCollapseLines) || 30;
+    const autoCollapseHeight = parseInt(collapseBtn.dataset.autoCollapseHeight) || 400;
+    const collapsedHeight = parseInt(collapseBtn.dataset.collapsedHeight) || 120;
+
+    let isCollapsed = false;
+
+    
+    function initCollapse() {
+      
+      const shouldCollapse = isCollapsedAttr ||
+                           defaultState === 'collapsed' ||
+                           shouldAutoCollapse();
+
+      if (shouldCollapse) {
+        setCollapsed(true, false); 
+      }
+    }
+
+    function shouldAutoCollapse() {
+      
+      if (codeElement) {
+        const lines = codeElement.querySelectorAll('.line, .cl');
+        const height = codeElement.offsetHeight;
+        return lines.length > autoCollapseLines || height > autoCollapseHeight;
+      }
+
+      
+      const containerHeight = codeContainer.offsetHeight;
+      if (containerHeight > autoCollapseHeight) {
+        return true;
+      }
+
+      
+      const textContent = codeContainer.textContent || codeContainer.innerText || '';
+      const estimatedLines = textContent.split('\n').length;
+      return estimatedLines > autoCollapseLines;
+    }
+
+    function setCollapsed(collapsed, animate = true) {
+      if (!collapseOverlay) return;
+
+      isCollapsed = collapsed;
+
+      if (collapsed) {
+        
+        codeContainer.style.maxHeight = collapsedHeight + 'px';
+        codeContainer.style.overflow = 'hidden';
+        collapseOverlay.style.opacity = '1';
+        collapseOverlay.style.pointerEvents = 'auto';
+
+        
+        collapseIcon.innerHTML = `\r\n  \u003csvg class=\u0022h-3 w-3\u0022\r\n    fill=\u0022none\u0022\r\n    stroke=\u0022currentColor\u0022\r\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M19 9l-7 7-7-7\u0022 \/\u003e\r\n\u003c\/svg\u003e`;
+        if (collapseText) {
+          collapseText.textContent = 'Expand';
+        }
+        collapseBtn.title = 'Expand';
+
+      } else {
+        
+        codeContainer.style.maxHeight = '';
+        codeContainer.style.overflow = '';
+        collapseOverlay.style.opacity = '0';
+        collapseOverlay.style.pointerEvents = 'none';
+
+        
+        collapseIcon.innerHTML = `\r\n  \u003csvg class=\u0022h-3 w-3\u0022\r\n    fill=\u0022none\u0022\r\n    stroke=\u0022currentColor\u0022\r\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath fill=\u0022currentColor\u0022 d=\u0022M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z\u0022\/\u003e\u003c\/svg\u003e`;
+        if (collapseText) {
+          collapseText.textContent = 'Collapse';
+        }
+        collapseBtn.title = 'Collapse';
+      }
+
+      
+      if (animate) {
+        codeContainer.style.transition = 'max-height 0.3s ease-out';
+        setTimeout(() => {
+          codeContainer.style.transition = '';
+        }, 300);
+      }
+    }
+
+    function toggleCollapse() {
+      setCollapsed(!isCollapsed, true);
+    }
+
+    
+    collapseBtn.addEventListener('click', toggleCollapse);
+
+    
+    if (collapseOverlay) {
+      collapseOverlay.addEventListener('click', () => {
+        if (isCollapsed) {
+          setCollapsed(false, true);
+        }
+      });
+    }
+
+    
+    initCollapse();
+  }
+})();
+</script>
+<p>2️⃣ 强制重置： 如果你确定本地的更改不重要，你想让本地分支完全匹配远程分支，可以使用 reset 命令将本地 dev 强制重置到远程的最新状态。</p>
+<div
+  class="code-block-container border-border bg-card my-6 overflow-hidden rounded-xl border shadow-sm transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md">
+  
+  <div
+    class="code-block-header bg-muted/30 border-border flex items-center justify-between border-b px-4 py-3">
+    
+    <div class="flex items-center gap-2">
+      <div class="text-muted-foreground flex-shrink-0">
+        
+  <svg class="h-4 w-4"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+</svg>
+      </div>
+      <span class="text-muted-foreground text-sm font-medium">
+        BASH
+      </span>
+    </div>
+
+    
+    <div class="flex items-center gap-2">
+      <button
+          class="collapse-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
+          data-code-id="code-6"
+          data-default-state="expanded"
+          data-collapsed="false"
+          data-auto-collapse-lines="30"
+          data-auto-collapse-height="400"
+          data-collapsed-height="120"
+          title="Collapse"
+          aria-label="Collapse">
+          <span class="collapse-icon">
+            
+  <svg class="h-3 w-3"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"><path fill="currentColor" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z"/></svg>
+          </span>
+          <span class="collapse-text hidden sm:inline"
+            >Collapse</span
+          >
+        </button>
+      <button
+        class="copy-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
+        data-code-id="code-6"
+        title="Copy"
+        aria-label="Copy">
+        <span class="copy-icon">
+          
+  <svg class="h-3 w-3"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+</svg>
+        </span>
+        <span class="copy-text hidden sm:inline"
+          >Copy</span
+        >
+      </button>
+    </div>
+  </div>
+
+  
+  <div class="code-block-content relative" id="code-6">
+    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 切换到 dev 分支</span>
+</span></span><span class="line"><span class="cl">git checkout dev
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 强制丢弃本地所有更改，并将本地分支指针指向远程分支的最新提交</span>
+</span></span><span class="line"><span class="cl">git reset --hard origin/dev
+</span></span><span class="line"><span class="cl">git stash 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">⚠️ 注意： git reset --hard 会永久丢弃你在本地 dev 上所有未提交或未推送的更改。&gt;&gt; 请确保你真的不需要这些更改。</span></span></code></pre></div>
+    
+    <div
+      class="collapse-overlay to-card/90 pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent opacity-0 transition-opacity duration-300">
+      <div
+        class="text-muted-foreground bg-card/80 border-border/50 hover:bg-primary/10 hover:text-primary hover:border-primary/30 absolute bottom-4 left-1/2 -translate-x-1/2 cursor-pointer rounded-full border px-3 py-1.5 text-xs backdrop-blur-sm transition-all duration-200">
+        Click to expand and view more
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+(function() {
+  const codeId = 'code-6';
+  const copyBtn = document.querySelector('.copy-code-btn[data-code-id="' + codeId + '"]');
+  const collapseBtn = document.querySelector('.collapse-code-btn[data-code-id="' + codeId + '"]');
+  const codeContainer = document.getElementById(codeId);
+
+  if (!codeContainer) return;
+
+  
+  if (copyBtn) {
+    const copyIcon = copyBtn.querySelector('.copy-icon');
+    const copyText = copyBtn.querySelector('.copy-text');
+
+    copyBtn.addEventListener('click', async function() {
+      try {
+        
+        let codeText = '';
+
+        
+        const codeTableCell = codeContainer.querySelector('.lntd:last-child code');
+        if (codeTableCell) {
+          codeText = codeTableCell.textContent || codeTableCell.innerText;
+        } else {
+          
+          const codeElement = codeContainer.querySelector('code');
+          if (codeElement) {
+            
+            const hasInlineLineNumbers = codeElement.querySelector('.ln');
+            if (hasInlineLineNumbers) {
+              
+              const codeLines = codeElement.querySelectorAll('.cl');
+              if (codeLines.length > 0) {
+                codeText = Array.from(codeLines)
+                  .map(line => {
+                    const text = line.textContent || line.innerText;
+                    
+                    return text.replace(/\n+$/, '');
+                  })
+                  .join('\n')
+                  .replace(/\n+$/, ''); 
+              } else {
+                
+                const allText = codeElement.textContent || codeElement.innerText;
+                codeText = allText.replace(/^\d+/gm, '').replace(/^\s+/gm, '');
+              }
+            } else {
+              
+              codeText = codeElement.textContent || codeElement.innerText;
+            }
+          } else {
+            
+            codeText = codeContainer.textContent || codeContainer.innerText;
+          }
+        }
+
+        
+        codeText = codeText.trim();
+
+        
+        await navigator.clipboard.writeText(codeText);
+
+        
+        copyIcon.innerHTML = `\r\n  \u003csvg class=\u0022h-3 w-3\u0022\r\n    fill=\u0022none\u0022\r\n    stroke=\u0022currentColor\u0022\r\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M5 13l4 4L19 7\u0022 \/\u003e\r\n\u003c\/svg\u003e`;
+        if (copyText) {
+          copyText.textContent = 'Copied';
+        }
+        copyBtn.classList.add('text-green-600');
+
+        
+        setTimeout(() => {
+          copyIcon.innerHTML = `\r\n  \u003csvg class=\u0022h-3 w-3\u0022\r\n    fill=\u0022none\u0022\r\n    stroke=\u0022currentColor\u0022\r\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z\u0022 \/\u003e\r\n\u003c\/svg\u003e`;
+          if (copyText) {
+            copyText.textContent = 'Copy';
+          }
+          copyBtn.classList.remove('text-green-600');
+        }, 2000);
+
+      } catch (err) {
+        console.error('复制失败:', err);
+
+        
+        const range = document.createRange();
+        const codeElement = codeContainer.querySelector('code') || codeContainer;
+        range.selectNodeContents(codeElement);
+        const selection = window.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(range);
+
+        
+        if (copyText) {
+          copyText.textContent = 'Selected';
+        }
+
+        setTimeout(() => {
+          if (copyText) {
+            copyText.textContent = 'Copy';
+          }
+          selection.removeAllRanges();
+        }, 2000);
+      }
+    });
+  }
+
+  
+  if (collapseBtn) {
+    const collapseIcon = collapseBtn.querySelector('.collapse-icon');
+    const collapseText = collapseBtn.querySelector('.collapse-text');
+    const collapseOverlay = codeContainer.querySelector('.collapse-overlay');
+
+    
+    let codeElement = codeContainer.querySelector('pre.chroma');
+    if (!codeElement) {
+      codeElement = codeContainer.querySelector('pre');
+    }
+
+    const defaultState = collapseBtn.dataset.defaultState || 'expanded';
+    const isCollapsedAttr = collapseBtn.dataset.collapsed === 'true';
+    const autoCollapseLines = parseInt(collapseBtn.dataset.autoCollapseLines) || 30;
+    const autoCollapseHeight = parseInt(collapseBtn.dataset.autoCollapseHeight) || 400;
+    const collapsedHeight = parseInt(collapseBtn.dataset.collapsedHeight) || 120;
+
+    let isCollapsed = false;
+
+    
+    function initCollapse() {
+      
+      const shouldCollapse = isCollapsedAttr ||
+                           defaultState === 'collapsed' ||
+                           shouldAutoCollapse();
+
+      if (shouldCollapse) {
+        setCollapsed(true, false); 
+      }
+    }
+
+    function shouldAutoCollapse() {
+      
+      if (codeElement) {
+        const lines = codeElement.querySelectorAll('.line, .cl');
+        const height = codeElement.offsetHeight;
+        return lines.length > autoCollapseLines || height > autoCollapseHeight;
+      }
+
+      
+      const containerHeight = codeContainer.offsetHeight;
+      if (containerHeight > autoCollapseHeight) {
+        return true;
+      }
+
+      
+      const textContent = codeContainer.textContent || codeContainer.innerText || '';
+      const estimatedLines = textContent.split('\n').length;
+      return estimatedLines > autoCollapseLines;
+    }
+
+    function setCollapsed(collapsed, animate = true) {
+      if (!collapseOverlay) return;
+
+      isCollapsed = collapsed;
+
+      if (collapsed) {
+        
+        codeContainer.style.maxHeight = collapsedHeight + 'px';
+        codeContainer.style.overflow = 'hidden';
+        collapseOverlay.style.opacity = '1';
+        collapseOverlay.style.pointerEvents = 'auto';
+
+        
+        collapseIcon.innerHTML = `\r\n  \u003csvg class=\u0022h-3 w-3\u0022\r\n    fill=\u0022none\u0022\r\n    stroke=\u0022currentColor\u0022\r\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M19 9l-7 7-7-7\u0022 \/\u003e\r\n\u003c\/svg\u003e`;
+        if (collapseText) {
+          collapseText.textContent = 'Expand';
+        }
+        collapseBtn.title = 'Expand';
+
+      } else {
+        
+        codeContainer.style.maxHeight = '';
+        codeContainer.style.overflow = '';
+        collapseOverlay.style.opacity = '0';
+        collapseOverlay.style.pointerEvents = 'none';
+
+        
+        collapseIcon.innerHTML = `\r\n  \u003csvg class=\u0022h-3 w-3\u0022\r\n    fill=\u0022none\u0022\r\n    stroke=\u0022currentColor\u0022\r\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath fill=\u0022currentColor\u0022 d=\u0022M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z\u0022\/\u003e\u003c\/svg\u003e`;
+        if (collapseText) {
+          collapseText.textContent = 'Collapse';
+        }
+        collapseBtn.title = 'Collapse';
+      }
+
+      
+      if (animate) {
+        codeContainer.style.transition = 'max-height 0.3s ease-out';
+        setTimeout(() => {
+          codeContainer.style.transition = '';
+        }, 300);
+      }
+    }
+
+    function toggleCollapse() {
+      setCollapsed(!isCollapsed, true);
+    }
+
+    
+    collapseBtn.addEventListener('click', toggleCollapse);
+
+    
+    if (collapseOverlay) {
+      collapseOverlay.addEventListener('click', () => {
+        if (isCollapsed) {
+          setCollapsed(false, true);
+        }
+      });
+    }
+
+    
+    initCollapse();
+  }
+})();
+</script>
+<p>3️⃣</p>
 
     </div>
   </blockquote><script>
@@ -3363,7 +5158,19 @@ document.addEventListener('DOMContentLoaded', function() {
     <li><a href="#暂存区--staging-area--常用命令"><em>暂存区 ( Staging Area ) 常用命令</em></a></li>
     <li><a href="#储存区--local-repository--常用命令"><em>储存区 ( Local Repository ) 常用命令</em></a></li>
     <li><a href="#分支--branch--常用命令"><em>分支 ( Branch ) 常用命令</em></a></li>
-    <li><a href="#远程仓库--remote-repository--常用命令"><em>远程仓库 ( Remote Repository ) 常用命令</em></a></li>
+    <li><a href="#远程仓库--remote-repository--常用命令"><em>远程仓库 ( Remote Repository ) 常用命令</em></a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#-在第二台设备使用git-pull-origin-dev-子分支成功拉取但是文件不是最新版本">💢 在第二台设备使用git pull origin dev 子分支，成功拉取但是文件不是最新版本</a></li>
+            <li><a href="#-原因一你当前不在-dev-分支上">🔍 原因一：你当前不在 dev 分支上</a></li>
+            <li><a href="#解决办法确认和切换分支">解决办法：确认和切换分支</a></li>
+            <li><a href="#-原因二pull-时的本地合并问题--">🔍 原因二：pull 时的本地合并问题  &raquo;</a></li>
+            <li><a href="#解决办法清理并强制更新">解决办法：清理并强制更新</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
   </ul>
 </nav>
           </div>
