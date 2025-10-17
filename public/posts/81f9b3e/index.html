@@ -55,7 +55,7 @@
 下载 &#43; 安装 点击此链接Github 流程 :工作区 (Working Directory)">
   <meta itemprop="datePublished" content="2025-10-14T19:43:39+08:00">
   <meta itemprop="dateModified" content="2025-10-14T19:43:39+08:00">
-  <meta itemprop="wordCount" content="2757">
+  <meta itemprop="wordCount" content="2943">
   <meta itemprop="image" content="http://localhost:1313/images/og-default.avif">
   <meta itemprop="keywords" content="技术,开发">
 
@@ -1046,7 +1046,7 @@
     stroke="currentColor"
     viewBox="0 0 24 24" aria-label="Word count"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
 </svg>
-          <span>2757 words</span>
+          <span>2943 words</span>
         </div>
       
 
@@ -1160,7 +1160,6 @@
     viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 3h6v6m-11 5L21 3m-3 10v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
 </a></li>
 </ul>
-
     </div>
   </blockquote><script>
 function toggleAlert(alertId) {
@@ -1249,7 +1248,6 @@ document.addEventListener('DOMContentLoaded', function() {
 <li>位置： 就是你打开的那个 <strong>项目文件夹</strong>。你看到的所有文件，包括代码、图片、配置文件等等，都属于工作区</li>
 <li>状态： 当你在文件中进行修改时，这些修改都处于“未追踪”或“已修改”状态</li>
 </ul>
-
     </div>
   </blockquote><script>
 function toggleAlert(alertId) {
@@ -1290,7 +1288,6 @@ document.addEventListener('DOMContentLoaded', function() {
 <li>位置： 在项目根目录下的 <strong>隐藏文件夹 .git/</strong> 中的一个 <strong>名为 index 的文件</strong></li>
 <li>功能： 它充当工作区和储存区之间的“缓冲站”。你使用 <em>git add</em> 命令将工作区中你想要的修改精准地加入暂存区。只有被加入到暂存区的修改，才会包含在你的下一个 commit 中</li>
 </ul>
-
     </div>
   </blockquote><script>
 function toggleAlert(alertId) {
@@ -1331,7 +1328,6 @@ document.addEventListener('DOMContentLoaded', function() {
 <li>位置： 也是在项目 <strong>根目录下的隐藏文件夹 .git/</strong> 中，主要内容 <strong>存储在 .git/objects</strong> 文件夹里</li>
 <li>功能： 这是 Git 的核心数据库。当你执行 <em>git commit</em> 时，暂存区中的快照会被永久地记录为历史版本，并存储在储存区中</li>
 </ul>
-
     </div>
   </blockquote><script>
 function toggleAlert(alertId) {
@@ -1416,7 +1412,6 @@ document.addEventListener('DOMContentLoaded', function() {
 <li>git clone <code>-</code>b <code>&lt; branch &gt; &lt; repo_url &gt;</code></li>
 <li>git clone <code>-</code>b develope &ndash;single-branch &lt; 你的仓库URL &gt;</li>
 </ul>
-
     </div>
   </blockquote><script>
 function toggleAlert(alertId) {
@@ -1458,7 +1453,6 @@ document.addEventListener('DOMContentLoaded', function() {
 <li>git log <code>-</code>2 显示最新两个log信息</li>
 <li>git log <code>--</code>graph <code>--</code>oneline 以图线和一行显示</li>
 </ul>
-
     </div>
   </blockquote><script>
 function toggleAlert(alertId) {
@@ -1505,7 +1499,6 @@ document.addEventListener('DOMContentLoaded', function() {
 <li>git stash drop stash@{0} 删除指定修改保存记录</li>
 <li>git stash clear 一次性删除所有的 git stash 修改保存记录</li>
 </ul>
-
     </div>
   </blockquote><script>
 function toggleAlert(alertId) {
@@ -1547,7 +1540,6 @@ document.addEventListener('DOMContentLoaded', function() {
 <li>git clean <code>&lt; folder_name &gt;</code> <code>-</code>nd 模拟删除不曾提交/追踪过的文件夹</li>
 <li>git clean <code>&lt; folder_name &gt;</code> <code>-</code>fd 确认删除文件夹</li>
 </ul>
-
     </div>
   </blockquote><script>
 function toggleAlert(alertId) {
@@ -1578,8 +1570,6 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 </script>
-
-
     </div>
   </blockquote><script>
 function toggleAlert(alertId) {
@@ -1633,7 +1623,6 @@ document.addEventListener('DOMContentLoaded', function() {
 <li>git diff <code>&lt;commit&gt;</code> HEAD 查看指定提交和当前分支最新提交的差异</li>
 <li>git diff <code>&lt;commit&gt;</code> 显示该提交与当前工作区的差异</li>
 </ul>
-
     </div>
   </blockquote><script>
 function toggleAlert(alertId) {
@@ -1664,8 +1653,6 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 </script>
-
-
     </div>
   </blockquote><script>
 function toggleAlert(alertId) {
@@ -1724,7 +1711,6 @@ document.addEventListener('DOMContentLoaded', function() {
 <li><code>--</code>mixed	移动 HEAD 指针，撤销 commit，也会撤销暂存区的文件。这是 git reset 的默认选项</li>
 <li><code>--</code>hard	移动 HEAD 指针，清空暂存区和工作区。所有更改都被丢弃。这是最危险的选项</li>
 </ul>
-
     </div>
   </blockquote><script>
 function toggleAlert(alertId) {
@@ -1755,8 +1741,6 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 </script>
-
-
     </div>
   </blockquote><script>
 function toggleAlert(alertId) {
@@ -1813,7 +1797,6 @@ document.addEventListener('DOMContentLoaded', function() {
 使用 git branch <code>-</code>vv 可以看到以下讯息：指针的分支，是否和远程仓库分支一样</li>
 </ul>
 <p>test   5ab7ba3 [origin/test] Create a new file for result record purpose</p>
-
     </div>
   </blockquote><script>
 function toggleAlert(alertId) {
@@ -1856,7 +1839,6 @@ document.addEventListener('DOMContentLoaded', function() {
 </li>
 </ul>
 <p><code>git merge [ sub-branches ]</code></p>
-
     </div>
   </blockquote><script>
 function toggleAlert(alertId) {
@@ -1887,8 +1869,6 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 </script>
-
-
     </div>
   </blockquote><script>
 function toggleAlert(alertId) {
@@ -1942,7 +1922,6 @@ document.addEventListener('DOMContentLoaded', function() {
 <li>git remote set-url origin <code>&lt; git@github.com:you/project.git &gt;</code> 修改远程地址</li>
 <li>git remote remove origin 删除远程仓库连接</li>
 </ul>
-
     </div>
   </blockquote><script>
 function toggleAlert(alertId) {
@@ -2016,7 +1995,6 @@ git remote update 获取远程分支所有的内容，但不会自动合并到�
       <ul>
 <li>git rebase &lt; target-branch &gt; 把我在其他分支提交，重新放在 main/master 后面继续排队走</li>
 </ul>
-
     </div>
   </blockquote><script>
 function toggleAlert(alertId) {
@@ -2353,7 +2331,6 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 })();
 </script>
-
     </div>
   </blockquote><script>
 function toggleAlert(alertId) {
@@ -2702,7 +2679,6 @@ feature:                           D  --- E &lt;--- 将我分支所有提交排�
   }
 })();
 </script>
-
     </div>
   </blockquote><script>
 function toggleAlert(alertId) {
@@ -2733,8 +2709,6 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 </script>
-
-
     </div>
   </blockquote><script>
 function toggleAlert(alertId) {
@@ -2819,7 +2793,6 @@ document.addEventListener('DOMContentLoaded', function() {
     class="border-primary bg-muted/30 hover:bg-muted/40 my-6 rounded-r-lg border-l-4 py-4 pr-4 pl-6 italic transition-all duration-200 ease-out hover:translate-x-1">
     <div class="prose prose-sm max-w-none">
       <p>Pull request =</p>
-
     </div>
   </blockquote><script>
 function toggleAlert(alertId) {
@@ -2858,7 +2831,6 @@ document.addEventListener('DOMContentLoaded', function() {
       <p>Code review :<br>
 <code>git commit -a --amend</code><br>
 <code>git push -f</code></p>
-
     </div>
   </blockquote><script>
 function toggleAlert(alertId) {
@@ -2895,7 +2867,6 @@ document.addEventListener('DOMContentLoaded', function() {
     class="border-primary bg-muted/30 hover:bg-muted/40 my-6 rounded-r-lg border-l-4 py-4 pr-4 pl-6 italic transition-all duration-200 ease-out hover:translate-x-1">
     <div class="prose prose-sm max-w-none">
       <p>Issue tracker =</p>
-
     </div>
   </blockquote><script>
 function toggleAlert(alertId) {
@@ -3006,14 +2977,14 @@ document.addEventListener('DOMContentLoaded', function() {
       id="alert-27-content"
       class="alert-content  px-6 pb-6">
       <div class="prose prose-sm text-foreground/90 max-w-none">
-        <h4 id="-在第二台设备使用git-pull-origin-dev-子分支成功拉取但是文件不是最新版本">💢 在第二台设备使用git pull origin dev 子分支，成功拉取但是文件不是最新版本</h4>
+        <h2 id="-在第二台设备使用git-pull-origin-dev-子分支成功拉取但是文件不是最新版本">💢 在第二台设备使用git pull origin dev 子分支，成功拉取但是文件不是最新版本</h2>
 
   <blockquote
     class="border-primary bg-muted/30 hover:bg-muted/40 my-6 rounded-r-lg border-l-4 py-4 pr-4 pl-6 italic transition-all duration-200 ease-out hover:translate-x-1">
     <div class="prose prose-sm max-w-none">
-      <h4 id="-原因一你当前不在-dev-分支上">🔍 原因一：你当前不在 dev 分支上</h4>
-<p>尽管你执行了 git pull origin dev，但 Git 默认是将远程的 origin/dev 拉取到你的 本地 dev 分支。如果你的工作区当前检出的是 main 或其他分支，那么你眼前的代码就不会变动。</p>
-<h4 id="解决办法确认和切换分支">解决办法：确认和切换分支</h4>
+      <h5 id="-原因一你当前不在-dev-分支上">🔍 原因一：你当前不在 dev 分支上</h5>
+<p>尽管你执行了 <code>git pull origin dev</code>，但 Git 默认是将远程的 <code>origin/dev</code> 拉取到你的 本地 dev 分支。如果你的工作区当前检出的是 main 或其他分支，那么你眼前的代码就不会变动。</p>
+<h5 id="解决办法确认和切换分支">解决办法：确认和切换分支</h5>
 <p>1️⃣ 检查当前分支：</p>
 <div
   class="code-block-container border-border bg-card my-6 overflow-hidden rounded-xl border shadow-sm transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md">
@@ -3911,9 +3882,9 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 })();
 </script>
-<h4 id="-原因二pull-时的本地合并问题--">🔍 原因二：pull 时的本地合并问题  &raquo;</h4>
+<h5 id="-原因二pull-时的本地合并问题--">🔍 原因二：pull 时的本地合并问题  &raquo;</h5>
 <p>git pull 实际上是两个命令的组合：git fetch（拉取远程数据）和 git merge（将拉取到的数据合并到当前分支）。</p>
-<h4 id="解决办法清理并强制更新">解决办法：清理并强制更新</h4>
+<h5 id="解决办法清理并强制更新">解决办法：清理并强制更新</h5>
 <p>1️⃣ 检查工作区状态：</p>
 <div
   class="code-block-container border-border bg-card my-6 overflow-hidden rounded-xl border shadow-sm transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md">
@@ -4519,8 +4490,607 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 })();
 </script>
-<p>3️⃣</p>
+<h5 id="-原因三untracked-或-ignored-文件干扰">🔍 原因三：Untracked 或 Ignored 文件干扰</h5>
+<p>如果你在项目中使用构建工具，一些旧的编译产物或缓存文件可能仍然存在于你的工作区，并让你误以为代码不是最新的。</p>
+<h5 id="解决办法清理工作区">解决办法：清理工作区</h5>
+<p>1️⃣ 执行 Dry Run 检查 (强烈推荐)：</p>
+<div
+  class="code-block-container border-border bg-card my-6 overflow-hidden rounded-xl border shadow-sm transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md">
+  
+  <div
+    class="code-block-header bg-muted/30 border-border flex items-center justify-between border-b px-4 py-3">
+    
+    <div class="flex items-center gap-2">
+      <div class="text-muted-foreground flex-shrink-0">
+        
+  <svg class="h-4 w-4"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+</svg>
+      </div>
+      <span class="text-muted-foreground text-sm font-medium">
+        BASH
+      </span>
+    </div>
 
+    
+    <div class="flex items-center gap-2">
+      <button
+          class="collapse-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
+          data-code-id="code-7"
+          data-default-state="expanded"
+          data-collapsed="false"
+          data-auto-collapse-lines="30"
+          data-auto-collapse-height="400"
+          data-collapsed-height="120"
+          title="Collapse"
+          aria-label="Collapse">
+          <span class="collapse-icon">
+            
+  <svg class="h-3 w-3"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"><path fill="currentColor" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z"/></svg>
+          </span>
+          <span class="collapse-text hidden sm:inline"
+            >Collapse</span
+          >
+        </button>
+      <button
+        class="copy-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
+        data-code-id="code-7"
+        title="Copy"
+        aria-label="Copy">
+        <span class="copy-icon">
+          
+  <svg class="h-3 w-3"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+</svg>
+        </span>
+        <span class="copy-text hidden sm:inline"
+          >Copy</span
+        >
+      </button>
+    </div>
+  </div>
+
+  
+  <div class="code-block-content relative" id="code-7">
+    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git clean -nfd		<span class="c1"># （查看哪些文件会被删除。）</span></span></span></code></pre></div>
+    
+    <div
+      class="collapse-overlay to-card/90 pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent opacity-0 transition-opacity duration-300">
+      <div
+        class="text-muted-foreground bg-card/80 border-border/50 hover:bg-primary/10 hover:text-primary hover:border-primary/30 absolute bottom-4 left-1/2 -translate-x-1/2 cursor-pointer rounded-full border px-3 py-1.5 text-xs backdrop-blur-sm transition-all duration-200">
+        Click to expand and view more
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+(function() {
+  const codeId = 'code-7';
+  const copyBtn = document.querySelector('.copy-code-btn[data-code-id="' + codeId + '"]');
+  const collapseBtn = document.querySelector('.collapse-code-btn[data-code-id="' + codeId + '"]');
+  const codeContainer = document.getElementById(codeId);
+
+  if (!codeContainer) return;
+
+  
+  if (copyBtn) {
+    const copyIcon = copyBtn.querySelector('.copy-icon');
+    const copyText = copyBtn.querySelector('.copy-text');
+
+    copyBtn.addEventListener('click', async function() {
+      try {
+        
+        let codeText = '';
+
+        
+        const codeTableCell = codeContainer.querySelector('.lntd:last-child code');
+        if (codeTableCell) {
+          codeText = codeTableCell.textContent || codeTableCell.innerText;
+        } else {
+          
+          const codeElement = codeContainer.querySelector('code');
+          if (codeElement) {
+            
+            const hasInlineLineNumbers = codeElement.querySelector('.ln');
+            if (hasInlineLineNumbers) {
+              
+              const codeLines = codeElement.querySelectorAll('.cl');
+              if (codeLines.length > 0) {
+                codeText = Array.from(codeLines)
+                  .map(line => {
+                    const text = line.textContent || line.innerText;
+                    
+                    return text.replace(/\n+$/, '');
+                  })
+                  .join('\n')
+                  .replace(/\n+$/, ''); 
+              } else {
+                
+                const allText = codeElement.textContent || codeElement.innerText;
+                codeText = allText.replace(/^\d+/gm, '').replace(/^\s+/gm, '');
+              }
+            } else {
+              
+              codeText = codeElement.textContent || codeElement.innerText;
+            }
+          } else {
+            
+            codeText = codeContainer.textContent || codeContainer.innerText;
+          }
+        }
+
+        
+        codeText = codeText.trim();
+
+        
+        await navigator.clipboard.writeText(codeText);
+
+        
+        copyIcon.innerHTML = `\r\n  \u003csvg class=\u0022h-3 w-3\u0022\r\n    fill=\u0022none\u0022\r\n    stroke=\u0022currentColor\u0022\r\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M5 13l4 4L19 7\u0022 \/\u003e\r\n\u003c\/svg\u003e`;
+        if (copyText) {
+          copyText.textContent = 'Copied';
+        }
+        copyBtn.classList.add('text-green-600');
+
+        
+        setTimeout(() => {
+          copyIcon.innerHTML = `\r\n  \u003csvg class=\u0022h-3 w-3\u0022\r\n    fill=\u0022none\u0022\r\n    stroke=\u0022currentColor\u0022\r\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z\u0022 \/\u003e\r\n\u003c\/svg\u003e`;
+          if (copyText) {
+            copyText.textContent = 'Copy';
+          }
+          copyBtn.classList.remove('text-green-600');
+        }, 2000);
+
+      } catch (err) {
+        console.error('复制失败:', err);
+
+        
+        const range = document.createRange();
+        const codeElement = codeContainer.querySelector('code') || codeContainer;
+        range.selectNodeContents(codeElement);
+        const selection = window.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(range);
+
+        
+        if (copyText) {
+          copyText.textContent = 'Selected';
+        }
+
+        setTimeout(() => {
+          if (copyText) {
+            copyText.textContent = 'Copy';
+          }
+          selection.removeAllRanges();
+        }, 2000);
+      }
+    });
+  }
+
+  
+  if (collapseBtn) {
+    const collapseIcon = collapseBtn.querySelector('.collapse-icon');
+    const collapseText = collapseBtn.querySelector('.collapse-text');
+    const collapseOverlay = codeContainer.querySelector('.collapse-overlay');
+
+    
+    let codeElement = codeContainer.querySelector('pre.chroma');
+    if (!codeElement) {
+      codeElement = codeContainer.querySelector('pre');
+    }
+
+    const defaultState = collapseBtn.dataset.defaultState || 'expanded';
+    const isCollapsedAttr = collapseBtn.dataset.collapsed === 'true';
+    const autoCollapseLines = parseInt(collapseBtn.dataset.autoCollapseLines) || 30;
+    const autoCollapseHeight = parseInt(collapseBtn.dataset.autoCollapseHeight) || 400;
+    const collapsedHeight = parseInt(collapseBtn.dataset.collapsedHeight) || 120;
+
+    let isCollapsed = false;
+
+    
+    function initCollapse() {
+      
+      const shouldCollapse = isCollapsedAttr ||
+                           defaultState === 'collapsed' ||
+                           shouldAutoCollapse();
+
+      if (shouldCollapse) {
+        setCollapsed(true, false); 
+      }
+    }
+
+    function shouldAutoCollapse() {
+      
+      if (codeElement) {
+        const lines = codeElement.querySelectorAll('.line, .cl');
+        const height = codeElement.offsetHeight;
+        return lines.length > autoCollapseLines || height > autoCollapseHeight;
+      }
+
+      
+      const containerHeight = codeContainer.offsetHeight;
+      if (containerHeight > autoCollapseHeight) {
+        return true;
+      }
+
+      
+      const textContent = codeContainer.textContent || codeContainer.innerText || '';
+      const estimatedLines = textContent.split('\n').length;
+      return estimatedLines > autoCollapseLines;
+    }
+
+    function setCollapsed(collapsed, animate = true) {
+      if (!collapseOverlay) return;
+
+      isCollapsed = collapsed;
+
+      if (collapsed) {
+        
+        codeContainer.style.maxHeight = collapsedHeight + 'px';
+        codeContainer.style.overflow = 'hidden';
+        collapseOverlay.style.opacity = '1';
+        collapseOverlay.style.pointerEvents = 'auto';
+
+        
+        collapseIcon.innerHTML = `\r\n  \u003csvg class=\u0022h-3 w-3\u0022\r\n    fill=\u0022none\u0022\r\n    stroke=\u0022currentColor\u0022\r\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M19 9l-7 7-7-7\u0022 \/\u003e\r\n\u003c\/svg\u003e`;
+        if (collapseText) {
+          collapseText.textContent = 'Expand';
+        }
+        collapseBtn.title = 'Expand';
+
+      } else {
+        
+        codeContainer.style.maxHeight = '';
+        codeContainer.style.overflow = '';
+        collapseOverlay.style.opacity = '0';
+        collapseOverlay.style.pointerEvents = 'none';
+
+        
+        collapseIcon.innerHTML = `\r\n  \u003csvg class=\u0022h-3 w-3\u0022\r\n    fill=\u0022none\u0022\r\n    stroke=\u0022currentColor\u0022\r\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath fill=\u0022currentColor\u0022 d=\u0022M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z\u0022\/\u003e\u003c\/svg\u003e`;
+        if (collapseText) {
+          collapseText.textContent = 'Collapse';
+        }
+        collapseBtn.title = 'Collapse';
+      }
+
+      
+      if (animate) {
+        codeContainer.style.transition = 'max-height 0.3s ease-out';
+        setTimeout(() => {
+          codeContainer.style.transition = '';
+        }, 300);
+      }
+    }
+
+    function toggleCollapse() {
+      setCollapsed(!isCollapsed, true);
+    }
+
+    
+    collapseBtn.addEventListener('click', toggleCollapse);
+
+    
+    if (collapseOverlay) {
+      collapseOverlay.addEventListener('click', () => {
+        if (isCollapsed) {
+          setCollapsed(false, true);
+        }
+      });
+    }
+
+    
+    initCollapse();
+  }
+})();
+</script>
+<p>2️⃣ 执行清理：</p>
+<div
+  class="code-block-container border-border bg-card my-6 overflow-hidden rounded-xl border shadow-sm transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md">
+  
+  <div
+    class="code-block-header bg-muted/30 border-border flex items-center justify-between border-b px-4 py-3">
+    
+    <div class="flex items-center gap-2">
+      <div class="text-muted-foreground flex-shrink-0">
+        
+  <svg class="h-4 w-4"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+</svg>
+      </div>
+      <span class="text-muted-foreground text-sm font-medium">
+        BASH
+      </span>
+    </div>
+
+    
+    <div class="flex items-center gap-2">
+      <button
+          class="collapse-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
+          data-code-id="code-8"
+          data-default-state="expanded"
+          data-collapsed="false"
+          data-auto-collapse-lines="30"
+          data-auto-collapse-height="400"
+          data-collapsed-height="120"
+          title="Collapse"
+          aria-label="Collapse">
+          <span class="collapse-icon">
+            
+  <svg class="h-3 w-3"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"><path fill="currentColor" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z"/></svg>
+          </span>
+          <span class="collapse-text hidden sm:inline"
+            >Collapse</span
+          >
+        </button>
+      <button
+        class="copy-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
+        data-code-id="code-8"
+        title="Copy"
+        aria-label="Copy">
+        <span class="copy-icon">
+          
+  <svg class="h-3 w-3"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+</svg>
+        </span>
+        <span class="copy-text hidden sm:inline"
+          >Copy</span
+        >
+      </button>
+    </div>
+  </div>
+
+  
+  <div class="code-block-content relative" id="code-8">
+    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git clean -fd		<span class="c1"># （-f 强制执行，-d 删除未追踪的文件夹。）（-f 强制执行，-d 删除未追踪的文件夹。）</span></span></span></code></pre></div>
+    
+    <div
+      class="collapse-overlay to-card/90 pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent opacity-0 transition-opacity duration-300">
+      <div
+        class="text-muted-foreground bg-card/80 border-border/50 hover:bg-primary/10 hover:text-primary hover:border-primary/30 absolute bottom-4 left-1/2 -translate-x-1/2 cursor-pointer rounded-full border px-3 py-1.5 text-xs backdrop-blur-sm transition-all duration-200">
+        Click to expand and view more
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+(function() {
+  const codeId = 'code-8';
+  const copyBtn = document.querySelector('.copy-code-btn[data-code-id="' + codeId + '"]');
+  const collapseBtn = document.querySelector('.collapse-code-btn[data-code-id="' + codeId + '"]');
+  const codeContainer = document.getElementById(codeId);
+
+  if (!codeContainer) return;
+
+  
+  if (copyBtn) {
+    const copyIcon = copyBtn.querySelector('.copy-icon');
+    const copyText = copyBtn.querySelector('.copy-text');
+
+    copyBtn.addEventListener('click', async function() {
+      try {
+        
+        let codeText = '';
+
+        
+        const codeTableCell = codeContainer.querySelector('.lntd:last-child code');
+        if (codeTableCell) {
+          codeText = codeTableCell.textContent || codeTableCell.innerText;
+        } else {
+          
+          const codeElement = codeContainer.querySelector('code');
+          if (codeElement) {
+            
+            const hasInlineLineNumbers = codeElement.querySelector('.ln');
+            if (hasInlineLineNumbers) {
+              
+              const codeLines = codeElement.querySelectorAll('.cl');
+              if (codeLines.length > 0) {
+                codeText = Array.from(codeLines)
+                  .map(line => {
+                    const text = line.textContent || line.innerText;
+                    
+                    return text.replace(/\n+$/, '');
+                  })
+                  .join('\n')
+                  .replace(/\n+$/, ''); 
+              } else {
+                
+                const allText = codeElement.textContent || codeElement.innerText;
+                codeText = allText.replace(/^\d+/gm, '').replace(/^\s+/gm, '');
+              }
+            } else {
+              
+              codeText = codeElement.textContent || codeElement.innerText;
+            }
+          } else {
+            
+            codeText = codeContainer.textContent || codeContainer.innerText;
+          }
+        }
+
+        
+        codeText = codeText.trim();
+
+        
+        await navigator.clipboard.writeText(codeText);
+
+        
+        copyIcon.innerHTML = `\r\n  \u003csvg class=\u0022h-3 w-3\u0022\r\n    fill=\u0022none\u0022\r\n    stroke=\u0022currentColor\u0022\r\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M5 13l4 4L19 7\u0022 \/\u003e\r\n\u003c\/svg\u003e`;
+        if (copyText) {
+          copyText.textContent = 'Copied';
+        }
+        copyBtn.classList.add('text-green-600');
+
+        
+        setTimeout(() => {
+          copyIcon.innerHTML = `\r\n  \u003csvg class=\u0022h-3 w-3\u0022\r\n    fill=\u0022none\u0022\r\n    stroke=\u0022currentColor\u0022\r\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z\u0022 \/\u003e\r\n\u003c\/svg\u003e`;
+          if (copyText) {
+            copyText.textContent = 'Copy';
+          }
+          copyBtn.classList.remove('text-green-600');
+        }, 2000);
+
+      } catch (err) {
+        console.error('复制失败:', err);
+
+        
+        const range = document.createRange();
+        const codeElement = codeContainer.querySelector('code') || codeContainer;
+        range.selectNodeContents(codeElement);
+        const selection = window.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(range);
+
+        
+        if (copyText) {
+          copyText.textContent = 'Selected';
+        }
+
+        setTimeout(() => {
+          if (copyText) {
+            copyText.textContent = 'Copy';
+          }
+          selection.removeAllRanges();
+        }, 2000);
+      }
+    });
+  }
+
+  
+  if (collapseBtn) {
+    const collapseIcon = collapseBtn.querySelector('.collapse-icon');
+    const collapseText = collapseBtn.querySelector('.collapse-text');
+    const collapseOverlay = codeContainer.querySelector('.collapse-overlay');
+
+    
+    let codeElement = codeContainer.querySelector('pre.chroma');
+    if (!codeElement) {
+      codeElement = codeContainer.querySelector('pre');
+    }
+
+    const defaultState = collapseBtn.dataset.defaultState || 'expanded';
+    const isCollapsedAttr = collapseBtn.dataset.collapsed === 'true';
+    const autoCollapseLines = parseInt(collapseBtn.dataset.autoCollapseLines) || 30;
+    const autoCollapseHeight = parseInt(collapseBtn.dataset.autoCollapseHeight) || 400;
+    const collapsedHeight = parseInt(collapseBtn.dataset.collapsedHeight) || 120;
+
+    let isCollapsed = false;
+
+    
+    function initCollapse() {
+      
+      const shouldCollapse = isCollapsedAttr ||
+                           defaultState === 'collapsed' ||
+                           shouldAutoCollapse();
+
+      if (shouldCollapse) {
+        setCollapsed(true, false); 
+      }
+    }
+
+    function shouldAutoCollapse() {
+      
+      if (codeElement) {
+        const lines = codeElement.querySelectorAll('.line, .cl');
+        const height = codeElement.offsetHeight;
+        return lines.length > autoCollapseLines || height > autoCollapseHeight;
+      }
+
+      
+      const containerHeight = codeContainer.offsetHeight;
+      if (containerHeight > autoCollapseHeight) {
+        return true;
+      }
+
+      
+      const textContent = codeContainer.textContent || codeContainer.innerText || '';
+      const estimatedLines = textContent.split('\n').length;
+      return estimatedLines > autoCollapseLines;
+    }
+
+    function setCollapsed(collapsed, animate = true) {
+      if (!collapseOverlay) return;
+
+      isCollapsed = collapsed;
+
+      if (collapsed) {
+        
+        codeContainer.style.maxHeight = collapsedHeight + 'px';
+        codeContainer.style.overflow = 'hidden';
+        collapseOverlay.style.opacity = '1';
+        collapseOverlay.style.pointerEvents = 'auto';
+
+        
+        collapseIcon.innerHTML = `\r\n  \u003csvg class=\u0022h-3 w-3\u0022\r\n    fill=\u0022none\u0022\r\n    stroke=\u0022currentColor\u0022\r\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M19 9l-7 7-7-7\u0022 \/\u003e\r\n\u003c\/svg\u003e`;
+        if (collapseText) {
+          collapseText.textContent = 'Expand';
+        }
+        collapseBtn.title = 'Expand';
+
+      } else {
+        
+        codeContainer.style.maxHeight = '';
+        codeContainer.style.overflow = '';
+        collapseOverlay.style.opacity = '0';
+        collapseOverlay.style.pointerEvents = 'none';
+
+        
+        collapseIcon.innerHTML = `\r\n  \u003csvg class=\u0022h-3 w-3\u0022\r\n    fill=\u0022none\u0022\r\n    stroke=\u0022currentColor\u0022\r\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath fill=\u0022currentColor\u0022 d=\u0022M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z\u0022\/\u003e\u003c\/svg\u003e`;
+        if (collapseText) {
+          collapseText.textContent = 'Collapse';
+        }
+        collapseBtn.title = 'Collapse';
+      }
+
+      
+      if (animate) {
+        codeContainer.style.transition = 'max-height 0.3s ease-out';
+        setTimeout(() => {
+          codeContainer.style.transition = '';
+        }, 300);
+      }
+    }
+
+    function toggleCollapse() {
+      setCollapsed(!isCollapsed, true);
+    }
+
+    
+    collapseBtn.addEventListener('click', toggleCollapse);
+
+    
+    if (collapseOverlay) {
+      collapseOverlay.addEventListener('click', () => {
+        if (isCollapsed) {
+          setCollapsed(false, true);
+        }
+      });
+    }
+
+    
+    initCollapse();
+  }
+})();
+</script>
     </div>
   </blockquote><script>
 function toggleAlert(alertId) {
@@ -5191,15 +5761,12 @@ document.addEventListener('DOMContentLoaded', function() {
     <li><a href="#暂存区--staging-area--常用命令"><em>暂存区 ( Staging Area ) 常用命令</em></a></li>
     <li><a href="#储存区--local-repository--常用命令"><em>储存区 ( Local Repository ) 常用命令</em></a></li>
     <li><a href="#分支--branch--常用命令"><em>分支 ( Branch ) 常用命令</em></a></li>
-    <li><a href="#远程仓库--remote-repository--常用命令"><em>远程仓库 ( Remote Repository ) 常用命令</em></a>
+    <li><a href="#远程仓库--remote-repository--常用命令"><em>远程仓库 ( Remote Repository ) 常用命令</em></a></li>
+    <li><a href="#-在第二台设备使用git-pull-origin-dev-子分支成功拉取但是文件不是最新版本">💢 在第二台设备使用git pull origin dev 子分支，成功拉取但是文件不是最新版本</a>
       <ul>
         <li>
           <ul>
-            <li><a href="#-在第二台设备使用git-pull-origin-dev-子分支成功拉取但是文件不是最新版本">💢 在第二台设备使用git pull origin dev 子分支，成功拉取但是文件不是最新版本</a></li>
-            <li><a href="#-原因一你当前不在-dev-分支上">🔍 原因一：你当前不在 dev 分支上</a></li>
-            <li><a href="#解决办法确认和切换分支">解决办法：确认和切换分支</a></li>
-            <li><a href="#-原因二pull-时的本地合并问题--">🔍 原因二：pull 时的本地合并问题  &raquo;</a></li>
-            <li><a href="#解决办法清理并强制更新">解决办法：清理并强制更新</a></li>
+            <li></li>
           </ul>
         </li>
       </ul>
