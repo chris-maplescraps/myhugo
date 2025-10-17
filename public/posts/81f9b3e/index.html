@@ -1160,6 +1160,7 @@
     viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 3h6v6m-11 5L21 3m-3 10v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
 </a></li>
 </ul>
+
     </div>
   </blockquote><script>
 function toggleAlert(alertId) {
@@ -1248,6 +1249,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <li>位置： 就是你打开的那个 <strong>项目文件夹</strong>。你看到的所有文件，包括代码、图片、配置文件等等，都属于工作区</li>
 <li>状态： 当你在文件中进行修改时，这些修改都处于“未追踪”或“已修改”状态</li>
 </ul>
+
     </div>
   </blockquote><script>
 function toggleAlert(alertId) {
@@ -1288,6 +1290,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <li>位置： 在项目根目录下的 <strong>隐藏文件夹 .git/</strong> 中的一个 <strong>名为 index 的文件</strong></li>
 <li>功能： 它充当工作区和储存区之间的“缓冲站”。你使用 <em>git add</em> 命令将工作区中你想要的修改精准地加入暂存区。只有被加入到暂存区的修改，才会包含在你的下一个 commit 中</li>
 </ul>
+
     </div>
   </blockquote><script>
 function toggleAlert(alertId) {
@@ -1328,6 +1331,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <li>位置： 也是在项目 <strong>根目录下的隐藏文件夹 .git/</strong> 中，主要内容 <strong>存储在 .git/objects</strong> 文件夹里</li>
 <li>功能： 这是 Git 的核心数据库。当你执行 <em>git commit</em> 时，暂存区中的快照会被永久地记录为历史版本，并存储在储存区中</li>
 </ul>
+
     </div>
   </blockquote><script>
 function toggleAlert(alertId) {
@@ -1421,6 +1425,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <li>git clean <code>&lt; folder_name &gt;</code> <code>-</code>nd 模拟删除不曾提交/追踪过的文件夹</li>
 <li>git clean <code>&lt; folder_name &gt;</code> <code>-</code>fd 确认删除文件夹</li>
 </ul>
+
     </div>
   </blockquote><script>
 function toggleAlert(alertId) {
@@ -1468,6 +1473,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <li>git reset  HEAD <code>&lt; changed_file &gt;</code> 从暂存区移除，也会丢失硬盘上的文件</li>
 <li>git restore <code>--</code>staged <code>&lt; changed_file &gt;</code> 只从暂存区移除</li>
 </ul>
+
     </div>
   </blockquote><script>
 function toggleAlert(alertId) {
@@ -1526,6 +1532,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <li><code>--</code>mixed	移动 HEAD 指针，撤销 commit，也会撤销暂存区的文件。这是 git reset 的默认选项</li>
 <li><code>--</code>hard	移动 HEAD 指针，清空暂存区和工作区。所有更改都被丢弃。这是最危险的选项</li>
 </ul>
+
     </div>
   </blockquote><script>
 function toggleAlert(alertId) {
@@ -1556,6 +1563,8 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 </script>
+
+
     </div>
   </blockquote><script>
 function toggleAlert(alertId) {
@@ -1609,6 +1618,7 @@ document.addEventListener('DOMContentLoaded', function() {
 使用 git branch <code>-</code>vv 可以看到以下讯息：指针的分支，是否和远程仓库分支一样</li>
 </ul>
 <p>test   5ab7ba3 [origin/test] Create a new file for result record purpose</p>
+
     </div>
   </blockquote><script>
 function toggleAlert(alertId) {
@@ -1651,6 +1661,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </li>
 </ul>
 <p><code>git merge [ sub-branches ]</code></p>
+
     </div>
   </blockquote><script>
 function toggleAlert(alertId) {
@@ -1681,6 +1692,8 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 </script>
+
+
     </div>
   </blockquote><script>
 function toggleAlert(alertId) {
@@ -1764,6 +1777,7 @@ document.addEventListener('DOMContentLoaded', function() {
 git remote update 获取远程分支所有的内容，但不会自动合并到本地分支</p>
 </li>
 </ul>
+
     </div>
   </blockquote><script>
 function toggleAlert(alertId) {
@@ -1816,6 +1830,7 @@ document.addEventListener('DOMContentLoaded', function() {
       <ul>
 <li>git rebase &lt; target-branch &gt; 把我在其他分支提交，重新放在 main/master 后面继续排队走</li>
 </ul>
+
     </div>
   </blockquote><script>
 function toggleAlert(alertId) {
@@ -2152,6 +2167,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 })();
 </script>
+
     </div>
   </blockquote><script>
 function toggleAlert(alertId) {
@@ -2500,6 +2516,7 @@ feature:                           D  --- E &lt;--- 将我分支所有提交排�
   }
 })();
 </script>
+
     </div>
   </blockquote><script>
 function toggleAlert(alertId) {
@@ -2530,6 +2547,8 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 </script>
+
+
     </div>
   </blockquote><script>
 function toggleAlert(alertId) {
@@ -2597,6 +2616,7 @@ document.addEventListener('DOMContentLoaded', function() {
     class="border-primary bg-muted/30 hover:bg-muted/40 my-6 rounded-r-lg border-l-4 py-4 pr-4 pl-6 italic transition-all duration-200 ease-out hover:translate-x-1">
     <div class="prose prose-sm max-w-none">
       <p>Pull request =</p>
+
     </div>
   </blockquote><script>
 function toggleAlert(alertId) {
@@ -2635,6 +2655,7 @@ document.addEventListener('DOMContentLoaded', function() {
       <p>Code review :<br>
 <code>git commit -a --amend</code><br>
 <code>git push -f</code></p>
+
     </div>
   </blockquote><script>
 function toggleAlert(alertId) {
@@ -2671,6 +2692,7 @@ document.addEventListener('DOMContentLoaded', function() {
     class="border-primary bg-muted/30 hover:bg-muted/40 my-6 rounded-r-lg border-l-4 py-4 pr-4 pl-6 italic transition-all duration-200 ease-out hover:translate-x-1">
     <div class="prose prose-sm max-w-none">
       <p>Issue tracker =</p>
+
     </div>
   </blockquote><script>
 function toggleAlert(alertId) {
