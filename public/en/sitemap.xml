@@ -3,7 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/categories/</loc>
+<<<<<<< HEAD
     <lastmod>2025-10-16T15:56:15+08:00</lastmod>
+=======
+    <lastmod>2025-10-19T10:42:43+08:00</lastmod>
+>>>>>>> 7d315be (create vs_studio.md)
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-CN"
@@ -26,7 +30,11 @@
                 />
   </url><url>
     <loc>http://localhost:1313/</loc>
+<<<<<<< HEAD
     <lastmod>2025-10-16T15:56:15+08:00</lastmod>
+=======
+    <lastmod>2025-10-19T10:42:43+08:00</lastmod>
+>>>>>>> 7d315be (create vs_studio.md)
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-CN"
@@ -49,6 +57,7 @@
                 />
   </url><url>
     <loc>http://localhost:1313/posts/</loc>
+<<<<<<< HEAD
     <lastmod>2025-10-16T15:56:15+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/48d997b/</loc>
@@ -56,6 +65,12 @@
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
     <lastmod>2025-10-16T15:56:15+08:00</lastmod>
+=======
+    <lastmod>2025-10-19T10:42:43+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2025-10-19T10:42:43+08:00</lastmod>
+>>>>>>> 7d315be (create vs_studio.md)
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-CN"
@@ -78,12 +93,27 @@
                 />
   </url><url>
     <loc>http://localhost:1313/categories/tech/</loc>
+<<<<<<< HEAD
     <lastmod>2025-10-16T15:56:15+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/%E5%BC%80%E5%8F%91/</loc>
     <lastmod>2025-10-16T15:56:15+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/%E6%8A%80%E6%9C%AF/</loc>
+=======
+    <lastmod>2025-10-19T10:42:43+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/aeede5e/</loc>
+    <lastmod>2025-10-19T10:42:43+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%E5%BC%80%E5%8F%91/</loc>
+    <lastmod>2025-10-19T10:42:43+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%E6%8A%80%E6%9C%AF/</loc>
+    <lastmod>2025-10-19T10:42:43+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/48d997b/</loc>
+>>>>>>> 7d315be (create vs_studio.md)
     <lastmod>2025-10-16T15:56:15+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/e985480/</loc>
