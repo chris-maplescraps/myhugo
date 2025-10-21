@@ -184,6 +184,7 @@ author = "MapleScraps"
 git remote update 获取远程分支所有的内容，但不会自动合并到本地分支
 >
 > - git push `-`u origin < 分支名 > 将本地< 分支名 >分支推送代码到origin 远程仓库, -u 默认为当前的远程仓库
+<<<<<<< HEAD
 > - git push `--`set-upstream origin 等于 git push -u origin < branch >
 > - git push `--`delete origin < 远程仓库分支 >  删除远程分支
 > - git pull `--`rebase origin main 将其他同事推送更新，同步到本地，然后将自己的新推送放在最后
@@ -191,6 +192,15 @@ git remote update 获取远程分支所有的内容，但不会自动合并到�
 > - `git merge origin/master` 合并后，必须执行推送到远程仓库
 > - `git log origin/master`
 > - git rebase `--`continue 
+=======
+> - `git push --set-upstream origin` 等于 git push -u origin < branch >
+> - `git push --delete origin < 远程仓库分支 >`  删除远程分支
+> - `git pull --rebase origin main` 将其他同事推送更新，同步到本地，然后将自己的新推送放在最后
+> - `git rebase --continue`
+> - `git merge origin/master` 合并后，必须执行推送到远程仓库
+> - `git log origin/master`
+> - `git rebase --continue`
+>>>>>>> d77f281f21df378d94ddccfe901d8eff34ff699d
 >
 > > - git rebase < target-branch > 把我在其他分支提交，重新放在 main/master 后面继续排队走
 >
