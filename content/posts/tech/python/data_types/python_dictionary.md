@@ -1,7 +1,7 @@
 +++
 title = 'Python Dictionary'
 date = 2025-10-19T11:08:28+08:00
-draft = true
+draft = false
 slug = "e349600"
 description = ""
 summary = ""

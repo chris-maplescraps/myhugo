@@ -1,7 +1,7 @@
 +++
 title = 'Python Tuple'
 date = 2025-10-19T11:08:40+08:00
-draft = true
+draft = false
 slug = "2340053"
 description = ""
 summary = ""

@@ -1,7 +1,7 @@
 +++
 title = 'Python Integer'
 date = 2025-10-19T11:09:09+08:00
-draft = true
+draft = false
 slug = "4191130"
 description = ""
 summary = ""

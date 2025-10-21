@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>库 on MapleScraps</title>
+    <link>http://localhost:1313/tags/%E5%BA%93/</link>
+    <description>Recent content in 库 on MapleScraps</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <lastBuildDate>Tue, 21 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E5%BA%93/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Rich 核心知识与示例速查</title>
+      <link>http://localhost:1313/posts/rich-%E6%A0%B8%E5%BF%83%E7%9F%A5%E8%AF%86%E4%B8%8E%E7%A4%BA%E4%BE%8B%E9%80%9F%E6%9F%A5/</link>
+      <pubDate>Tue, 21 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/rich-%E6%A0%B8%E5%BF%83%E7%9F%A5%E8%AF%86%E4%B8%8E%E7%A4%BA%E4%BE%8B%E9%80%9F%E6%9F%A5/</guid>
+      <description>&lt;p&gt;Rich 是一个在终端渲染“富文本”的 Python 库：颜色、样式、表格、进度条、Markdown、代码高亮、异常栈（traceback）等都能优雅呈现，且上手简单。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

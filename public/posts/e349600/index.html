@@ -2,7 +2,7 @@
 <html
   lang="en-US"
   data-theme="default">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1314&amp;path=livereload" data-no-instant defer></script>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8" />
 <meta
   name="viewport"
@@ -18,7 +18,7 @@
 <meta name="language" content="en-US" />
 
 <meta name="robots" content="index, follow" />
-<link rel="canonical" href="http://localhost:1314/posts/e349600/" />
+<link rel="canonical" href="http://localhost:1313/posts/e349600/" />
 
 
 
@@ -27,7 +27,7 @@
 
 
 <link rel="manifest" href="/site.webmanifest" />
-<meta property="og:url" content="http://localhost:1314/posts/e349600/">
+<meta property="og:url" content="http://localhost:1313/posts/e349600/">
   <meta property="og:site_name" content="MapleScraps">
   <meta property="og:title" content="Python Dictionary">
   <meta property="og:description" content="Dictionary 这篇用最简单的话，讲清 Python 字典（dict）：它是“键-值”映射，键必须可哈希（可做字典键），适合快速查找、聚合统计、配置与数据表达。
@@ -39,11 +39,11 @@
     <meta property="article:modified_time" content="2025-10-19T11:08:28+08:00">
     <meta property="article:tag" content="技术">
     <meta property="article:tag" content="开发">
-    <meta property="og:image" content="http://localhost:1314/images/og-default.avif">
+    <meta property="og:image" content="http://localhost:1313/images/og-default.avif">
 
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="http://localhost:1314/images/og-default.avif">
+  <meta name="twitter:image" content="http://localhost:1313/images/og-default.avif">
   <meta name="twitter:title" content="Python Dictionary">
   <meta name="twitter:description" content="Dictionary 这篇用最简单的话，讲清 Python 字典（dict）：它是“键-值”映射，键必须可哈希（可做字典键），适合快速查找、聚合统计、配置与数据表达。
 一句话认识 dict 特性：键唯一、值可任意类型、无序（3.7&#43;按插入顺序显示但别依赖排序）。 键必须可哈希：数字、字符串、元组可以；列表、字典不行。 常见创建：{}、dict()、dict(a=1,b=2)、dict([(&#39;a&#39;,1),(&#39;b&#39;,2)])。 快速上手 PYTHONCollapseCopy# 创建与访问 user = {&#39;name&#39;: &#39;Alice&#39;, &#39;age&#39;: 20} user[&#39;age&#39;] # 20（不存在会报 KeyError） user.get(&#39;city&#39;) # None（安全访问） user.get(&#39;city&#39;, &#39;Beijing&#39;) # 默认值 # 新增与更新 user[&#39;city&#39;] = &#39;Beijing&#39; user.update({&#39;age&#39;: 21, &#39;job&#39;: &#39;dev&#39;}) # 删除 user.pop(&#39;job&#39;) # 返回值并删除 user.pop(&#39;not_exist&#39;, None) # 给默认值避免报错 user.popitem() # 弹出最后插入的键值对（LIFO） del user[&#39;city&#39;] # 查询 &#39;age&#39; in user # True len(user) # 键的个数 # 视图（动态） user.keys() # 所有键 user.values() # 所有值 user.items() # (键,值) 对 # 遍历（推荐） for k, v in user.items(): print(k, v)Click to expand and view more常用命令（方法） 访问：d[key]、d.get(key, default)、d.setdefault(key, default)（不存在时写入并返回）。 更新：d[key] = val、d.update(other)、合并：d1 | d2（3.9&#43;，右侧覆盖）。 删除：d.pop(key, default)、d.popitem()、del d[key]、d.clear()。 复制：d.copy()（浅拷贝）；深拷贝用 copy.deepcopy(d)。 视图：d.keys()、d.values()、d.items()（动态反映字典变化）。 高频场景与技巧 计数： PYTHONCollapseCopyfrom collections import Counter Counter([&#39;a&#39;,&#39;b&#39;,&#39;a&#39;]) # {&#39;a&#39;: 2, &#39;b&#39;: 1}Click to expand and view more分组： PYTHONCollapseCopygroups = {} for x in [&#39;US&#39;, &#39;CN&#39;, &#39;US&#39;]: groups.setdefault(x, []).append(1) # {&#39;US&#39;: [1,1], &#39;CN&#39;: [1]}Click to expand and view more字典推导式： PYTHONCollapseCopysquares = {x: x*x for x in range(5)} # {0:0, 1:1, 2:4, 3:9, 4:16}Click to expand and view more按 key/value 排序显示： PYTHONCollapseCopysorted_items = sorted(user.items(), key=lambda kv: kv[0]) # 按键 sorted_by_val = sorted(user.items(), key=lambda kv: kv[1]) # 按值Click to expand and view more容易踩雷（简明版） 键重复会覆盖：{&#39;a&#39;:1, &#39;a&#39;:2} -&gt; {&#39;a&#39;:2}。 键必须可哈希：d[[1,2]] = &#39;x&#39; 会报错；可用元组 d[(1,2)]=&#39;x&#39;。 边遍历边修改易出错：先 list(d.items()) 再改，或生成新字典。 popitem() 是弹出“最后插入”的项，不是随机。 浅拷贝不复制嵌套对象：copy() 只复制最外层引用，需 deepcopy。 get 默认返回 None，容易误判；可显式给默认值。 setdefault 会写入字典：仅当“需要默认结构并立即使用”时用。 视图是动态的：keys()/items() 随字典变化实时更新。 JSON 键通常要字符串：非字符串键序列化可能会不符合预期。 速查清单 创建：{}, dict(), dict(a=1), dict([(k,v)]) 访问：[], get, setdefault 更新/合并：=, update, | 删除：pop, popitem, del, clear 遍历：for k,v in d.items() 视图：keys, values, items 拷贝：copy, deepcopy 推导式：{k:v for ... if ...} 小示例 PYTHONCollapseCopy# 合并并保留右侧覆盖 cfg = {&#39;host&#39;: &#39;localhost&#39;, &#39;port&#39;: 8000} override = {&#39;port&#39;: 8080, &#39;debug&#39;: True} final = cfg | override print(final) # {&#39;host&#39;: &#39;localhost&#39;, &#39;port&#39;: 8080, &#39;debug&#39;: True} # 统计并找 Top-N from collections import Counter words = [&#39;a&#39;,&#39;b&#39;,&#39;a&#39;,&#39;c&#39;,&#39;a&#39;,&#39;b&#39;] print(Counter(words).most_common(2)) # [(&#39;a&#39;,3), (&#39;b&#39;,2)] # 安全读取嵌套结构 user = {&#39;profile&#39;: {&#39;name&#39;: &#39;Alice&#39;}} name = user.get(&#39;profile&#39;, {}).get(&#39;name&#39;, &#39;unknown&#39;) print(name)Click to expand and view more">
@@ -55,7 +55,7 @@
   <meta itemprop="datePublished" content="2025-10-19T11:08:28+08:00">
   <meta itemprop="dateModified" content="2025-10-19T11:08:28+08:00">
   <meta itemprop="wordCount" content="1154">
-  <meta itemprop="image" content="http://localhost:1314/images/og-default.avif">
+  <meta itemprop="image" content="http://localhost:1313/images/og-default.avif">
   <meta itemprop="keywords" content="技术,开发">
 
 

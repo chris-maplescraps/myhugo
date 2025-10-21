@@ -2,7 +2,7 @@
 <html
   lang="en-US"
   data-theme="default">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1314&amp;path=livereload" data-no-instant defer></script>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8" />
 <meta
   name="viewport"
@@ -11,13 +11,14 @@
 
 <title>Python Update | MapleScraps</title>
 
-<meta name="description" content="Latest version Python 3. 14 no GIL | 官方名字 free threaded 2 个版本 &ndash;&gt; with GIL | without GIL ( default with GIL ) NoteGIL： Global Interpreter..." />
+<meta name="description" content="Python 3.14 关键更新（简明版） 这篇把 3.14 最重要的改动讲清楚，用最少的词和直接可跑的例子让你迅速上手：
+Free-threaded（无 GIL 选项）：支持在特定构建中移除 GIL，让多线程能真正并行跑 Python 字节码。（默认仍有 GIL 的构建）..." />
 <meta name="keywords" content="技术, 开发" />
 <meta name="author" content="MapleScraps" />
 <meta name="language" content="en-US" />
 
 <meta name="robots" content="index, follow" />
-<link rel="canonical" href="http://localhost:1314/posts/460fa21/" />
+<link rel="canonical" href="http://localhost:1313/posts/460fa21/" />
 
 
 
@@ -26,10 +27,11 @@
 
 
 <link rel="manifest" href="/site.webmanifest" />
-<meta property="og:url" content="http://localhost:1314/posts/460fa21/">
+<meta property="og:url" content="http://localhost:1313/posts/460fa21/">
   <meta property="og:site_name" content="MapleScraps">
   <meta property="og:title" content="Python Update">
-  <meta property="og:description" content="Latest version Python 3. 14 no GIL | 官方名字 free threaded 2 个版本 –&gt; with GIL | without GIL ( default with GIL ) NoteGIL： Global Interpreter Lock 全局解释器 核心作用： 在任何给定的时间点，它只允许 一个 线程执行 Python 字节码 想象一下，GIL 就像是厨房里唯一的厨师帽。无论厨房里有多少个厨师（线程）在工作，只有戴着帽子的那位才能在灶台（CPU）前切菜、炒菜（执行 Python 代码）。其他厨师必须等着，直到戴帽子的人把帽子摘下。">
+  <meta property="og:description" content="Python 3.14 关键更新（简明版） 这篇把 3.14 最重要的改动讲清楚，用最少的词和直接可跑的例子让你迅速上手：
+Free-threaded（无 GIL 选项）：支持在特定构建中移除 GIL，让多线程能真正并行跑 Python 字节码。（默认仍有 GIL 的构建） 模板字符串字面值 t&#34;...&#34;：更安全、更适合国际化的字符串插值语法，默认只替换标识符。 其他质量提升：解释器性能与错误信息进一步改进（细节不展开，保持高层认知）。 1. Free-threaded（无 GIL 选项） 核心点：取消全局解释器锁后，“同一进程内的多个 Python 线程”可以同时执行字节码，不再被 GIL 串行化。">
   <meta property="og:locale" content="en_US">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -37,21 +39,23 @@
     <meta property="article:modified_time" content="2025-10-16T10:32:06+08:00">
     <meta property="article:tag" content="技术">
     <meta property="article:tag" content="开发">
-    <meta property="og:image" content="http://localhost:1314/images/og-default.avif">
+    <meta property="og:image" content="http://localhost:1313/images/og-default.avif">
 
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="http://localhost:1314/images/og-default.avif">
+  <meta name="twitter:image" content="http://localhost:1313/images/og-default.avif">
   <meta name="twitter:title" content="Python Update">
-  <meta name="twitter:description" content="Latest version Python 3. 14 no GIL | 官方名字 free threaded 2 个版本 –&gt; with GIL | without GIL ( default with GIL ) NoteGIL： Global Interpreter Lock 全局解释器 核心作用： 在任何给定的时间点，它只允许 一个 线程执行 Python 字节码 想象一下，GIL 就像是厨房里唯一的厨师帽。无论厨房里有多少个厨师（线程）在工作，只有戴着帽子的那位才能在灶台（CPU）前切菜、炒菜（执行 Python 代码）。其他厨师必须等着，直到戴帽子的人把帽子摘下。">
+  <meta name="twitter:description" content="Python 3.14 关键更新（简明版） 这篇把 3.14 最重要的改动讲清楚，用最少的词和直接可跑的例子让你迅速上手：
+Free-threaded（无 GIL 选项）：支持在特定构建中移除 GIL，让多线程能真正并行跑 Python 字节码。（默认仍有 GIL 的构建） 模板字符串字面值 t&#34;...&#34;：更安全、更适合国际化的字符串插值语法，默认只替换标识符。 其他质量提升：解释器性能与错误信息进一步改进（细节不展开，保持高层认知）。 1. Free-threaded（无 GIL 选项） 核心点：取消全局解释器锁后，“同一进程内的多个 Python 线程”可以同时执行字节码，不再被 GIL 串行化。">
 
 
   <meta itemprop="name" content="Python Update">
-  <meta itemprop="description" content="Latest version Python 3. 14 no GIL | 官方名字 free threaded 2 个版本 –&gt; with GIL | without GIL ( default with GIL ) NoteGIL： Global Interpreter Lock 全局解释器 核心作用： 在任何给定的时间点，它只允许 一个 线程执行 Python 字节码 想象一下，GIL 就像是厨房里唯一的厨师帽。无论厨房里有多少个厨师（线程）在工作，只有戴着帽子的那位才能在灶台（CPU）前切菜、炒菜（执行 Python 代码）。其他厨师必须等着，直到戴帽子的人把帽子摘下。">
+  <meta itemprop="description" content="Python 3.14 关键更新（简明版） 这篇把 3.14 最重要的改动讲清楚，用最少的词和直接可跑的例子让你迅速上手：
+Free-threaded（无 GIL 选项）：支持在特定构建中移除 GIL，让多线程能真正并行跑 Python 字节码。（默认仍有 GIL 的构建） 模板字符串字面值 t&#34;...&#34;：更安全、更适合国际化的字符串插值语法，默认只替换标识符。 其他质量提升：解释器性能与错误信息进一步改进（细节不展开，保持高层认知）。 1. Free-threaded（无 GIL 选项） 核心点：取消全局解释器锁后，“同一进程内的多个 Python 线程”可以同时执行字节码，不再被 GIL 串行化。">
   <meta itemprop="datePublished" content="2025-10-16T10:32:06+08:00">
   <meta itemprop="dateModified" content="2025-10-16T10:32:06+08:00">
-  <meta itemprop="wordCount" content="625">
-  <meta itemprop="image" content="http://localhost:1314/images/og-default.avif">
+  <meta itemprop="wordCount" content="2293">
+  <meta itemprop="image" content="http://localhost:1313/images/og-default.avif">
   <meta itemprop="keywords" content="技术,开发">
 
 
@@ -1026,7 +1030,7 @@
     viewBox="0 0 24 24" aria-label="Reading time"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
 </svg>
           <span
-            >2 minute</span
+            >5 minute</span
           >
         </div>
       
@@ -1041,7 +1045,7 @@
     stroke="currentColor"
     viewBox="0 0 24 24" aria-label="Word count"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
 </svg>
-          <span>625 words</span>
+          <span>2293 words</span>
         </div>
       
 
@@ -1138,155 +1142,29 @@
 
   
   <article class="prose prose-neutral dark:prose-invert mb-12 max-w-none">
-    <h1 id="latest-version">Latest version</h1>
-<h2 id="python-3-14">Python 3. 14</h2>
+    <h1 id="python-314-关键更新简明版">Python 3.14 关键更新（简明版）</h1>
+<p>这篇把 3.14 最重要的改动讲清楚，用最少的词和直接可跑的例子让你迅速上手：</p>
 <ul>
-<li>no GIL | 官方名字 free threaded</li>
-<li>2 个版本 &ndash;&gt; with GIL | without GIL ( default with GIL )</li>
+<li>Free-threaded（无 GIL 选项）：支持在特定构建中移除 GIL，让多线程能真正并行跑 Python 字节码。（默认仍有 GIL 的构建）</li>
+<li>模板字符串字面值 <code>t&quot;...&quot;</code>：更安全、更适合国际化的字符串插值语法，默认只替换标识符。</li>
+<li>其他质量提升：解释器性能与错误信息进一步改进（细节不展开，保持高层认知）。</li>
 </ul>
-<div
-    class="alert alert-note my-6 overflow-hidden rounded-lg transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md"
-    style="background-color: color-mix(in srgb, var(--color-note) 10%, transparent);
-              border-left-color: var(--color-note);
-              --hover-bg: color-mix(in srgb, var(--color-note) 15%, transparent);"
-    onmouseover="this.style.backgroundColor = this.style.getPropertyValue('--hover-bg')"
-    onmouseout="this.style.backgroundColor = 'color-mix(in srgb, var(--color-note) 10%, transparent)'"
-    role="alert"
-    aria-labelledby="alert-1-title">
-    
-    <div
-      class=" flex items-center justify-between px-6 py-6"
-      >
-      <div class="flex items-center gap-3">
-        
-        <h4
-          id="alert-1-title"
-          class="m-0 font-semibold text-foreground/90">
-          Note
-        </h4>
-      </div>
-
-      
-      
-    </div>
-
-    
-    <div
-      id="alert-1-content"
-      class="alert-content  px-6 pb-6">
-      <div class="prose prose-sm text-foreground/90 max-w-none">
-        <h4 id="gil-global-interpreter-lock-全局解释器">GIL： Global Interpreter Lock 全局解释器</h4>
-<h4 id="核心作用-在任何给定的时间点它只允许-一个-线程执行-python-字节码">核心作用： 在任何给定的时间点，它只允许 <strong>一个</strong> 线程执行 Python <strong>字节码</strong></h4>
-
-  <blockquote
-    class="border-primary bg-muted/30 hover:bg-muted/40 my-6 rounded-r-lg border-l-4 py-4 pr-4 pl-6 italic transition-all duration-200 ease-out hover:translate-x-1">
-    <div class="prose prose-sm max-w-none">
-      <p>想象一下，GIL 就像是厨房里唯一的<strong>厨师帽</strong>。无论厨房里有多少个厨师（线程）在工作，只有戴着帽子的那位才能在灶台（CPU）前切菜、炒菜（执行 Python 代码）。其他厨师必须等着，直到戴帽子的人把帽子摘下。</p>
-    </div>
-  </blockquote><script>
-function toggleAlert(alertId) {
-  const content = document.getElementById(alertId + '-content');
-  const chevron = document.getElementById(alertId + '-chevron');
-  const header = content.previousElementSibling;
-  
-  if (content.classList.contains('hidden')) {
-    content.classList.remove('hidden');
-    chevron.style.transform = 'rotate(0deg)';
-    header.setAttribute('aria-expanded', 'true');
-  } else {
-    content.classList.add('hidden');
-    chevron.style.transform = 'rotate(-90deg)';
-    header.setAttribute('aria-expanded', 'false');
-  }
-}
-
-
-document.addEventListener('DOMContentLoaded', function() {
-  const collapsedAlerts = document.querySelectorAll('.alert-content.hidden');
-  collapsedAlerts.forEach(function(content) {
-    const alertId = content.id.replace('-content', '');
-    const chevron = document.getElementById(alertId + '-chevron');
-    if (chevron) {
-      chevron.style.transform = 'rotate(-90deg)';
-    }
-  });
-});
-</script>
-
-<h4 id="为什么需要">为什么需要：</h4>
-<ol>
-<li>简化 CPython 的实现 (Simplicity)：<br>
-Python 的内存管理（尤其是<strong>引用计数</strong>）和垃圾回收机制得到了简化。如果没有 GIL，开发者必须在 CPython 的底层代码中处处使用复杂的细粒度锁来确保内存安全，这会让解释器的开发难度大大增加。</li>
-<li>更容易集成 C 库 (C Extensions)：<br>
-许多常用的 Python 扩展库（如 NumPy、SciPy）都依赖于 C 语言库。在有 GIL 的情况下，这些 C 扩展可以更容易地编写，因为它们不必担心 Python 解释器内部的并发问题。</li>
-</ol>
-      </div>
-    </div>
-  </div><script>
-function toggleAlert(alertId) {
-  const content = document.getElementById(alertId + '-content');
-  const chevron = document.getElementById(alertId + '-chevron');
-  const header = content.previousElementSibling;
-  
-  if (content.classList.contains('hidden')) {
-    content.classList.remove('hidden');
-    chevron.style.transform = 'rotate(0deg)';
-    header.setAttribute('aria-expanded', 'true');
-  } else {
-    content.classList.add('hidden');
-    chevron.style.transform = 'rotate(-90deg)';
-    header.setAttribute('aria-expanded', 'false');
-  }
-}
-
-
-document.addEventListener('DOMContentLoaded', function() {
-  const collapsedAlerts = document.querySelectorAll('.alert-content.hidden');
-  collapsedAlerts.forEach(function(content) {
-    const alertId = content.id.replace('-content', '');
-    const chevron = document.getElementById(alertId + '-chevron');
-    if (chevron) {
-      chevron.style.transform = 'rotate(-90deg)';
-    }
-  });
-});
-</script>
-
-<div
-    class="alert alert-tip my-6 overflow-hidden rounded-lg transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md"
-    style="background-color: color-mix(in srgb, var(--color-tip) 10%, transparent);
-              border-left-color: var(--color-tip);
-              --hover-bg: color-mix(in srgb, var(--color-tip) 15%, transparent);"
-    onmouseover="this.style.backgroundColor = this.style.getPropertyValue('--hover-bg')"
-    onmouseout="this.style.backgroundColor = 'color-mix(in srgb, var(--color-tip) 10%, transparent)'"
-    role="alert"
-    aria-labelledby="alert-3-title">
-    
-    <div
-      class=" flex items-center justify-between px-6 py-6"
-      >
-      <div class="flex items-center gap-3">
-        
-        <h4
-          id="alert-3-title"
-          class="m-0 font-semibold text-foreground/90">
-          新特征
-        </h4>
-      </div>
-
-      
-      
-    </div>
-
-    
-    <div
-      id="alert-3-content"
-      class="alert-content  px-6 pb-6">
-      <div class="prose prose-sm text-foreground/90 max-w-none">
-        <ol>
+<hr>
+<h2 id="1-free-threaded无-gil-选项">1. Free-threaded（无 GIL 选项）</h2>
+<ul>
 <li>
-<p>模板字符串字面值 (Template String Literals)<br>
-模板字符串字面值是一种新的字符串类型，旨在简化<strong>字符串插值 (interpolation)</strong> 和<strong>国际化 (i18n)</strong> 场景。它引入了一个新的字符串前缀 <code>t</code> or <code>T</code> (t-string)，类似 <code>f</code> (f-string) 或 <code>r</code> (raw string)</p>
+<p>核心点：取消全局解释器锁后，“同一进程内的多个 Python 线程”可以同时执行字节码，不再被 GIL 串行化。</p>
+</li>
+<li>
+<p>为什么重要：CPU 密集型多线程（比如计算、压缩、加密）能得到真正的并行提升；IO 密集场景依旧建议优先 <code>asyncio</code> 或多进程。</p>
+</li>
+<li>
+<p>当前形态：3.14 提供“有 GIL”和“无 GIL（free-threaded）”两种构建。默认仍为有 GIL版本；要尝试无 GIL，需要选择对应构建或开关。</p>
+</li>
+<li>
+<p>极简对比示例（多线程 CPU 计算）：</p>
+</li>
+</ul>
 <div
   class="code-block-container border-border bg-card my-6 overflow-hidden rounded-xl border shadow-sm transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md">
   
@@ -1352,10 +1230,29 @@ document.addEventListener('DOMContentLoaded', function() {
 
   
   <div class="code-block-content relative" id="code-0">
-    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">name</span> <span class="o">=</span> <span class="s2">&#34;Alice&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="n">greeting</span> <span class="o">=</span> <span class="n">t</span><span class="s2">&#34;Hello, $</span><span class="si">{name}</span><span class="s2">!&#34;</span> 
-</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">greeting</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># 输出预计为: Hello, Alice!</span></span></span></code></pre></div>
+    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">time</span><span class="o">,</span> <span class="nn">math</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">concurrent.futures</span> <span class="kn">import</span> <span class="n">ThreadPoolExecutor</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 模拟 CPU 密集任务</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">heavy</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">s</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">s</span> <span class="o">+=</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">s</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">N</span> <span class="o">=</span> <span class="mi">2_000_00</span>  <span class="c1"># 调小一点以便在本地快速测试</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 单线程：串行运行两次</span>
+</span></span><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="n">heavy</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">b</span> <span class="o">=</span> <span class="n">heavy</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;single:&#34;</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span> <span class="o">-</span> <span class="n">start</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 多线程：两个任务并发</span>
+</span></span><span class="line"><span class="cl"><span class="k">with</span> <span class="n">ThreadPoolExecutor</span><span class="p">(</span><span class="n">max_workers</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span> <span class="k">as</span> <span class="n">ex</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">r</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">ex</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">heavy</span><span class="p">,</span> <span class="p">[</span><span class="n">N</span><span class="p">,</span> <span class="n">N</span><span class="p">]))</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;threads:&#34;</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span> <span class="o">-</span> <span class="n">start</span><span class="p">)</span></span></span></code></pre></div>
     
     <div
       class="collapse-overlay to-card/90 pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent opacity-0 transition-opacity duration-300">
@@ -1588,89 +1485,1678 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 })();
 </script>
-
-  <blockquote
-    class="border-primary bg-muted/30 hover:bg-muted/40 my-6 rounded-r-lg border-l-4 py-4 pr-4 pl-6 italic transition-all duration-200 ease-out hover:translate-x-1">
-    <div class="prose prose-sm max-w-none">
-      <p>新特性主要有两个核心目标：</p>
-<ol>
-<li>
-<p><strong>更清晰的插值语法 (<code>${...}</code>):</strong></p>
 <ul>
 <li>
-<p>它使用 <strong><code>${identifier}</code></strong> 语法进行变量替换，这与许多其他编程语言（如 JavaScript 的模板字面量或 Shell 脚本）的插值语法更为一致。</p>
-</li>
-<li>
-<p>这解决了 f-string 在某些情况下可能过于强大（它能运行任意 Python 表达式）和引起安全顾虑的问题。模板字符串默认只替换<strong>标识符 (identifiers)</strong>，更安全、更受限。</p>
-</li>
+<p>预期：</p>
+<ul>
+<li>有 GIL 构建：多线程不一定更快，可能与单线程相近（甚至更慢）。</li>
+<li>无 GIL 构建：多线程更接近线性加速（具体提速取决于机器与任务）。</li>
 </ul>
 </li>
-</ol>
-    </div>
-  </blockquote><script>
-function toggleAlert(alertId) {
-  const content = document.getElementById(alertId + '-content');
-  const chevron = document.getElementById(alertId + '-chevron');
-  const header = content.previousElementSibling;
-  
-  if (content.classList.contains('hidden')) {
-    content.classList.remove('hidden');
-    chevron.style.transform = 'rotate(0deg)';
-    header.setAttribute('aria-expanded', 'true');
-  } else {
-    content.classList.add('hidden');
-    chevron.style.transform = 'rotate(-90deg)';
-    header.setAttribute('aria-expanded', 'false');
-  }
-}
-
-
-document.addEventListener('DOMContentLoaded', function() {
-  const collapsedAlerts = document.querySelectorAll('.alert-content.hidden');
-  collapsedAlerts.forEach(function(content) {
-    const alertId = content.id.replace('-content', '');
-    const chevron = document.getElementById(alertId + '-chevron');
-    if (chevron) {
-      chevron.style.transform = 'rotate(-90deg)';
-    }
-  });
-});
-</script>
-
+<li>
+<p>注意事项：</p>
+<ul>
+<li>扩展/原生库需要兼容 free-threaded 模式（逐步适配中）。</li>
+<li>数据竞争与锁：无 GIL 不等于不需要锁，仍需正确使用线程同步原语（<code>Lock</code>,<code>Event</code>）。</li>
+<li>不同构建的行为差异：团队需明确“使用的构建类型”，避免线上/线下不一致。</li>
+</ul>
 </li>
-</ol>
+</ul>
+<hr>
+<h2 id="2-模板字符串字面值-t">2. 模板字符串字面值 <code>t&quot;...&quot;</code></h2>
+<ul>
+<li>
+<p>核心点：<code>t</code> 前缀的字符串支持更安全的插值语法，默认仅替换“标识符”（变量名），避免 f-string 那样可以执行任意表达式带来的风险。</p>
+</li>
+<li>
+<p>入门例子：</p>
+</li>
+</ul>
+<div
+  class="code-block-container border-border bg-card my-6 overflow-hidden rounded-xl border shadow-sm transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md">
+  
+  <div
+    class="code-block-header bg-muted/30 border-border flex items-center justify-between border-b px-4 py-3">
+    
+    <div class="flex items-center gap-2">
+      <div class="text-muted-foreground flex-shrink-0">
+        
+  <svg class="h-4 w-4"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+</svg>
+      </div>
+      <span class="text-muted-foreground text-sm font-medium">
+        PYTHON
+      </span>
+    </div>
+
+    
+    <div class="flex items-center gap-2">
+      <button
+          class="collapse-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
+          data-code-id="code-1"
+          data-default-state="expanded"
+          data-collapsed="false"
+          data-auto-collapse-lines="30"
+          data-auto-collapse-height="400"
+          data-collapsed-height="120"
+          title="Collapse"
+          aria-label="Collapse">
+          <span class="collapse-icon">
+            
+  <svg class="h-3 w-3"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"><path fill="currentColor" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z"/></svg>
+          </span>
+          <span class="collapse-text hidden sm:inline"
+            >Collapse</span
+          >
+        </button>
+      <button
+        class="copy-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
+        data-code-id="code-1"
+        title="Copy"
+        aria-label="Copy">
+        <span class="copy-icon">
+          
+  <svg class="h-3 w-3"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+</svg>
+        </span>
+        <span class="copy-text hidden sm:inline"
+          >Copy</span
+        >
+      </button>
+    </div>
+  </div>
+
+  
+  <div class="code-block-content relative" id="code-1">
+    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">name</span> <span class="o">=</span> <span class="s2">&#34;Alice&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># t-string 默认仅支持 ${identifier} 形式</span>
+</span></span><span class="line"><span class="cl"><span class="n">msg</span> <span class="o">=</span> <span class="n">t</span><span class="s2">&#34;Hello, $</span><span class="si">{name}</span><span class="s2">!&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>  <span class="c1"># Hello, Alice!</span></span></span></code></pre></div>
+    
+    <div
+      class="collapse-overlay to-card/90 pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent opacity-0 transition-opacity duration-300">
+      <div
+        class="text-muted-foreground bg-card/80 border-border/50 hover:bg-primary/10 hover:text-primary hover:border-primary/30 absolute bottom-4 left-1/2 -translate-x-1/2 cursor-pointer rounded-full border px-3 py-1.5 text-xs backdrop-blur-sm transition-all duration-200">
+        Click to expand and view more
       </div>
     </div>
-  </div><script>
-function toggleAlert(alertId) {
-  const content = document.getElementById(alertId + '-content');
-  const chevron = document.getElementById(alertId + '-chevron');
-  const header = content.previousElementSibling;
+  </div>
+</div>
+
+
+<script>
+(function() {
+  const codeId = 'code-1';
+  const copyBtn = document.querySelector('.copy-code-btn[data-code-id="' + codeId + '"]');
+  const collapseBtn = document.querySelector('.collapse-code-btn[data-code-id="' + codeId + '"]');
+  const codeContainer = document.getElementById(codeId);
+
+  if (!codeContainer) return;
+
   
-  if (content.classList.contains('hidden')) {
-    content.classList.remove('hidden');
-    chevron.style.transform = 'rotate(0deg)';
-    header.setAttribute('aria-expanded', 'true');
-  } else {
-    content.classList.add('hidden');
-    chevron.style.transform = 'rotate(-90deg)';
-    header.setAttribute('aria-expanded', 'false');
+  if (copyBtn) {
+    const copyIcon = copyBtn.querySelector('.copy-icon');
+    const copyText = copyBtn.querySelector('.copy-text');
+
+    copyBtn.addEventListener('click', async function() {
+      try {
+        
+        let codeText = '';
+
+        
+        const codeTableCell = codeContainer.querySelector('.lntd:last-child code');
+        if (codeTableCell) {
+          codeText = codeTableCell.textContent || codeTableCell.innerText;
+        } else {
+          
+          const codeElement = codeContainer.querySelector('code');
+          if (codeElement) {
+            
+            const hasInlineLineNumbers = codeElement.querySelector('.ln');
+            if (hasInlineLineNumbers) {
+              
+              const codeLines = codeElement.querySelectorAll('.cl');
+              if (codeLines.length > 0) {
+                codeText = Array.from(codeLines)
+                  .map(line => {
+                    const text = line.textContent || line.innerText;
+                    
+                    return text.replace(/\n+$/, '');
+                  })
+                  .join('\n')
+                  .replace(/\n+$/, ''); 
+              } else {
+                
+                const allText = codeElement.textContent || codeElement.innerText;
+                codeText = allText.replace(/^\d+/gm, '').replace(/^\s+/gm, '');
+              }
+            } else {
+              
+              codeText = codeElement.textContent || codeElement.innerText;
+            }
+          } else {
+            
+            codeText = codeContainer.textContent || codeContainer.innerText;
+          }
+        }
+
+        
+        codeText = codeText.trim();
+
+        
+        await navigator.clipboard.writeText(codeText);
+
+        
+        copyIcon.innerHTML = `\r\n  \u003csvg class=\u0022h-3 w-3\u0022\r\n    fill=\u0022none\u0022\r\n    stroke=\u0022currentColor\u0022\r\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M5 13l4 4L19 7\u0022 \/\u003e\r\n\u003c\/svg\u003e`;
+        if (copyText) {
+          copyText.textContent = 'Copied';
+        }
+        copyBtn.classList.add('text-green-600');
+
+        
+        setTimeout(() => {
+          copyIcon.innerHTML = `\r\n  \u003csvg class=\u0022h-3 w-3\u0022\r\n    fill=\u0022none\u0022\r\n    stroke=\u0022currentColor\u0022\r\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z\u0022 \/\u003e\r\n\u003c\/svg\u003e`;
+          if (copyText) {
+            copyText.textContent = 'Copy';
+          }
+          copyBtn.classList.remove('text-green-600');
+        }, 2000);
+
+      } catch (err) {
+        console.error('复制失败:', err);
+
+        
+        const range = document.createRange();
+        const codeElement = codeContainer.querySelector('code') || codeContainer;
+        range.selectNodeContents(codeElement);
+        const selection = window.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(range);
+
+        
+        if (copyText) {
+          copyText.textContent = 'Selected';
+        }
+
+        setTimeout(() => {
+          if (copyText) {
+            copyText.textContent = 'Copy';
+          }
+          selection.removeAllRanges();
+        }, 2000);
+      }
+    });
   }
-}
 
+  
+  if (collapseBtn) {
+    const collapseIcon = collapseBtn.querySelector('.collapse-icon');
+    const collapseText = collapseBtn.querySelector('.collapse-text');
+    const collapseOverlay = codeContainer.querySelector('.collapse-overlay');
 
-document.addEventListener('DOMContentLoaded', function() {
-  const collapsedAlerts = document.querySelectorAll('.alert-content.hidden');
-  collapsedAlerts.forEach(function(content) {
-    const alertId = content.id.replace('-content', '');
-    const chevron = document.getElementById(alertId + '-chevron');
-    if (chevron) {
-      chevron.style.transform = 'rotate(-90deg)';
+    
+    let codeElement = codeContainer.querySelector('pre.chroma');
+    if (!codeElement) {
+      codeElement = codeContainer.querySelector('pre');
     }
-  });
-});
-</script>
 
+    const defaultState = collapseBtn.dataset.defaultState || 'expanded';
+    const isCollapsedAttr = collapseBtn.dataset.collapsed === 'true';
+    const autoCollapseLines = parseInt(collapseBtn.dataset.autoCollapseLines) || 30;
+    const autoCollapseHeight = parseInt(collapseBtn.dataset.autoCollapseHeight) || 400;
+    const collapsedHeight = parseInt(collapseBtn.dataset.collapsedHeight) || 120;
+
+    let isCollapsed = false;
+
+    
+    function initCollapse() {
+      
+      const shouldCollapse = isCollapsedAttr ||
+                           defaultState === 'collapsed' ||
+                           shouldAutoCollapse();
+
+      if (shouldCollapse) {
+        setCollapsed(true, false); 
+      }
+    }
+
+    function shouldAutoCollapse() {
+      
+      if (codeElement) {
+        const lines = codeElement.querySelectorAll('.line, .cl');
+        const height = codeElement.offsetHeight;
+        return lines.length > autoCollapseLines || height > autoCollapseHeight;
+      }
+
+      
+      const containerHeight = codeContainer.offsetHeight;
+      if (containerHeight > autoCollapseHeight) {
+        return true;
+      }
+
+      
+      const textContent = codeContainer.textContent || codeContainer.innerText || '';
+      const estimatedLines = textContent.split('\n').length;
+      return estimatedLines > autoCollapseLines;
+    }
+
+    function setCollapsed(collapsed, animate = true) {
+      if (!collapseOverlay) return;
+
+      isCollapsed = collapsed;
+
+      if (collapsed) {
+        
+        codeContainer.style.maxHeight = collapsedHeight + 'px';
+        codeContainer.style.overflow = 'hidden';
+        collapseOverlay.style.opacity = '1';
+        collapseOverlay.style.pointerEvents = 'auto';
+
+        
+        collapseIcon.innerHTML = `\r\n  \u003csvg class=\u0022h-3 w-3\u0022\r\n    fill=\u0022none\u0022\r\n    stroke=\u0022currentColor\u0022\r\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M19 9l-7 7-7-7\u0022 \/\u003e\r\n\u003c\/svg\u003e`;
+        if (collapseText) {
+          collapseText.textContent = 'Expand';
+        }
+        collapseBtn.title = 'Expand';
+
+      } else {
+        
+        codeContainer.style.maxHeight = '';
+        codeContainer.style.overflow = '';
+        collapseOverlay.style.opacity = '0';
+        collapseOverlay.style.pointerEvents = 'none';
+
+        
+        collapseIcon.innerHTML = `\r\n  \u003csvg class=\u0022h-3 w-3\u0022\r\n    fill=\u0022none\u0022\r\n    stroke=\u0022currentColor\u0022\r\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath fill=\u0022currentColor\u0022 d=\u0022M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z\u0022\/\u003e\u003c\/svg\u003e`;
+        if (collapseText) {
+          collapseText.textContent = 'Collapse';
+        }
+        collapseBtn.title = 'Collapse';
+      }
+
+      
+      if (animate) {
+        codeContainer.style.transition = 'max-height 0.3s ease-out';
+        setTimeout(() => {
+          codeContainer.style.transition = '';
+        }, 300);
+      }
+    }
+
+    function toggleCollapse() {
+      setCollapsed(!isCollapsed, true);
+    }
+
+    
+    collapseBtn.addEventListener('click', toggleCollapse);
+
+    
+    if (collapseOverlay) {
+      collapseOverlay.addEventListener('click', () => {
+        if (isCollapsed) {
+          setCollapsed(false, true);
+        }
+      });
+    }
+
+    
+    initCollapse();
+  }
+})();
+</script>
+<ul>
+<li>
+<p>更适合哪些场景：</p>
+<ul>
+<li>国际化（i18n）：配合字典或映射进行安全替换。</li>
+<li>配置与模板：只允许变量名插值，避免注入执行。</li>
+</ul>
+</li>
+<li>
+<p>对比 f-string：</p>
+</li>
+</ul>
+<div
+  class="code-block-container border-border bg-card my-6 overflow-hidden rounded-xl border shadow-sm transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md">
+  
+  <div
+    class="code-block-header bg-muted/30 border-border flex items-center justify-between border-b px-4 py-3">
+    
+    <div class="flex items-center gap-2">
+      <div class="text-muted-foreground flex-shrink-0">
+        
+  <svg class="h-4 w-4"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+</svg>
+      </div>
+      <span class="text-muted-foreground text-sm font-medium">
+        PYTHON
+      </span>
+    </div>
+
+    
+    <div class="flex items-center gap-2">
+      <button
+          class="collapse-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
+          data-code-id="code-2"
+          data-default-state="expanded"
+          data-collapsed="false"
+          data-auto-collapse-lines="30"
+          data-auto-collapse-height="400"
+          data-collapsed-height="120"
+          title="Collapse"
+          aria-label="Collapse">
+          <span class="collapse-icon">
+            
+  <svg class="h-3 w-3"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"><path fill="currentColor" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z"/></svg>
+          </span>
+          <span class="collapse-text hidden sm:inline"
+            >Collapse</span
+          >
+        </button>
+      <button
+        class="copy-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
+        data-code-id="code-2"
+        title="Copy"
+        aria-label="Copy">
+        <span class="copy-icon">
+          
+  <svg class="h-3 w-3"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+</svg>
+        </span>
+        <span class="copy-text hidden sm:inline"
+          >Copy</span
+        >
+      </button>
+    </div>
+  </div>
+
+  
+  <div class="code-block-content relative" id="code-2">
+    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># f-string 可以执行任意表达式（强大但有风险）</span>
+</span></span><span class="line"><span class="cl"><span class="n">x</span> <span class="o">=</span> <span class="mi">2</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;x^3 = </span><span class="si">{</span><span class="n">x</span><span class="o">**</span><span class="mi">3</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>  <span class="c1"># 会计算表达式</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># t-string 限制更严格，更安全，适合受控插值</span>
+</span></span><span class="line"><span class="cl"><span class="n">user</span> <span class="o">=</span> <span class="s2">&#34;Bob&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="s2">&#34;Welcome, $</span><span class="si">{user}</span><span class="s2">&#34;</span><span class="p">)</span></span></span></code></pre></div>
+    
+    <div
+      class="collapse-overlay to-card/90 pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent opacity-0 transition-opacity duration-300">
+      <div
+        class="text-muted-foreground bg-card/80 border-border/50 hover:bg-primary/10 hover:text-primary hover:border-primary/30 absolute bottom-4 left-1/2 -translate-x-1/2 cursor-pointer rounded-full border px-3 py-1.5 text-xs backdrop-blur-sm transition-all duration-200">
+        Click to expand and view more
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+(function() {
+  const codeId = 'code-2';
+  const copyBtn = document.querySelector('.copy-code-btn[data-code-id="' + codeId + '"]');
+  const collapseBtn = document.querySelector('.collapse-code-btn[data-code-id="' + codeId + '"]');
+  const codeContainer = document.getElementById(codeId);
+
+  if (!codeContainer) return;
+
+  
+  if (copyBtn) {
+    const copyIcon = copyBtn.querySelector('.copy-icon');
+    const copyText = copyBtn.querySelector('.copy-text');
+
+    copyBtn.addEventListener('click', async function() {
+      try {
+        
+        let codeText = '';
+
+        
+        const codeTableCell = codeContainer.querySelector('.lntd:last-child code');
+        if (codeTableCell) {
+          codeText = codeTableCell.textContent || codeTableCell.innerText;
+        } else {
+          
+          const codeElement = codeContainer.querySelector('code');
+          if (codeElement) {
+            
+            const hasInlineLineNumbers = codeElement.querySelector('.ln');
+            if (hasInlineLineNumbers) {
+              
+              const codeLines = codeElement.querySelectorAll('.cl');
+              if (codeLines.length > 0) {
+                codeText = Array.from(codeLines)
+                  .map(line => {
+                    const text = line.textContent || line.innerText;
+                    
+                    return text.replace(/\n+$/, '');
+                  })
+                  .join('\n')
+                  .replace(/\n+$/, ''); 
+              } else {
+                
+                const allText = codeElement.textContent || codeElement.innerText;
+                codeText = allText.replace(/^\d+/gm, '').replace(/^\s+/gm, '');
+              }
+            } else {
+              
+              codeText = codeElement.textContent || codeElement.innerText;
+            }
+          } else {
+            
+            codeText = codeContainer.textContent || codeContainer.innerText;
+          }
+        }
+
+        
+        codeText = codeText.trim();
+
+        
+        await navigator.clipboard.writeText(codeText);
+
+        
+        copyIcon.innerHTML = `\r\n  \u003csvg class=\u0022h-3 w-3\u0022\r\n    fill=\u0022none\u0022\r\n    stroke=\u0022currentColor\u0022\r\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M5 13l4 4L19 7\u0022 \/\u003e\r\n\u003c\/svg\u003e`;
+        if (copyText) {
+          copyText.textContent = 'Copied';
+        }
+        copyBtn.classList.add('text-green-600');
+
+        
+        setTimeout(() => {
+          copyIcon.innerHTML = `\r\n  \u003csvg class=\u0022h-3 w-3\u0022\r\n    fill=\u0022none\u0022\r\n    stroke=\u0022currentColor\u0022\r\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z\u0022 \/\u003e\r\n\u003c\/svg\u003e`;
+          if (copyText) {
+            copyText.textContent = 'Copy';
+          }
+          copyBtn.classList.remove('text-green-600');
+        }, 2000);
+
+      } catch (err) {
+        console.error('复制失败:', err);
+
+        
+        const range = document.createRange();
+        const codeElement = codeContainer.querySelector('code') || codeContainer;
+        range.selectNodeContents(codeElement);
+        const selection = window.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(range);
+
+        
+        if (copyText) {
+          copyText.textContent = 'Selected';
+        }
+
+        setTimeout(() => {
+          if (copyText) {
+            copyText.textContent = 'Copy';
+          }
+          selection.removeAllRanges();
+        }, 2000);
+      }
+    });
+  }
+
+  
+  if (collapseBtn) {
+    const collapseIcon = collapseBtn.querySelector('.collapse-icon');
+    const collapseText = collapseBtn.querySelector('.collapse-text');
+    const collapseOverlay = codeContainer.querySelector('.collapse-overlay');
+
+    
+    let codeElement = codeContainer.querySelector('pre.chroma');
+    if (!codeElement) {
+      codeElement = codeContainer.querySelector('pre');
+    }
+
+    const defaultState = collapseBtn.dataset.defaultState || 'expanded';
+    const isCollapsedAttr = collapseBtn.dataset.collapsed === 'true';
+    const autoCollapseLines = parseInt(collapseBtn.dataset.autoCollapseLines) || 30;
+    const autoCollapseHeight = parseInt(collapseBtn.dataset.autoCollapseHeight) || 400;
+    const collapsedHeight = parseInt(collapseBtn.dataset.collapsedHeight) || 120;
+
+    let isCollapsed = false;
+
+    
+    function initCollapse() {
+      
+      const shouldCollapse = isCollapsedAttr ||
+                           defaultState === 'collapsed' ||
+                           shouldAutoCollapse();
+
+      if (shouldCollapse) {
+        setCollapsed(true, false); 
+      }
+    }
+
+    function shouldAutoCollapse() {
+      
+      if (codeElement) {
+        const lines = codeElement.querySelectorAll('.line, .cl');
+        const height = codeElement.offsetHeight;
+        return lines.length > autoCollapseLines || height > autoCollapseHeight;
+      }
+
+      
+      const containerHeight = codeContainer.offsetHeight;
+      if (containerHeight > autoCollapseHeight) {
+        return true;
+      }
+
+      
+      const textContent = codeContainer.textContent || codeContainer.innerText || '';
+      const estimatedLines = textContent.split('\n').length;
+      return estimatedLines > autoCollapseLines;
+    }
+
+    function setCollapsed(collapsed, animate = true) {
+      if (!collapseOverlay) return;
+
+      isCollapsed = collapsed;
+
+      if (collapsed) {
+        
+        codeContainer.style.maxHeight = collapsedHeight + 'px';
+        codeContainer.style.overflow = 'hidden';
+        collapseOverlay.style.opacity = '1';
+        collapseOverlay.style.pointerEvents = 'auto';
+
+        
+        collapseIcon.innerHTML = `\r\n  \u003csvg class=\u0022h-3 w-3\u0022\r\n    fill=\u0022none\u0022\r\n    stroke=\u0022currentColor\u0022\r\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M19 9l-7 7-7-7\u0022 \/\u003e\r\n\u003c\/svg\u003e`;
+        if (collapseText) {
+          collapseText.textContent = 'Expand';
+        }
+        collapseBtn.title = 'Expand';
+
+      } else {
+        
+        codeContainer.style.maxHeight = '';
+        codeContainer.style.overflow = '';
+        collapseOverlay.style.opacity = '0';
+        collapseOverlay.style.pointerEvents = 'none';
+
+        
+        collapseIcon.innerHTML = `\r\n  \u003csvg class=\u0022h-3 w-3\u0022\r\n    fill=\u0022none\u0022\r\n    stroke=\u0022currentColor\u0022\r\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath fill=\u0022currentColor\u0022 d=\u0022M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z\u0022\/\u003e\u003c\/svg\u003e`;
+        if (collapseText) {
+          collapseText.textContent = 'Collapse';
+        }
+        collapseBtn.title = 'Collapse';
+      }
+
+      
+      if (animate) {
+        codeContainer.style.transition = 'max-height 0.3s ease-out';
+        setTimeout(() => {
+          codeContainer.style.transition = '';
+        }, 300);
+      }
+    }
+
+    function toggleCollapse() {
+      setCollapsed(!isCollapsed, true);
+    }
+
+    
+    collapseBtn.addEventListener('click', toggleCollapse);
+
+    
+    if (collapseOverlay) {
+      collapseOverlay.addEventListener('click', () => {
+        if (isCollapsed) {
+          setCollapsed(false, true);
+        }
+      });
+    }
+
+    
+    initCollapse();
+  }
+})();
+</script>
+<ul>
+<li>可能的扩展：后续库可提供“自定义解析/校验”，用于更复杂的模板处理（例如从翻译表自动替换）。</li>
+</ul>
+<hr>
+<h2 id="3-快速试用与迁移建议">3. 快速试用与迁移建议</h2>
+<ul>
+<li>试用 free-threaded 构建：在允许的环境中选用“无 GIL”版本进行压力测试，优先验证 CPU 密集型多线程是否得到实测收益。</li>
+<li>评估第三方库兼容性：关键依赖（科学计算、图像处理、数据处理等）是否兼容 free-threaded 模式。</li>
+<li>团队策略：明确“构建类型”，在 CI/CD 与发布流程中保持一致；必要时提供两套构建的基准数据供决策。</li>
+</ul>
+<hr>
+<h2 id="4-容易踩雷精简版">4. 容易踩雷（精简版）</h2>
+<ul>
+<li>误以为“无 GIL = 无锁”：并发读写仍需同步，避免数据竞争。</li>
+<li>多线程提速不明显：任务可能是 IO 密集或受限于其他瓶颈（磁盘/网络/全局锁）。</li>
+<li>库不兼容 free-threaded：使用前先确认依赖支持情况（官方与社区在持续适配中）。</li>
+<li>t-string 用法误解：<code>t</code> 字符串默认只替换“变量名”，不执行表达式；若需要复杂插值请使用 f-string 或合适模板引擎。</li>
+</ul>
+<hr>
+<h2 id="5-一屏速查">5. 一屏速查</h2>
+<ul>
+<li>构建：3.14 同时提供“有 GIL”与“无 GIL（free-threaded）”构建（默认仍为有 GIL）。</li>
+<li>并发选择：
+<ul>
+<li>CPU 密集：优先尝试无 GIL + 多线程；或多进程</li>
+<li>IO 密集：优先 <code>asyncio</code> 或合适的并发模型</li>
+</ul>
+</li>
+<li>t-string：<code>t&quot;Hello, ${name}&quot;</code> 仅变量插值，更安全，适合 i18n/模板。</li>
+<li>f-string：强大灵活，可执行表达式；注意安全边界。</li>
+</ul>
+<hr>
+<h2 id="6-如何验证你的项目在无-gil-构建下的实际加速">6. 如何验证你的项目在无 GIL 构建下的实际加速</h2>
+<ul>
+<li>明确构建类型：选择并使用 3.14 “free-threaded（无 GIL）”构建，在相同环境下对比“有 GIL”构建。</li>
+<li>关注场景：优先测试 CPU 密集型任务（数学计算、压缩、加密、解析等）。</li>
+<li>对比方法（线程 vs 进程）：</li>
+</ul>
+<div
+  class="code-block-container border-border bg-card my-6 overflow-hidden rounded-xl border shadow-sm transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md">
+  
+  <div
+    class="code-block-header bg-muted/30 border-border flex items-center justify-between border-b px-4 py-3">
+    
+    <div class="flex items-center gap-2">
+      <div class="text-muted-foreground flex-shrink-0">
+        
+  <svg class="h-4 w-4"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+</svg>
+      </div>
+      <span class="text-muted-foreground text-sm font-medium">
+        PYTHON
+      </span>
+    </div>
+
+    
+    <div class="flex items-center gap-2">
+      <button
+          class="collapse-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
+          data-code-id="code-3"
+          data-default-state="expanded"
+          data-collapsed="false"
+          data-auto-collapse-lines="30"
+          data-auto-collapse-height="400"
+          data-collapsed-height="120"
+          title="Collapse"
+          aria-label="Collapse">
+          <span class="collapse-icon">
+            
+  <svg class="h-3 w-3"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"><path fill="currentColor" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z"/></svg>
+          </span>
+          <span class="collapse-text hidden sm:inline"
+            >Collapse</span
+          >
+        </button>
+      <button
+        class="copy-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
+        data-code-id="code-3"
+        title="Copy"
+        aria-label="Copy">
+        <span class="copy-icon">
+          
+  <svg class="h-3 w-3"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+</svg>
+        </span>
+        <span class="copy-text hidden sm:inline"
+          >Copy</span
+        >
+      </button>
+    </div>
+  </div>
+
+  
+  <div class="code-block-content relative" id="code-3">
+    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">time</span><span class="o">,</span> <span class="nn">math</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">concurrent.futures</span> <span class="kn">import</span> <span class="n">ThreadPoolExecutor</span><span class="p">,</span> <span class="n">ProcessPoolExecutor</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">heavy</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">s</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">s</span> <span class="o">+=</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">s</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">N</span> <span class="o">=</span> <span class="mi">500_000</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">bench</span><span class="p">(</span><span class="n">label</span><span class="p">,</span> <span class="n">runner</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">r</span> <span class="o">=</span> <span class="n">runner</span><span class="p">(</span><span class="n">heavy</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">label</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span> <span class="o">-</span> <span class="n">start</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">r</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 单线程基线</span>
+</span></span><span class="line"><span class="cl"><span class="n">bench</span><span class="p">(</span><span class="s2">&#34;single&#34;</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">fn</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="p">(</span><span class="n">fn</span><span class="p">(</span><span class="n">n</span><span class="p">),</span> <span class="n">fn</span><span class="p">(</span><span class="n">n</span><span class="p">)))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 多线程（受 GIL 影响）</span>
+</span></span><span class="line"><span class="cl"><span class="n">bench</span><span class="p">(</span><span class="s2">&#34;threads&#34;</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">fn</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="n">ThreadPoolExecutor</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">fn</span><span class="p">,</span> <span class="p">[</span><span class="n">n</span><span class="p">,</span> <span class="n">n</span><span class="p">]))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 多进程（不受 GIL 影响，但有进程开销）</span>
+</span></span><span class="line"><span class="cl"><span class="n">bench</span><span class="p">(</span><span class="s2">&#34;processes&#34;</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">fn</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="n">ProcessPoolExecutor</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">fn</span><span class="p">,</span> <span class="p">[</span><span class="n">n</span><span class="p">,</span> <span class="n">n</span><span class="p">]))</span></span></span></code></pre></div>
+    
+    <div
+      class="collapse-overlay to-card/90 pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent opacity-0 transition-opacity duration-300">
+      <div
+        class="text-muted-foreground bg-card/80 border-border/50 hover:bg-primary/10 hover:text-primary hover:border-primary/30 absolute bottom-4 left-1/2 -translate-x-1/2 cursor-pointer rounded-full border px-3 py-1.5 text-xs backdrop-blur-sm transition-all duration-200">
+        Click to expand and view more
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+(function() {
+  const codeId = 'code-3';
+  const copyBtn = document.querySelector('.copy-code-btn[data-code-id="' + codeId + '"]');
+  const collapseBtn = document.querySelector('.collapse-code-btn[data-code-id="' + codeId + '"]');
+  const codeContainer = document.getElementById(codeId);
+
+  if (!codeContainer) return;
+
+  
+  if (copyBtn) {
+    const copyIcon = copyBtn.querySelector('.copy-icon');
+    const copyText = copyBtn.querySelector('.copy-text');
+
+    copyBtn.addEventListener('click', async function() {
+      try {
+        
+        let codeText = '';
+
+        
+        const codeTableCell = codeContainer.querySelector('.lntd:last-child code');
+        if (codeTableCell) {
+          codeText = codeTableCell.textContent || codeTableCell.innerText;
+        } else {
+          
+          const codeElement = codeContainer.querySelector('code');
+          if (codeElement) {
+            
+            const hasInlineLineNumbers = codeElement.querySelector('.ln');
+            if (hasInlineLineNumbers) {
+              
+              const codeLines = codeElement.querySelectorAll('.cl');
+              if (codeLines.length > 0) {
+                codeText = Array.from(codeLines)
+                  .map(line => {
+                    const text = line.textContent || line.innerText;
+                    
+                    return text.replace(/\n+$/, '');
+                  })
+                  .join('\n')
+                  .replace(/\n+$/, ''); 
+              } else {
+                
+                const allText = codeElement.textContent || codeElement.innerText;
+                codeText = allText.replace(/^\d+/gm, '').replace(/^\s+/gm, '');
+              }
+            } else {
+              
+              codeText = codeElement.textContent || codeElement.innerText;
+            }
+          } else {
+            
+            codeText = codeContainer.textContent || codeContainer.innerText;
+          }
+        }
+
+        
+        codeText = codeText.trim();
+
+        
+        await navigator.clipboard.writeText(codeText);
+
+        
+        copyIcon.innerHTML = `\r\n  \u003csvg class=\u0022h-3 w-3\u0022\r\n    fill=\u0022none\u0022\r\n    stroke=\u0022currentColor\u0022\r\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M5 13l4 4L19 7\u0022 \/\u003e\r\n\u003c\/svg\u003e`;
+        if (copyText) {
+          copyText.textContent = 'Copied';
+        }
+        copyBtn.classList.add('text-green-600');
+
+        
+        setTimeout(() => {
+          copyIcon.innerHTML = `\r\n  \u003csvg class=\u0022h-3 w-3\u0022\r\n    fill=\u0022none\u0022\r\n    stroke=\u0022currentColor\u0022\r\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z\u0022 \/\u003e\r\n\u003c\/svg\u003e`;
+          if (copyText) {
+            copyText.textContent = 'Copy';
+          }
+          copyBtn.classList.remove('text-green-600');
+        }, 2000);
+
+      } catch (err) {
+        console.error('复制失败:', err);
+
+        
+        const range = document.createRange();
+        const codeElement = codeContainer.querySelector('code') || codeContainer;
+        range.selectNodeContents(codeElement);
+        const selection = window.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(range);
+
+        
+        if (copyText) {
+          copyText.textContent = 'Selected';
+        }
+
+        setTimeout(() => {
+          if (copyText) {
+            copyText.textContent = 'Copy';
+          }
+          selection.removeAllRanges();
+        }, 2000);
+      }
+    });
+  }
+
+  
+  if (collapseBtn) {
+    const collapseIcon = collapseBtn.querySelector('.collapse-icon');
+    const collapseText = collapseBtn.querySelector('.collapse-text');
+    const collapseOverlay = codeContainer.querySelector('.collapse-overlay');
+
+    
+    let codeElement = codeContainer.querySelector('pre.chroma');
+    if (!codeElement) {
+      codeElement = codeContainer.querySelector('pre');
+    }
+
+    const defaultState = collapseBtn.dataset.defaultState || 'expanded';
+    const isCollapsedAttr = collapseBtn.dataset.collapsed === 'true';
+    const autoCollapseLines = parseInt(collapseBtn.dataset.autoCollapseLines) || 30;
+    const autoCollapseHeight = parseInt(collapseBtn.dataset.autoCollapseHeight) || 400;
+    const collapsedHeight = parseInt(collapseBtn.dataset.collapsedHeight) || 120;
+
+    let isCollapsed = false;
+
+    
+    function initCollapse() {
+      
+      const shouldCollapse = isCollapsedAttr ||
+                           defaultState === 'collapsed' ||
+                           shouldAutoCollapse();
+
+      if (shouldCollapse) {
+        setCollapsed(true, false); 
+      }
+    }
+
+    function shouldAutoCollapse() {
+      
+      if (codeElement) {
+        const lines = codeElement.querySelectorAll('.line, .cl');
+        const height = codeElement.offsetHeight;
+        return lines.length > autoCollapseLines || height > autoCollapseHeight;
+      }
+
+      
+      const containerHeight = codeContainer.offsetHeight;
+      if (containerHeight > autoCollapseHeight) {
+        return true;
+      }
+
+      
+      const textContent = codeContainer.textContent || codeContainer.innerText || '';
+      const estimatedLines = textContent.split('\n').length;
+      return estimatedLines > autoCollapseLines;
+    }
+
+    function setCollapsed(collapsed, animate = true) {
+      if (!collapseOverlay) return;
+
+      isCollapsed = collapsed;
+
+      if (collapsed) {
+        
+        codeContainer.style.maxHeight = collapsedHeight + 'px';
+        codeContainer.style.overflow = 'hidden';
+        collapseOverlay.style.opacity = '1';
+        collapseOverlay.style.pointerEvents = 'auto';
+
+        
+        collapseIcon.innerHTML = `\r\n  \u003csvg class=\u0022h-3 w-3\u0022\r\n    fill=\u0022none\u0022\r\n    stroke=\u0022currentColor\u0022\r\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M19 9l-7 7-7-7\u0022 \/\u003e\r\n\u003c\/svg\u003e`;
+        if (collapseText) {
+          collapseText.textContent = 'Expand';
+        }
+        collapseBtn.title = 'Expand';
+
+      } else {
+        
+        codeContainer.style.maxHeight = '';
+        codeContainer.style.overflow = '';
+        collapseOverlay.style.opacity = '0';
+        collapseOverlay.style.pointerEvents = 'none';
+
+        
+        collapseIcon.innerHTML = `\r\n  \u003csvg class=\u0022h-3 w-3\u0022\r\n    fill=\u0022none\u0022\r\n    stroke=\u0022currentColor\u0022\r\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath fill=\u0022currentColor\u0022 d=\u0022M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z\u0022\/\u003e\u003c\/svg\u003e`;
+        if (collapseText) {
+          collapseText.textContent = 'Collapse';
+        }
+        collapseBtn.title = 'Collapse';
+      }
+
+      
+      if (animate) {
+        codeContainer.style.transition = 'max-height 0.3s ease-out';
+        setTimeout(() => {
+          codeContainer.style.transition = '';
+        }, 300);
+      }
+    }
+
+    function toggleCollapse() {
+      setCollapsed(!isCollapsed, true);
+    }
+
+    
+    collapseBtn.addEventListener('click', toggleCollapse);
+
+    
+    if (collapseOverlay) {
+      collapseOverlay.addEventListener('click', () => {
+        if (isCollapsed) {
+          setCollapsed(false, true);
+        }
+      });
+    }
+
+    
+    initCollapse();
+  }
+})();
+</script>
+<ul>
+<li>判断方式：
+<ul>
+<li>有 GIL：<code>threads</code> 通常与 <code>single</code> 接近或更慢。</li>
+<li>无 GIL：<code>threads</code> 应明显快于 <code>single</code>，接近 <code>processes</code>（具体视任务与机器）。</li>
+</ul>
+</li>
+<li>注意：
+<ul>
+<li>扩展库兼容性：确认核心依赖在 free-threaded 模式下兼容。</li>
+<li>并发正确性：无 GIL 不等于无锁，读写共享数据仍需同步。</li>
+<li>统一构建类型：在 CI/CD 与生产一致，避免环境差异导致结果不同。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="7-t-string-与-i18n-的工程化示例含替换表与校验">7. t-string 与 i18n 的工程化示例（含替换表与校验）</h2>
+<ul>
+<li>目标：安全插值、可校验、可回退。避免执行任意表达式，防止注入。</li>
+<li>简易示例（t-string 直接用）：</li>
+</ul>
+<div
+  class="code-block-container border-border bg-card my-6 overflow-hidden rounded-xl border shadow-sm transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md">
+  
+  <div
+    class="code-block-header bg-muted/30 border-border flex items-center justify-between border-b px-4 py-3">
+    
+    <div class="flex items-center gap-2">
+      <div class="text-muted-foreground flex-shrink-0">
+        
+  <svg class="h-4 w-4"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+</svg>
+      </div>
+      <span class="text-muted-foreground text-sm font-medium">
+        PYTHON
+      </span>
+    </div>
+
+    
+    <div class="flex items-center gap-2">
+      <button
+          class="collapse-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
+          data-code-id="code-4"
+          data-default-state="expanded"
+          data-collapsed="false"
+          data-auto-collapse-lines="30"
+          data-auto-collapse-height="400"
+          data-collapsed-height="120"
+          title="Collapse"
+          aria-label="Collapse">
+          <span class="collapse-icon">
+            
+  <svg class="h-3 w-3"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"><path fill="currentColor" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z"/></svg>
+          </span>
+          <span class="collapse-text hidden sm:inline"
+            >Collapse</span
+          >
+        </button>
+      <button
+        class="copy-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
+        data-code-id="code-4"
+        title="Copy"
+        aria-label="Copy">
+        <span class="copy-icon">
+          
+  <svg class="h-3 w-3"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+</svg>
+        </span>
+        <span class="copy-text hidden sm:inline"
+          >Copy</span
+        >
+      </button>
+    </div>
+  </div>
+
+  
+  <div class="code-block-content relative" id="code-4">
+    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># 仅替换变量名（更安全）</span>
+</span></span><span class="line"><span class="cl"><span class="n">name</span> <span class="o">=</span> <span class="s2">&#34;Alice&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="s2">&#34;Hello, $</span><span class="si">{name}</span><span class="s2">!&#34;</span><span class="p">)</span></span></span></code></pre></div>
+    
+    <div
+      class="collapse-overlay to-card/90 pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent opacity-0 transition-opacity duration-300">
+      <div
+        class="text-muted-foreground bg-card/80 border-border/50 hover:bg-primary/10 hover:text-primary hover:border-primary/30 absolute bottom-4 left-1/2 -translate-x-1/2 cursor-pointer rounded-full border px-3 py-1.5 text-xs backdrop-blur-sm transition-all duration-200">
+        Click to expand and view more
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+(function() {
+  const codeId = 'code-4';
+  const copyBtn = document.querySelector('.copy-code-btn[data-code-id="' + codeId + '"]');
+  const collapseBtn = document.querySelector('.collapse-code-btn[data-code-id="' + codeId + '"]');
+  const codeContainer = document.getElementById(codeId);
+
+  if (!codeContainer) return;
+
+  
+  if (copyBtn) {
+    const copyIcon = copyBtn.querySelector('.copy-icon');
+    const copyText = copyBtn.querySelector('.copy-text');
+
+    copyBtn.addEventListener('click', async function() {
+      try {
+        
+        let codeText = '';
+
+        
+        const codeTableCell = codeContainer.querySelector('.lntd:last-child code');
+        if (codeTableCell) {
+          codeText = codeTableCell.textContent || codeTableCell.innerText;
+        } else {
+          
+          const codeElement = codeContainer.querySelector('code');
+          if (codeElement) {
+            
+            const hasInlineLineNumbers = codeElement.querySelector('.ln');
+            if (hasInlineLineNumbers) {
+              
+              const codeLines = codeElement.querySelectorAll('.cl');
+              if (codeLines.length > 0) {
+                codeText = Array.from(codeLines)
+                  .map(line => {
+                    const text = line.textContent || line.innerText;
+                    
+                    return text.replace(/\n+$/, '');
+                  })
+                  .join('\n')
+                  .replace(/\n+$/, ''); 
+              } else {
+                
+                const allText = codeElement.textContent || codeElement.innerText;
+                codeText = allText.replace(/^\d+/gm, '').replace(/^\s+/gm, '');
+              }
+            } else {
+              
+              codeText = codeElement.textContent || codeElement.innerText;
+            }
+          } else {
+            
+            codeText = codeContainer.textContent || codeContainer.innerText;
+          }
+        }
+
+        
+        codeText = codeText.trim();
+
+        
+        await navigator.clipboard.writeText(codeText);
+
+        
+        copyIcon.innerHTML = `\r\n  \u003csvg class=\u0022h-3 w-3\u0022\r\n    fill=\u0022none\u0022\r\n    stroke=\u0022currentColor\u0022\r\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M5 13l4 4L19 7\u0022 \/\u003e\r\n\u003c\/svg\u003e`;
+        if (copyText) {
+          copyText.textContent = 'Copied';
+        }
+        copyBtn.classList.add('text-green-600');
+
+        
+        setTimeout(() => {
+          copyIcon.innerHTML = `\r\n  \u003csvg class=\u0022h-3 w-3\u0022\r\n    fill=\u0022none\u0022\r\n    stroke=\u0022currentColor\u0022\r\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z\u0022 \/\u003e\r\n\u003c\/svg\u003e`;
+          if (copyText) {
+            copyText.textContent = 'Copy';
+          }
+          copyBtn.classList.remove('text-green-600');
+        }, 2000);
+
+      } catch (err) {
+        console.error('复制失败:', err);
+
+        
+        const range = document.createRange();
+        const codeElement = codeContainer.querySelector('code') || codeContainer;
+        range.selectNodeContents(codeElement);
+        const selection = window.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(range);
+
+        
+        if (copyText) {
+          copyText.textContent = 'Selected';
+        }
+
+        setTimeout(() => {
+          if (copyText) {
+            copyText.textContent = 'Copy';
+          }
+          selection.removeAllRanges();
+        }, 2000);
+      }
+    });
+  }
+
+  
+  if (collapseBtn) {
+    const collapseIcon = collapseBtn.querySelector('.collapse-icon');
+    const collapseText = collapseBtn.querySelector('.collapse-text');
+    const collapseOverlay = codeContainer.querySelector('.collapse-overlay');
+
+    
+    let codeElement = codeContainer.querySelector('pre.chroma');
+    if (!codeElement) {
+      codeElement = codeContainer.querySelector('pre');
+    }
+
+    const defaultState = collapseBtn.dataset.defaultState || 'expanded';
+    const isCollapsedAttr = collapseBtn.dataset.collapsed === 'true';
+    const autoCollapseLines = parseInt(collapseBtn.dataset.autoCollapseLines) || 30;
+    const autoCollapseHeight = parseInt(collapseBtn.dataset.autoCollapseHeight) || 400;
+    const collapsedHeight = parseInt(collapseBtn.dataset.collapsedHeight) || 120;
+
+    let isCollapsed = false;
+
+    
+    function initCollapse() {
+      
+      const shouldCollapse = isCollapsedAttr ||
+                           defaultState === 'collapsed' ||
+                           shouldAutoCollapse();
+
+      if (shouldCollapse) {
+        setCollapsed(true, false); 
+      }
+    }
+
+    function shouldAutoCollapse() {
+      
+      if (codeElement) {
+        const lines = codeElement.querySelectorAll('.line, .cl');
+        const height = codeElement.offsetHeight;
+        return lines.length > autoCollapseLines || height > autoCollapseHeight;
+      }
+
+      
+      const containerHeight = codeContainer.offsetHeight;
+      if (containerHeight > autoCollapseHeight) {
+        return true;
+      }
+
+      
+      const textContent = codeContainer.textContent || codeContainer.innerText || '';
+      const estimatedLines = textContent.split('\n').length;
+      return estimatedLines > autoCollapseLines;
+    }
+
+    function setCollapsed(collapsed, animate = true) {
+      if (!collapseOverlay) return;
+
+      isCollapsed = collapsed;
+
+      if (collapsed) {
+        
+        codeContainer.style.maxHeight = collapsedHeight + 'px';
+        codeContainer.style.overflow = 'hidden';
+        collapseOverlay.style.opacity = '1';
+        collapseOverlay.style.pointerEvents = 'auto';
+
+        
+        collapseIcon.innerHTML = `\r\n  \u003csvg class=\u0022h-3 w-3\u0022\r\n    fill=\u0022none\u0022\r\n    stroke=\u0022currentColor\u0022\r\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M19 9l-7 7-7-7\u0022 \/\u003e\r\n\u003c\/svg\u003e`;
+        if (collapseText) {
+          collapseText.textContent = 'Expand';
+        }
+        collapseBtn.title = 'Expand';
+
+      } else {
+        
+        codeContainer.style.maxHeight = '';
+        codeContainer.style.overflow = '';
+        collapseOverlay.style.opacity = '0';
+        collapseOverlay.style.pointerEvents = 'none';
+
+        
+        collapseIcon.innerHTML = `\r\n  \u003csvg class=\u0022h-3 w-3\u0022\r\n    fill=\u0022none\u0022\r\n    stroke=\u0022currentColor\u0022\r\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath fill=\u0022currentColor\u0022 d=\u0022M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z\u0022\/\u003e\u003c\/svg\u003e`;
+        if (collapseText) {
+          collapseText.textContent = 'Collapse';
+        }
+        collapseBtn.title = 'Collapse';
+      }
+
+      
+      if (animate) {
+        codeContainer.style.transition = 'max-height 0.3s ease-out';
+        setTimeout(() => {
+          codeContainer.style.transition = '';
+        }, 300);
+      }
+    }
+
+    function toggleCollapse() {
+      setCollapsed(!isCollapsed, true);
+    }
+
+    
+    collapseBtn.addEventListener('click', toggleCollapse);
+
+    
+    if (collapseOverlay) {
+      collapseOverlay.addEventListener('click', () => {
+        if (isCollapsed) {
+          setCollapsed(false, true);
+        }
+      });
+    }
+
+    
+    initCollapse();
+  }
+})();
+</script>
+<ul>
+<li>当模板来自外部（文件/DB），推荐“受控替换表 + 校验”的做法：</li>
+</ul>
+<div
+  class="code-block-container border-border bg-card my-6 overflow-hidden rounded-xl border shadow-sm transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md">
+  
+  <div
+    class="code-block-header bg-muted/30 border-border flex items-center justify-between border-b px-4 py-3">
+    
+    <div class="flex items-center gap-2">
+      <div class="text-muted-foreground flex-shrink-0">
+        
+  <svg class="h-4 w-4"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+</svg>
+      </div>
+      <span class="text-muted-foreground text-sm font-medium">
+        PYTHON
+      </span>
+    </div>
+
+    
+    <div class="flex items-center gap-2">
+      <button
+          class="collapse-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
+          data-code-id="code-5"
+          data-default-state="expanded"
+          data-collapsed="false"
+          data-auto-collapse-lines="30"
+          data-auto-collapse-height="400"
+          data-collapsed-height="120"
+          title="Collapse"
+          aria-label="Collapse">
+          <span class="collapse-icon">
+            
+  <svg class="h-3 w-3"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"><path fill="currentColor" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z"/></svg>
+          </span>
+          <span class="collapse-text hidden sm:inline"
+            >Collapse</span
+          >
+        </button>
+      <button
+        class="copy-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
+        data-code-id="code-5"
+        title="Copy"
+        aria-label="Copy">
+        <span class="copy-icon">
+          
+  <svg class="h-3 w-3"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+</svg>
+        </span>
+        <span class="copy-text hidden sm:inline"
+          >Copy</span
+        >
+      </button>
+    </div>
+  </div>
+
+  
+  <div class="code-block-content relative" id="code-5">
+    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">re</span>
+</span></span><span class="line"><span class="cl"><span class="n">PLACEHOLDER</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&#34;\$\{([A-Za-z_][A-Za-z0-9_]*)\}&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">TemplateError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">pass</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">render_safe</span><span class="p">(</span><span class="n">template</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">allowed_keys</span><span class="p">:</span> <span class="nb">set</span><span class="p">,</span> <span class="n">values</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">fallback</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># 校验占位符只使用允许的键</span>
+</span></span><span class="line"><span class="cl">    <span class="n">keys</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">PLACEHOLDER</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">template</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="n">illegal</span> <span class="o">=</span> <span class="n">keys</span> <span class="o">-</span> <span class="n">allowed_keys</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">illegal</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">raise</span> <span class="n">TemplateError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;illegal placeholders: </span><span class="si">{</span><span class="nb">sorted</span><span class="p">(</span><span class="n">illegal</span><span class="p">)</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># 兜底：缺失键用 fallback 或报错</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">repl</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">k</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">values</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="n">values</span><span class="p">[</span><span class="n">k</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">fallback</span> <span class="ow">and</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">fallback</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="n">fallback</span><span class="p">[</span><span class="n">k</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">        <span class="k">raise</span> <span class="n">TemplateError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;missing key: </span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">PLACEHOLDER</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="n">repl</span><span class="p">,</span> <span class="n">template</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 用法示例（支持 i18n）</span>
+</span></span><span class="line"><span class="cl"><span class="n">allowed</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&#34;name&#34;</span><span class="p">,</span> <span class="s2">&#34;product&#34;</span><span class="p">,</span> <span class="s2">&#34;price&#34;</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="n">values</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;Alice&#34;</span><span class="p">,</span> <span class="s2">&#34;product&#34;</span><span class="p">:</span> <span class="s2">&#34;Pro&#34;</span><span class="p">,</span> <span class="s2">&#34;price&#34;</span><span class="p">:</span> <span class="mi">199</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">cn_template</span> <span class="o">=</span> <span class="s2">&#34;亲爱的 $</span><span class="si">{name}</span><span class="s2">，您订购的 $</span><span class="si">{product}</span><span class="s2"> 价格为 $</span><span class="si">{price}</span><span class="s2"> 元。&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">en_template</span> <span class="o">=</span> <span class="s2">&#34;Dear $</span><span class="si">{name}</span><span class="s2">, your $</span><span class="si">{product}</span><span class="s2"> costs $</span><span class="si">{price}</span><span class="s2"> USD.&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">render_safe</span><span class="p">(</span><span class="n">cn_template</span><span class="p">,</span> <span class="n">allowed</span><span class="p">,</span> <span class="n">values</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">render_safe</span><span class="p">(</span><span class="n">en_template</span><span class="p">,</span> <span class="n">allowed</span><span class="p">,</span> <span class="n">values</span><span class="p">))</span></span></span></code></pre></div>
+    
+    <div
+      class="collapse-overlay to-card/90 pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent opacity-0 transition-opacity duration-300">
+      <div
+        class="text-muted-foreground bg-card/80 border-border/50 hover:bg-primary/10 hover:text-primary hover:border-primary/30 absolute bottom-4 left-1/2 -translate-x-1/2 cursor-pointer rounded-full border px-3 py-1.5 text-xs backdrop-blur-sm transition-all duration-200">
+        Click to expand and view more
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+(function() {
+  const codeId = 'code-5';
+  const copyBtn = document.querySelector('.copy-code-btn[data-code-id="' + codeId + '"]');
+  const collapseBtn = document.querySelector('.collapse-code-btn[data-code-id="' + codeId + '"]');
+  const codeContainer = document.getElementById(codeId);
+
+  if (!codeContainer) return;
+
+  
+  if (copyBtn) {
+    const copyIcon = copyBtn.querySelector('.copy-icon');
+    const copyText = copyBtn.querySelector('.copy-text');
+
+    copyBtn.addEventListener('click', async function() {
+      try {
+        
+        let codeText = '';
+
+        
+        const codeTableCell = codeContainer.querySelector('.lntd:last-child code');
+        if (codeTableCell) {
+          codeText = codeTableCell.textContent || codeTableCell.innerText;
+        } else {
+          
+          const codeElement = codeContainer.querySelector('code');
+          if (codeElement) {
+            
+            const hasInlineLineNumbers = codeElement.querySelector('.ln');
+            if (hasInlineLineNumbers) {
+              
+              const codeLines = codeElement.querySelectorAll('.cl');
+              if (codeLines.length > 0) {
+                codeText = Array.from(codeLines)
+                  .map(line => {
+                    const text = line.textContent || line.innerText;
+                    
+                    return text.replace(/\n+$/, '');
+                  })
+                  .join('\n')
+                  .replace(/\n+$/, ''); 
+              } else {
+                
+                const allText = codeElement.textContent || codeElement.innerText;
+                codeText = allText.replace(/^\d+/gm, '').replace(/^\s+/gm, '');
+              }
+            } else {
+              
+              codeText = codeElement.textContent || codeElement.innerText;
+            }
+          } else {
+            
+            codeText = codeContainer.textContent || codeContainer.innerText;
+          }
+        }
+
+        
+        codeText = codeText.trim();
+
+        
+        await navigator.clipboard.writeText(codeText);
+
+        
+        copyIcon.innerHTML = `\r\n  \u003csvg class=\u0022h-3 w-3\u0022\r\n    fill=\u0022none\u0022\r\n    stroke=\u0022currentColor\u0022\r\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M5 13l4 4L19 7\u0022 \/\u003e\r\n\u003c\/svg\u003e`;
+        if (copyText) {
+          copyText.textContent = 'Copied';
+        }
+        copyBtn.classList.add('text-green-600');
+
+        
+        setTimeout(() => {
+          copyIcon.innerHTML = `\r\n  \u003csvg class=\u0022h-3 w-3\u0022\r\n    fill=\u0022none\u0022\r\n    stroke=\u0022currentColor\u0022\r\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z\u0022 \/\u003e\r\n\u003c\/svg\u003e`;
+          if (copyText) {
+            copyText.textContent = 'Copy';
+          }
+          copyBtn.classList.remove('text-green-600');
+        }, 2000);
+
+      } catch (err) {
+        console.error('复制失败:', err);
+
+        
+        const range = document.createRange();
+        const codeElement = codeContainer.querySelector('code') || codeContainer;
+        range.selectNodeContents(codeElement);
+        const selection = window.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(range);
+
+        
+        if (copyText) {
+          copyText.textContent = 'Selected';
+        }
+
+        setTimeout(() => {
+          if (copyText) {
+            copyText.textContent = 'Copy';
+          }
+          selection.removeAllRanges();
+        }, 2000);
+      }
+    });
+  }
+
+  
+  if (collapseBtn) {
+    const collapseIcon = collapseBtn.querySelector('.collapse-icon');
+    const collapseText = collapseBtn.querySelector('.collapse-text');
+    const collapseOverlay = codeContainer.querySelector('.collapse-overlay');
+
+    
+    let codeElement = codeContainer.querySelector('pre.chroma');
+    if (!codeElement) {
+      codeElement = codeContainer.querySelector('pre');
+    }
+
+    const defaultState = collapseBtn.dataset.defaultState || 'expanded';
+    const isCollapsedAttr = collapseBtn.dataset.collapsed === 'true';
+    const autoCollapseLines = parseInt(collapseBtn.dataset.autoCollapseLines) || 30;
+    const autoCollapseHeight = parseInt(collapseBtn.dataset.autoCollapseHeight) || 400;
+    const collapsedHeight = parseInt(collapseBtn.dataset.collapsedHeight) || 120;
+
+    let isCollapsed = false;
+
+    
+    function initCollapse() {
+      
+      const shouldCollapse = isCollapsedAttr ||
+                           defaultState === 'collapsed' ||
+                           shouldAutoCollapse();
+
+      if (shouldCollapse) {
+        setCollapsed(true, false); 
+      }
+    }
+
+    function shouldAutoCollapse() {
+      
+      if (codeElement) {
+        const lines = codeElement.querySelectorAll('.line, .cl');
+        const height = codeElement.offsetHeight;
+        return lines.length > autoCollapseLines || height > autoCollapseHeight;
+      }
+
+      
+      const containerHeight = codeContainer.offsetHeight;
+      if (containerHeight > autoCollapseHeight) {
+        return true;
+      }
+
+      
+      const textContent = codeContainer.textContent || codeContainer.innerText || '';
+      const estimatedLines = textContent.split('\n').length;
+      return estimatedLines > autoCollapseLines;
+    }
+
+    function setCollapsed(collapsed, animate = true) {
+      if (!collapseOverlay) return;
+
+      isCollapsed = collapsed;
+
+      if (collapsed) {
+        
+        codeContainer.style.maxHeight = collapsedHeight + 'px';
+        codeContainer.style.overflow = 'hidden';
+        collapseOverlay.style.opacity = '1';
+        collapseOverlay.style.pointerEvents = 'auto';
+
+        
+        collapseIcon.innerHTML = `\r\n  \u003csvg class=\u0022h-3 w-3\u0022\r\n    fill=\u0022none\u0022\r\n    stroke=\u0022currentColor\u0022\r\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M19 9l-7 7-7-7\u0022 \/\u003e\r\n\u003c\/svg\u003e`;
+        if (collapseText) {
+          collapseText.textContent = 'Expand';
+        }
+        collapseBtn.title = 'Expand';
+
+      } else {
+        
+        codeContainer.style.maxHeight = '';
+        codeContainer.style.overflow = '';
+        collapseOverlay.style.opacity = '0';
+        collapseOverlay.style.pointerEvents = 'none';
+
+        
+        collapseIcon.innerHTML = `\r\n  \u003csvg class=\u0022h-3 w-3\u0022\r\n    fill=\u0022none\u0022\r\n    stroke=\u0022currentColor\u0022\r\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath fill=\u0022currentColor\u0022 d=\u0022M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z\u0022\/\u003e\u003c\/svg\u003e`;
+        if (collapseText) {
+          collapseText.textContent = 'Collapse';
+        }
+        collapseBtn.title = 'Collapse';
+      }
+
+      
+      if (animate) {
+        codeContainer.style.transition = 'max-height 0.3s ease-out';
+        setTimeout(() => {
+          codeContainer.style.transition = '';
+        }, 300);
+      }
+    }
+
+    function toggleCollapse() {
+      setCollapsed(!isCollapsed, true);
+    }
+
+    
+    collapseBtn.addEventListener('click', toggleCollapse);
+
+    
+    if (collapseOverlay) {
+      collapseOverlay.addEventListener('click', () => {
+        if (isCollapsed) {
+          setCollapsed(false, true);
+        }
+      });
+    }
+
+    
+    initCollapse();
+  }
+})();
+</script>
+<ul>
+<li>工程化建议：
+<ul>
+<li>模板存储：放置在外部资源（JSON/YAML/PO），与代码分离。</li>
+<li>校验流程：CI 中检查模板占位符与允许的键集合一致。</li>
+<li>回退策略：缺失键使用默认值或走“未翻译”标记，避免运行时崩溃。</li>
+<li>不要用 f-string 渲染外部模板：防止执行表达式；统一使用受控替换器。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="8-结语">8. 结语</h2>
+<ul>
+<li>3.14 的 free-threaded 为“多线程真正并行”提供现实路径，但工程落地需评估库兼容与并发正确性。</li>
+<li>t-string 聚焦安全插值，结合受控替换与校验可用于 i18n 的工程化场景。</li>
+</ul>
 
   </article>
 
@@ -2274,17 +3760,14 @@ document.addEventListener('DOMContentLoaded', function() {
           <div id="toc-content">
             <nav id="TableOfContents">
   <ul>
-    <li><a href="#python-3-14">Python 3. 14</a>
-      <ul>
-        <li>
-          <ul>
-            <li><a href="#gil-global-interpreter-lock-全局解释器">GIL： Global Interpreter Lock 全局解释器</a></li>
-            <li><a href="#核心作用-在任何给定的时间点它只允许-一个-线程执行-python-字节码">核心作用： 在任何给定的时间点，它只允许 <strong>一个</strong> 线程执行 Python <strong>字节码</strong></a></li>
-            <li><a href="#为什么需要">为什么需要：</a></li>
-          </ul>
-        </li>
-      </ul>
-    </li>
+    <li><a href="#1-free-threaded无-gil-选项">1. Free-threaded（无 GIL 选项）</a></li>
+    <li><a href="#2-模板字符串字面值-t">2. 模板字符串字面值 <code>t&#34;...&#34;</code></a></li>
+    <li><a href="#3-快速试用与迁移建议">3. 快速试用与迁移建议</a></li>
+    <li><a href="#4-容易踩雷精简版">4. 容易踩雷（精简版）</a></li>
+    <li><a href="#5-一屏速查">5. 一屏速查</a></li>
+    <li><a href="#6-如何验证你的项目在无-gil-构建下的实际加速">6. 如何验证你的项目在无 GIL 构建下的实际加速</a></li>
+    <li><a href="#7-t-string-与-i18n-的工程化示例含替换表与校验">7. t-string 与 i18n 的工程化示例（含替换表与校验）</a></li>
+    <li><a href="#8-结语">8. 结语</a></li>
   </ul>
 </nav>
           </div>
