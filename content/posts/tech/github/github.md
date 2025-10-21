@@ -167,32 +167,39 @@ author = "MapleScraps"
 
 ## *远程仓库 ( Remote Repository ) 常用命令*
 
-> - git clone 克隆github远程储存库某个项目到本地
-> - git pull 从远程储存库更新 ( git fetch )+ 合并 ( git merge )到本地目录
-> - git push origin main从本地的快照上传文件到远程储存库 ( 新分支在执行推送到远程仓库，会自动创建 ) 
->> - git remote `-`v 
->> - git remote show origin 显示当前连接的远程仓库
->> - git remote add origin `< git@github.com:you/project.git >` 添加远程仓库 （ 属于自己的远程仓库 ）
->> - git remote add upstream `< http://github.com/[git-username] >` 添加上游 （ fork别人的github仓库 ）
->> - git remote set-url origin `< git@github.com:you/project.git >` 修改远程地址
->> - git remote remove origin 删除远程仓库连接
+> - `git clone` 克隆github远程储存库某个项目到本地
+> -` git pull` 从远程储存库更新 ( git fetch )+ 合并 ( git merge )到本地目录
+> - `git push origin main` 从本地的快照上传文件到远程储存库 ( 新分支在执行推送到远程仓库，会自动创建 ) 
+>> - `git remote -v`
+>> - `git remote show origin` 显示当前连接的远程仓库
+>> - `git remote add origin < git@github.com:you/project.git >` 添加远程仓库 （ 属于自己的远程仓库 ）
+>> - `git remote add upstream < http://github.com/[git-username] >` 添加上游 （ fork别人的github仓库 ）
+>> - `git remote set-url origin < git@github.com:you/project.git >` 修改远程地址
+>> - `git remote remove origin` 删除远程仓库连接
 > 
 > - `git fetch` 将远程仓库别人更新的提交，复制到本地远程分支，就可以看到别人提交什么，但不会合并
           * git log origin/main 查看main分支最新的状态
           * git log origin/main --online --graph 以树状显示分支状态
-> - git fetch origin optimize:optimize 本地没有该远程分支，可以直接把它 origin/optimize 拉到本地 optimize 并切换过去
+> - `git fetch origin optimize:optimize` 本地没有该远程分支，可以直接把它 origin/optimize 拉到本地 optimize 并切换过去
 git remote update 获取远程分支所有的内容，但不会自动合并到本地分支
 >
-> - git push `-`u origin < 分支名 > 将本地< 分支名 >分支推送代码到origin 远程仓库, -u 默认为当前的远程仓库
-> - git push `--`set-upstream origin 等于 git push -u origin < branch >
-> - git push `--`delete origin < 远程仓库分支 >  删除远程分支
-> - git pull `--`rebase origin main 将其他同事推送更新，同步到本地，然后将自己的新推送放在最后
-> - git rebase `--`continue 
+> - `git push -u origin` < 分支名 > 将本地< 分支名 >分支推送代码到origin 远程仓库, -u 默认为当前的远程仓库
+> - `git push --set-upstream origin` 等于 git push -u origin < branch >
+> - `git push --delete origin < 远程仓库分支 >`  删除远程分支
+> - `git pull --rebase origin main` 将其他同事推送更新，同步到本地，然后将自己的新推送放在最后
+> - `git rebase --continue` 
 > - `git merge origin/master` 合并后，必须执行推送到远程仓库
 > - `git log origin/master`
-> - git rebase `--`continue 
+> - `git rebase --continue` 
+> - `git push --set-upstream origin` 等于 git push -u origin < branch >
+> - `git push --delete origin < 远程仓库分支 >`  删除远程分支
+> - `git pull --rebase origin main` 将其他同事推送更新，同步到本地，然后将自己的新推送放在最后
+> - `git rebase --continue`
+> - `git merge origin/master` 合并后，必须执行推送到远程仓库
+> - `git log origin/master`
+> - `git rebase --continue`
 >
-> > - git rebase < target-branch > 把我在其他分支提交，重新放在 main/master 后面继续排队走
+> > - `git rebase < target-branch >` 把我在其他分支提交，重新放在 main/master 后面继续排队走
 >
 > > ```markdown
 > > [ 真实环境例子 ]
