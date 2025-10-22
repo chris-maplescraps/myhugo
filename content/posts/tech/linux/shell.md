@@ -11,7 +11,7 @@ cover = ""
 author = "MapleScraps"
 +++
 
-# Linux Shell 核心命令速查（运维/DevOps）
+# Linux Shell 核心命令（ 运维/DevOps ）
 
 这份速查把“日常必用”命令按场景分组，配最短解释与最小例子，一屏掌握、拿来即用。
 
@@ -40,8 +40,8 @@ rm -rf tmp/                     # 删除目录（危险！确认路径）
 ```bash
 cat file.log            # 显示全文（小文件）
 less file.log           # 分页查看（q退出）
-head -n 50 file.log     # 前 50 行
-tail -n 100 file.log    # 后 100 行
+head -n 50 file.log     # 前 50 行 （最旧）
+tail -n 100 file.log    # 后 100 行 (最新)
 tail -f app.log         # 实时追踪日志
 ```
 - 查找筛选：
@@ -210,10 +210,3 @@ sar -n DEV 1 5                 # 网络设备统计（需 sysstat）
 - 传输：`ssh` `scp` `rsync` `ssh-keygen` `ssh-copy-id`
 - 容器：`docker ps` `logs -f` `exec -it` `run -d -p` `stop` `rm`
 - K8s：`kubectl get/describe/logs/exec/rollout/scale/port-forward/apply/delete`
-
-如果你希望我再加：
-- 高级 `awk/sed` 模板、正则技巧
-- `systemd` 定时器与健康检查（service + timer）
-- `docker compose` 与镜像构建 cache/多阶段
-- `kubectl` 上下文/多集群管理与 `k9s`
-告诉我我就补上。
