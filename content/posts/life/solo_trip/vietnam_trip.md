@@ -1,7 +1,7 @@
 +++
 title = 'Vietnam_trip'
 date = 2025-10-01T13:53:14+08:00
-draft = false
+draft = true
 slug = "40c875a"
 description = ""
 summary = ""
