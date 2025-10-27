@@ -24,13 +24,31 @@ author = "MapleScraps"
 > sudo apt install python3.x
 > sudo python3 --version
 > ```
->
+> ```output
+> Python 3.10
+> 
+#### Step 2
+> ```bash
+> # Check the python version
+> python3 --version  
+> 
+> # Change the python version
+> alias python3=''/usr/bin/python3.xx'
+> ```
+> 
+> ```output
+> Python 3.13.8
+> ```
+> 
+
 
 ## 💻 WindowsOS
 
 #### Step 1
-> a. Download python installer https://www.python.org/downloads/
+> ##### 安装 ***Python*** 官方程序  
+> Download python installer [python org](https://www.python.org/downloads/)
 > 
 
 #### Step 2
-> Download & Install Pycharm https://www.jetbrains.com/pycharm/download/?section=windows
+> 下载 ***Python Charm IDE*** 开发程序  
+> Download & Install Pycharm [pycharm official](https://www.jetbrains.com/pycharm/download/?section=windows)
