@@ -15,15 +15,15 @@ author = "MapleScraps"
 # Jupyter
 
 ##### 常用操作
-> 单元格操作  
-> Shift + Enter  
+> **单元格操作**  
+> - Shift + Enter : 运行当前单元格结果   
 > 
-> 快捷键
-> Esc + A : 在当前单元格上方插入新单元格
-> Esc + B : 在当前单元格下方插入新单元格
-> Esc + M : 将单元格转换为 Markdown 格式
-> Ctrl + Enter : 运行当前单元格
-> Shift + Enter : 运行当前单元格并选择下一个单元格
+> **快捷键**  
+> - Esc + A : 在当前单元格上方插入新单元格  
+> - Esc + B : 在当前单元格下方插入新单元格  
+> - Esc + M : 将单元格转换为 Markdown 格式  
+> - Ctrl + Enter : 运行当前单元格  
+> - Shift + Enter : 运行当前单元格并选择下一个单元格  
 > 
 > 
 

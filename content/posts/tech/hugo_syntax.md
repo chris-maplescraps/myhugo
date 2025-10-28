@@ -74,23 +74,31 @@ func main() {
 > 在markdown文章中嵌入此 shortcode, 就可以实现了
 > #### Example
 > Use the self-closing syntax to pass the text as an argument:
->> {{< qr text="https://gohugo.io" />}}
+> > {{< qr text="https://gohugo.io" />}}
 >
 > Or insert the text between the opening and closing tags:
->> {{< qr >}}
-https://gohugo.io
->> {{< /qr >}}
+> > {{< qr >}}
+> https://gohugo.io
+> > {{< /qr >}}
 >
 > To create a QR code containing contact information in the vCard format:
->> {{< qr level="low" scale=2 alt="QR code of vCard for John Smith" >}}
-BEGIN:VCARD
-VERSION:2.1
-N;CHARSET=UTF-8:Smith;John;R.;Dr.;PhD
-FN;CHARSET=UTF-8:Dr. John R. Smith, PhD.
-ORG;CHARSET=UTF-8:ABC Widgets
-TITLE;CHARSET=UTF-8:Vice President Engineering
-TEL;TYPE=WORK:+12065550101
-EMAIL;TYPE=WORK:jsmith@example.org
-END:VCARD
->> {{< /qr >}}
+> > {{< qr level="low" scale=2 alt="QR code of vCard for John Smith" >}}
+> > BEGIN:VCARD
+> > VERSION:2.1
+> > N;CHARSET=UTF-8:Smith;John;R.;Dr.;PhD
+> > FN;CHARSET=UTF-8:Dr. John R. Smith, PhD.
+> > ORG;CHARSET=UTF-8:ABC Widgets
+> > TITLE;CHARSET=UTF-8:Vice President Engineering
+> > TEL;TYPE=WORK:+12065550101
+> > EMAIL;TYPE=WORK:jsmith@example.org
+> > END:VCARD
+> > {{< /qr >}}
+>
+
+> [!NOTE]+ Tag jump   
+> Hugo 自带短代码，可在 Markdown 内实现站内安全跳转，即使文章路径或 slug 改动，也不会产生死链。   
+> **你可以阅读上一篇文章：**`[跳转到Hugo文章]({{</* relref "hugo.md" */>}})`
+> - [跳转到Hugo文章]({{< relref "hugo.md" >}})
+> 
+> 
 
