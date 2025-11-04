@@ -158,3 +158,51 @@ author = "MapleScraps"
 >> **客服短回复**：128 - 256   
 >> **常规对话**：多轮对话：512 - 1024  
 >> **长内容生成**：1024 - 4096，生成一篇产品说明书（ 包含功能，使用方法等结构 ）  
+>> 
+
+#### OpenAI 方式调用：
+> ##### 非对话模型
+> ```python
+> from openai import OpenAI
+> 
+> # 从环境变量读取API密钥（ 推荐安全存储 ）
+> client = OpenAI(
+> 		api_key="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+> 		base_url="https://api.openai-proxy.org/v1"
+> )
+> 
+> # 调用Completion接口
+> response = client.completions.create(
+> 		model="gpt-3.5-turbo-instruct", # 非对话模型
+> 		prompt="请将以下英文翻译成中文：\n'Artificial intelligence will reshape the future.'",
+> 		max_tokens=100, # 生成文本最大长度
+> 		temperature=0.7 # 控制随机性
+> )
+> 
+> # 提取结果
+> print(response.choices[0].text.strip())
+> ```
+> 
+
+> ##### 对话模型
+> ```python
+> from openai import OpenAI
+> 
+> client = OpenAI(
+> 		api_key="xxxxxxxxxxxxxxxxxxxx",
+> 		base_url="https://api.openai-proxy.org/v1"
+> )
+> 
+> completion = client.chat.completions.create(
+> 		model="gpt-3.5-turbo",
+> 		messages=[
+>			{"role": "system", "content": "你是一个乐于助人的智能AI小助手"},
+>			{"role": "user", "content": "你好，请你介绍一下你自己"}
+>		],
+>		max_tokens=150,
+>		temperature=0.5
+> )
+> 
+> print(completion.choices[0].message)
+> ```
+> 
