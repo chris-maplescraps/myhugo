@@ -225,7 +225,7 @@ author = "MapleScraps"
 >>     print("OSError 捕获成功")
 >> except FileNotFoundError:
 >>     print("FileNotFoundError 捕获成功")
->> ``` 
+>> ```
 >> 输出：
 >> ```nginx
 >> OSError 捕获成功
@@ -255,12 +255,14 @@ author = "MapleScraps"
 >> Python 的所有异常都是一棵继承树上的节点，   
 >> 它们最终都源自 **BaseException**。”    
 >
+
 > ### Python 语法
 >
 > ```python
 > print("hello python!!!")
 > ```
 > 
+
 > ### 变量
 >
 >> a = "John"  
@@ -293,6 +295,39 @@ author = "MapleScraps"
 
 > ### 内置函数
 > 
+
+> ### 泡泡排序
+> ```python
+> # 创建一个名为 my_list 的列表（List），并存入初始数据 [8, 10, 6, 2, 4]。这就是我们要排序的目标
+> my_list = [8, 10, 6, 2, 4]
+> 
+> # 创建一个布尔, 为 True 才能启动下面的 while 循环
+> swapped = True
+> 
+> # 开始执行 while 循环
+> while swapped:
+> 
+> 		# 假设这一轮遍历不会发生交换，就会退出 while 循环，不然会死循环
+> 		swapped = False  # no swaps so far
+> 		
+> 		# 遍历列表的索引，能够比较 (索引0, 索引1)、(索引1, 索引2)、(索引2, 索引3) 和 (索引3, 索引4)
+> 		for i in range(len(my_list) - 1):
+> 		
+> 			# 比较列表中的右边邻居元素
+> 			# 检查当前元素 (my_list[i]) 是否大于 下一个元素 (my_list[i + 1])
+> 			# 在第一轮 i=0 时，它会检查 my_list[0] (即 8) 是否大于 my_list[1] (即 10)
+> 			if my_list[i] > my_list[i + 1]:
+> 			
+>				# 只有在 if 条件为 True 时才执行, 将 swapped 变量设置回 True
+> 				swapped = True  # a swap occurred!
+> 				
+> 				# my_list[1] 和 my_list[1 + 1] 原始列表位置 [10, 6]
+> 				# 当 i=1 时 (10 > 6)，列表从 [x, 10, 6, x, x] 变为 [6, 10]
+> 				my_list[i], my_list[i + 1] = my_list[i + 1], my_list[i]
+> 
+> print(my_list)
+> ```
+
 
 > ### 类
 > 
