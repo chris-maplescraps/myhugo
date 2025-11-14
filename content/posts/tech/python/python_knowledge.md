@@ -482,7 +482,40 @@ author = "MapleScraps"
 >> |or| x or y | x 为 True，返回 x 的值，否则返回 y 计算值| ( a and b ) 返回 10|
 >> |not| not x | x 为 True，返回 False，x 为 False，返回 True| not ( a and b ) 返回 False
 >> - 逻辑表达式是有 ( expression and expression )
+>>
 > 
+>> ##### 三元运算符
+>> ```python
+>> a = 10
+>> b = 80
+>> c = 55
+>> max = a if a > b else b
+>> print(max)
+>> 
+>> # 分段方式计算，可读性好
+>> max1 = a if a > b else b
+>> max2 = max1 if max1 > c else c
+>> print(max2)
+>> 
+>> # 嵌套方式计算，可读性差
+>> max = (a if a > b else b) if (a if a > b else b) > c else c
+>> print(max)
+>>  
+>> ```
+>> ```
+>>      a if a > b else b
+>>      |  |             |
+>>    表达式           表达式
+>> 
+>> 如果条件成立 则返回表达式 a 值
+>> 如果条件不成立 则返回表达式 b 值
+>> ```
+>> 
+>> 
+>> 
+>> 
+>> 
+>
 >> ##### 位运算符
 >> ##### & 与运算 and
 >> 
@@ -493,5 +526,14 @@ author = "MapleScraps"
 >> |>>|右移运算|||
 > 
 >> ##### 成员运算符
+>> 
+>> 
+>
+>> ### 进制
+>> 
+>> 
+>> 
+>> 
+>> 
 >> 
 >> 
