@@ -279,45 +279,71 @@ author = "MapleScraps"
 > 
 
 > ### 数据类型
->> ##### List 列表
->> - 使用切片 slide 分割列表，将创建新的内存地址和原本的地址不相同
->> 
-> 
->> ##### 列表生成式 List comprehension
->> ```python
->> squares = [ expression for element in list if conditional ]
->> squares = [ x ** 2 for x in range(10) ]
->> 
->> for element in list:
->>     if conditional:
->>         expression
->>         
->> for x in range(10):        
->>     if x == 0:    
->>         break
->> ```
->> 
->> ---
->> 
->> ##### 二维列表生成式
->> ```python
->> # Pattern 1
->> matrix = [[0 for c in range(3)] for r in range(4)]
->> 
->> # Pattern 2
->> matrix = [[(r, c) for c in range(3)] for r in range(4)]
->> ```
->> 输出：
->> ```output
->> # Pattern 1
->> [[0, 0, 0]], [[0, 0, 0]], [[0, 0, 0]], [[0, 0, 0]]
->> 
->> # Pattern 2
->> [[(0, 0), (0, 1), (0, 2)]], [[(1, 0), (1, 1), (1, 2)]], [[(2, 0), (2, 1), (2, 2)]], [[(3, 0), (3, 1), (3, 2)]]
->> ```
->> 
+> > ##### List 列表
+> > - 使用切片 slide 分割列表，将创建新的内存地址和原本的地址不相同
+>
+>
+> > ##### 列表生成式 List comprehension
+> > ```python
+> > squares = [ expression for element in list if conditional ]
+> > squares = [ x ** 2 for x in range(10) ]
+> > 
+> > for element in list:
+> >  if conditional:
+> >      expression
+> >         
+> > for x in range(10):        
+> >  if x == 0:    
+> >      break
+> > ```
+>
+> > ---
+>
+> > ##### 二维列表生成式
+> > ```python
+> > # Pattern 1
+> > matrix = [[0 for c in range(3)] for r in range(4)]
+> > 
+> > # Pattern 2
+> > matrix = [[(r, c) for c in range(3)] for r in range(4)]
+> > ```
+>
+> > 输出：
+> > ```output
+> > # Pattern 1
+> > [[0, 0, 0]], [[0, 0, 0]], [[0, 0, 0]], [[0, 0, 0]]
+> > 
+> > # Pattern 2
+> > [[(0, 0), (0, 1), (0, 2)]], [[(1, 0), (1, 1), (1, 2)]], [[(2, 0), (2, 1), (2, 2)]], [[(3, 0), (3, 1), (3, 2)]]
+> > ```
+> > ---
+>
 
 > ### 循环 & 嵌套循环
+> ##### while 语法结构说明：
+> ```python
+> # 初始条件设置 = 一般是重复执行的 计数器，不然会无限循环
+> 
+> while 条件（ 判断 计数器 是否条件成立 ）：
+> 	条件成立后执行的代码 1
+> 	条件成立后执行的代码 2
+> 	条件成立后执行的代码 3
+> 	条件成立后执行的代码 4
+> 	
+> 	处理条件（计数器 + 1）
+> ```
+> ---
+> ##### for 语法结构说明：
+> ```python
+> for 变量 in sequences:
+> 	print( 变量 )
+> for 变量 in range(x):
+> 	print( 变量 )
+> for 变量 in range(x, y, z):
+> 	print( 变量 )
+> ```
+> 
+> while & else 组合
 > 
 
 > ### 函数
