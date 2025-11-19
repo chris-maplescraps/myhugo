@@ -1,5 +1,5 @@
 +++
-title = 'Odoo Basic'
+title = 'Odoo Deployment'
 date = 2025-11-18T11:04:43+08:00
 draft = false
 slug = "bcb86a1"
@@ -12,7 +12,7 @@ author = "MapleScraps"
 
 +++
 
-# Odoo Basic
+# Odoo Deployment
 
 - odoo.conf 配置管理文件，管理员密码，数据库保存路径，日志保存等等
 - odoo 下载 [odoo github official](https://github.com/odoo/odoo.git)
