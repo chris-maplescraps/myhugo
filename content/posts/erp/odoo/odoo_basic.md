@@ -1,7 +1,7 @@
 +++
 title = 'Odoo Basic'
 date = 2025-11-18T11:04:43+08:00
-draft = true
+draft = false
 slug = "bcb86a1"
 description = ""
 summary = ""
@@ -148,5 +148,33 @@ author = "MapleScraps"
 > ||-s|	赋予新创建的用户 odoo15 超级用户 (superuser) 权限。在 Odoo 的首次设置和运行时，通常需要此权限来创建和管理 Odoo 数据库|
 > ||odoo15|	指定要在 PostgreSQL 中创建的数据库用户名（角色名）|
 > 
+>  
+
+## Postgres数据库操作, pgadmin4 工具
+
+> **用户保存数据位置**
+> 1. Databases > [ production_db ] > Schemas > Public > Tables > res_users
+> 2. 右键点击 res.users > view/edit data > first 100 
 > 
 
+## Odoo 配置日志
+在 odoo.conf 配置文件中
+> ```conf
+> # 指定保存日志位置
+> logfile = /var/log/odoo/odoo.log
+> 
+> # 日志级别 critical, error, warn, debug
+> log_level = info 
+> ```
+
+> [!IMPORTANT]
+> - 需要在 docker-compose.yml 中的 volumes 需要添加 `- ./odoo-log-data:/var/log/odoo`
+> - `./odoo-log-data` 配置权限 `sudo chmod -R 777 odoo-log-data`
+> 
+
+保持追踪记录
+> ```bash
+> tail -f odoo-log-data/odoo.log
+> ```
+> 
+> 
