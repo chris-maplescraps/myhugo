@@ -24,12 +24,12 @@ author = "MapleScraps"
 > - **{{</* figure ... */>}}**: 插入图片或视频，支持 caption、link 等参数。
 > - {{</* figure **src="/images/xxx.jpg"** **alt="xxx"** **caption="xxx"** **link="https://xxx"** **class="w-75 ma0"** */>}}
 >> 示例 : 
-> {{< figure 
-  src="/images/universal.jpg" 
-  alt="Universal Image" 
-  caption="Image description"
-  link="https://www.google.com" 
-  class="w-75 ma0" 
+{{< figure 
+src="/images/universal.jpg" 
+alt="Universal Image" 
+caption="Image description"
+link="https://www.google.com" 
+class="w-75 ma0" 
 >}}
 
 > [!NOTE]+ Instagram shortcode

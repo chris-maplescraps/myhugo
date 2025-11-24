@@ -354,12 +354,61 @@ author = "MapleScraps"
 > > 如果循环被 break 语句中断，则 else 块不会执行。
 >
 ---
-
 > ### 函数
+> ##### return 语句的基本语法
+> ```python
+> def 函数名(参数列表):
+> 	代码块
+> 	return 返回值
+> ```
+> > [!NOTE]
+> > 说明：
+> > - 如果没有 return 语句，默认返回 None， None 是内置常量，代表空值对象
+> > - 既然是一个值。就代表有自己的内存空间 ID
+---
+> ### 数据驻留机制
+> ##### 驻留机制成立条件
+> :one: 字符串是由 26 个英文字母大小写，0-9，_组成
+> :two: 字符串长度为 0 或者 1 的时候
+> :three: 字符串在编写代码的时候才会进行驻留，不是在运行代码的时候
+> :four: [ -5, 256 ] 的整数数字
+> ##### sys.intern() 可以实现强制驻留
+> ```python
+> import sys
+> a = "!@#
+> b = "!@#
+> print(id(a)) # 233291254
+> print(id(b)) # 233291523
+> 
+> # 将变量 b 指向 变量 a 相同内存
+> b = sys.intern(a)
+> print(id(b)) # 233291254 变量 a 内存地址
+> ```
+> > [!NOTE]
+> > - 如果 a 和 b 的值不同，当强制将 b 指向 a，那么 b 的值也会和 a 一样
+> > - 参考视频 [bilibili 韩顺平 - 驻留机制](https://www.bilibili.com/video/BV1zN4y1v7Vv?spm_id_from=333.788.videopod.episodes&vd_source=5f93ceb15a68557ff6f7a1f95aca67bb&p=29)
+---
+> ### 函数调用机制
+> 
+> 参考视频
+---
+> ### 函数传参机制
+> 
 > 
 ---
-> ### 递归
+> ### 函数递归机制
+> - 函数调用自己，每次调用的时候传入不同的值
+> - 有助于解决复杂问题，也能让代码更简洁
+> - 必须有 base case 决定终止条件，否则会无限调用函数，直到栈溢出（当调用函数，会在内存创建新的栈）
+> ---
+> ##### 递归执行过程分为 "递进" 和 "回归"
+>
+> {{< figure src="/images/recursive.png" alt="xxx" class="w-75 ma0" >}}
 > 
+> 
+> > [!NOTE]
+> > - 参考视频 [林粒粒呀 - 8分钟搞懂“编程的鬼打墙”——递归](https://www.bilibili.com/video/BV14q5fzAEpD/?spm_id_from=333.337.search-card.all.click&vd_source=5f93ceb15a68557ff6f7a1f95aca67bb)
+>
 ---
 > ### 实参 & 形参
 > 

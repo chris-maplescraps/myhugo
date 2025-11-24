@@ -17,7 +17,6 @@ author = "MapleScraps"
 ### Odoo 根目录结构
 || opt / odoo / addons| opt / odoo / odoo / addons|
 | ---|---|---|
-
 |特征| /opt/odoo/addons (外部/自定义 Addons) | /opt/odoo/odoo/addons (内部/核心 Addons)|
 |位置|Odoo 安装目录的顶层，或位于您通过配置文件 $ADDONS_PATH 指定的任何路径|Odoo 源码目录内部，通常在 odoo/odoo/addons/|
 |内容|**自定义模块、第三方模块、垂直行业模块 ** 存放所有您自己开发或从 Odoo App Store 下载的模块|**Odoo 官方核心模块** 存放 Odoo Community 和 Enterprise 版本提供的 **所有标准模块**（如 `base`、`web`、`sale`、`account` 等）|
