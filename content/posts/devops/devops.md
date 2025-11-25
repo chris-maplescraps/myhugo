@@ -30,7 +30,20 @@ author = "MapleScraps"
 > {{< figure src="/images/open_permission_5.png"  class="w-75 ma0" >}}
 
 ## Terraform
+> **安装 Terraform**： [official website](https://developer.hashicorp.com/terraform)
+> > **Terraform provider**：[official website](https://registry.terraform.io/browse/providers)
+> > - 强烈建议为每个基础设施配置 provider 信息，在 providers.tf
+> > 
+> 
+
 ## Ansible
+>
+
 ## Jenkins
+>
+
 ## Docker
+>
+
 ## Kubernates
+>
