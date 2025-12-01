@@ -14,12 +14,12 @@ author = "MapleScraps"
 
 # Python Knowledge
 > [!NOTE]+
-> - 编译器 =  将源代码文件转换成可行执行二进制文件
-> - 解释器 =  将源代码直接执行，无需进行转换
-> - 源代码 =  
-> - 高级语言 =  由人类进行编写，然后选择使用编译器还是解释器
-> - 自然语言 =  
-> - 机器语言 =  
+> - 编译器 compiler =  将源代码文件转换成可行执行二进制文件
+> - 解释器 interpreter =  将源代码直接执行，无需进行转换
+> - 源代码 source code = 无法直接被电脑运行，需要被编译 或者 解释
+> - 高级语言 high-level programming =  由人类进行编写，然后选择使用编译器还是解释器
+> - 自然语言 natural language = 人类沟通语言  
+> - 机器语言 machine language = 1byte = 8 bits ( 二进制 0 和 1 )
 
 > ### Python 原理机制  
 > #### 类继承结构（Class Inheritance Hierarchy）  
