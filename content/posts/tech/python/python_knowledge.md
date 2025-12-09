@@ -444,21 +444,21 @@ author = "MapleScraps"
 ---
 > ### 运算符家庭
 > ##### 运算符优先级图表 ( 上（最高）-> 下（最低）)
-> |运算符|描述|所属|
-> |---|---|---|
-> |( expressions... )| 加圆括号的表达式|算 Arithmetic|
-> |**|乘方，次方|算 Exponentiation|
-> |*，@，/，//，%|乘，矩阵乘，除，整除，取余|算 Multi / Division|
-> | + -|加法减法|算 Add / Subtraction|
-> |>> <<| 右移，左移运算符（移位）|位 Bitwise|
-> |&|按位与|位 Bitwise|
-> |^|按位异或|位 Bitwise|
-> | \| | 按位或|位 Bitwise|
-> |in，not in，is，is not，<，<=，>，>=，!=，==| 比较运算，包括成员检测和标识号检测|比 Comparison|
-> |not x|布尔逻辑非 NOT|逻 Logical|
-> |and|布尔逻辑与 AND|逻 Logical|
-> |or|布尔逻辑或 OR|逻 Logical|
-> |=，%=，/=，//=，-=，+=，*=，**=|赋值运算符|赋 Assignment|
+> |运算符号|描述|运算名称|英文名称|
+> |---|---|---|---|
+> |( expressions... )| 加圆括号的表达式|算 Arithmetic|Parentheses|
+> |**|乘方，次方|算 Arithmetic|Exponentiation|
+> |*，@，/，//，%|乘，矩阵乘，除，整除，取余|算 Arithmetic|Multi / Division|
+> | + -|加法减法|算 Arithmetic|Add / Subtract|
+> |>> <<| 右移，左移运算符（移位）|位 Bitwise|Shift|
+> |&|按位与|位 Bitwise|AND|
+> |^|按位异或|位 Bitwise|XOR|
+> | \| | 按位或|位 Bitwise|OR|
+> |in，not in，<br />is，is not，<br /><，<=，>，>=，!=，==| 比较运算，包括成员和标识号检测 |比 Comparison|Membership test<br />Identity test<br />All comparison|
+> |not x|布尔逻辑非 NOT|逻 Logical|NOT|
+> |and|布尔逻辑与 AND|逻 Logical|AND|
+> |or|布尔逻辑或 OR|逻 Logical|OR|
+> |=，%=，/=，//=，-=，+=，*=，**=|赋值运算符|赋 Assignment|Assignment|
 >
 > 
 > > ##### 算数运算符
