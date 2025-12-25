@@ -21,6 +21,8 @@ author = "MapleScraps"
 - Brift what is the responsibilities in current job ?
     - IT Support Engineer, it could be vary direction, but as I mentioed previous my current position more focus on end user not only Asia, also include Euope plants, meaning that the issue related to behind the system, I need to liaise with level 2 Euope team or other IT department like ERP development, Network Security, and Azure cloud system. Apart from this, I also handling IT infrastrature of my plant such as thumprint system, cctv, door access, 
 
+    - Participant in Odoo develope but 
+
 - What is the expectation salary ?
     - 
 
@@ -42,3 +44,4 @@ author = "MapleScraps"
     - **Fail-safe / Backup plan**: 备用方案。
     - **Minimize downtime**: 最大程度减少停机/停运时间。
     - **Business Continuity**: 业务连续性（这是一个高级词汇，能体现你站在公司运营的高度思考问题）。
+    - **Alternative strategies**: 
