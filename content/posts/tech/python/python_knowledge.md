@@ -13,6 +13,11 @@ author = "MapleScraps"
 +++
 
 # Python Knowledge
+##### 命名规则
+- 不合规 = **True**, **&sleep;** , **365**, **2nd_class**, **@home**, **for**
+- 合规 =  **i_am_a_legend**, **samplevariable**, **For**, **_ fun**, **true**, **TRUE**, **maxValue**, **securityinspectorsuperintendentsecretagent007**
+
+> 
 > [!NOTE]+
 > - 编译器 compiler =  将源代码文件转换成可行执行二进制文件
 > - 解释器 interpreter =  将源代码直接执行，无需进行转换
