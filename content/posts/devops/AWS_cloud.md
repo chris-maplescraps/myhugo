@@ -31,8 +31,46 @@ author = "MapleScraps"
 > 
 
 ## Create EC2 Instance
+> **第一步：进入启动向导**
+> :one: 登录 AWS 管理控制台
+> :two: 在搜索栏输入 EC2 并进入服务
+> :three: 点击橙色按钮 “启动实例” (Launch instance)
 > 
-
+> ---
+>
+> **第二步：配置基础信息**
+> :one: 名称和标签：在“名称”框里输入实例的名字（例如：My-Web-Server）
+> :two: **操作系统 (AMI)：**
+> - 在“应用程序和操作系统映像”下，选择 Amazon Linux 2023
+> - 确保它标记了 “符合免费套餐条件” (Free tier eligible)
+> ---
+>
+> :three: **实例类型：**
+> - 通常默认是 `t2.micro` 或 `t3.micro`（视区域而定）。这也是免费套餐支持的规格
+> ---
+>
+> **第三步：设置登录凭证与网络**
+> :one: 密钥对 (Key pair)：
+> - 点击 “创建新密钥对”
+> - 输入名称，选择 `.pem`（如果你用 Mac/Linux/OpenSSH）或 .ppk（如果你用老版 PuTTY）。
+> - 重要： 下载后务必保存好，这是你登录机器的唯一凭证，弄丢了很难找回
+> ---
+>
+> :two: **网络设置：**
+> - 默认会为你创建一个安全组
+> - 勾选 “允许来自以下的 SSH 流量”（为了你能远程登录）
+> - 如果你想做网页服务器，可以勾选 “允许来自互联网的 HTTP 流量”
+> ---
+>
+> **第四步：存储与启动**
+> :one: **配置存储：**
+>
+> - 默认通常是 8GiB。免费套餐用户最多可以免费使用 30GiB 的通用型 (SSD) 存储
+>
+> :two: **启动实例：**
+> - 点击右侧面板底部的 “启动实例” (Launch instance)
+> 
+> ---
 
 ## Systems Manager (SSM) login
 ##### 第一步：为 EC2 实例配置 IAM 角色
@@ -52,14 +90,14 @@ author = "MapleScraps"
 > 
 
 ##### 第三步：如何执行登录
-> 方法 A：直接通过 AWS 控制台（最快）
+> **方法 A：直接通过 AWS 控制台（最快）**
 > :one: 在 EC2 实例列表勾选你的实例
 > :two: 点击右上角的 连接 (Connect)
 > :three: 选择 Session Manager 选项卡，点击 连接
 > :four: 你将直接在浏览器中获得一个终端
 > 
 
-> 方法 B：通过本地命令行（体验最好）
+> **方法 B：通过本地命令行（体验最好）**
 > :one: 安装 AWS CLI 并配置好你的 Access Key
 > :two: 安装插件：下载并安装 Session Manager Plugin
 > :three: 运行命令：
@@ -68,6 +106,6 @@ author = "MapleScraps"
 > aws ssm start-session --target i-0123456789abcdef0
 > ```
 
->> 注意事项
+>> **注意事项**
 >> - 网络通畅：如果你的实例在私有子网（Private Subnet）且没有 NAT 网关，SSM 会失效。这种情况下需要配置 VPC Endpoints
 >> - 操作系统：Amazon Linux 2/2023 默认自带 Agent。如果是 Ubuntu 或 Windows，可能需要手动安装 amazon-ssm-agent
