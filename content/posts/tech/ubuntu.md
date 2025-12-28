@@ -75,3 +75,22 @@ author = "MapleScraps"
 > [!TIP]
 > - docker-compose 属于旧版本，新版本docker compose 之间没有杠 -
 > 
+
+## Install Tactical RMM
+> [!IMPORTANT]
+> Prepare a **Ubuntu Server 22.04 ( Only support 22.04 for Ubuntu )**
+> 
+> **Required:** Create TXT in DNS manager
+> - api.domain.com
+> - mesh.domain.com
+> - rmm.domain.com
+> 
+> **Required:** Create A record in DNS manager
+> - api.domain.com | server's public-IP | DNS only
+> - mesh.domain.com | server's public-IP | DNS only
+> - rmm.domain.com | server's public-IP | DNS only
+> 
+
+:one: Go to [Tactical Github](https://github.com/amidaware/tacticalrmm)
+:two: Refer documentation --> RMM Server Installation --> Traditional Install
+:three: Follow the instruction to installing and configuring RMM 
