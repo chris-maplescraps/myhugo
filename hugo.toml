@@ -147,7 +147,7 @@ colorScheme = "default"
   link = "/"
 
   [params.favicon]
-  svg = "/favicon.svg"
+  svg = "favicon.svg"
 
   [params.author]
   name = "Chris Goh"
