@@ -1,4 +1,4 @@
-baseURL = "https://chris-maplescraps.github.io/"
+baseURL = "https://chris-maplescraps.github.io/myhugo/"
 languageCode = "en-US"
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
@@ -153,7 +153,7 @@ colorScheme = "default"
   name = "Chris Goh"
   title = "A Clean and Minimal Hugo Theme"
   description = "Focused on personal growth"
-  avatar = "/images/screnery.jpg"
+  avatar = "images/screnery.jpg"
 
     [[params.author.social]]
     name = "GitHub"
