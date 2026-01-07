@@ -1,4 +1,4 @@
-baseURL = "https://chris-maplescraps.github.io/myhugo/"
+baseURL = "/"
 languageCode = "en-US"
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
